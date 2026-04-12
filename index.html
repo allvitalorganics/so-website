@@ -149,7 +149,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 
 <!-- Nav -->
 <div class="nav">
-<div class="logo">sensitive ones</div>
+<div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div>
 <div class="links">
 <a href="#" onclick="showPage('pdp');return false">Skin Support</a>
 <a href="#" onclick="showPage('science');return false">Science</a>
@@ -413,7 +413,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <div class="pg" id="pdp">
 <div class="announce">Subscribe & save 30% — free shipping every month.</div>
 <div class="nav">
-<div class="logo">sensitive ones</div>
+<div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div>
 <div class="links">
 <a href="#" onclick="showPage('pdp');return false">Skin Support</a>
 <a href="#" onclick="showPage('science');return false">Science</a>
@@ -517,15 +517,39 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 </div>
 </div>
 
-<!-- Copy footer for PDP -->
+<!-- PDP FOOTER -->
 <div class="footer">
-<div class="footer-bottom" style="margin-top:0;border-top:none">
+<div class="footer-grid">
+<div>
+<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
+<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems.<br>For Sensitive Ones LLC · Ohio, USA.</p>
+<p style="font-size:9px;color:#444;margin-top:12px;line-height:1.5;max-width:280px;font-style:italic">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+</div>
+<div>
+<h4>Shop</h4>
+<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
+</div>
+<div>
+<h4>Support</h4>
+<p><a href="#" onclick="showPage('contact');return false">Contact</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
+</div>
+<div>
+<h4>Legal</h4>
+<p><a href="#" onclick="showPage('privacy');return false">Privacy Policy</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms of Service</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
+</div>
+</div>
+<div class="footer-bottom">
 <p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC. All rights reserved.</p>
 <div style="display:flex;gap:16px">
-<a href="#" onclick="showPage('privacy');return false">Privacy</a>
-<a href="#" onclick="showPage('terms');return false">Terms</a>
-<a href="#" onclick="showPage('shipping');return false">Shipping</a>
-<a href="#" onclick="showPage('refund');return false">Refunds</a>
+<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
+<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
 </div>
 </div>
 </div>
@@ -535,7 +559,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <!-- ██ SCIENCE ██ -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="science">
-<div class="nav"><div class="logo">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 
 <div class="sec-white">
 <div class="sec center">
@@ -545,10 +569,11 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 </div>
 </div>
 
+<!-- INGREDIENT 1: VERISOL -->
 <div class="sec-cream">
 <div class="sec">
-<h2 class="h2 mb24">Verisol® — The most studied collagen for skin.</h2>
-<p class="body mb24">Verisol® is a specific bioactive collagen peptide composition by GELITA AG (Germany). It is not generic collagen — it is optimized for skin outcomes and has been the subject of multiple randomized, double-blind, placebo-controlled trials.</p>
+<h2 class="h2 mb8">1. Verisol® Collagen Peptides — <span style="color:var(--mg)">5,000mg</span></h2>
+<p class="body mb16">The most clinically studied collagen peptide for skin. Produced by GELITA AG (Eberbach, Germany). Not generic collagen — a specific bioactive composition optimized for skin outcomes.</p>
 <table style="width:100%;border-collapse:collapse;font-size:13px">
 <tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Study</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Design</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Result</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
 <tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin wrinkles</td><td style="padding:12px;color:var(--tx2)">RCT, n=114, 8 weeks, 2.5g/day</td><td style="padding:12px"><strong>20% reduction</strong> in eye wrinkle volume. <strong>65%</strong> ↑ procollagen type I. <strong>18%</strong> ↑ elastin.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" style="color:var(--mg);text-decoration:none">PubMed 24401291</a></td></tr>
@@ -557,13 +582,113 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <tr><td style="padding:12px">Nail health</td><td style="padding:12px;color:var(--tx2)">Open-label, n=25, 24 weeks, 2.5g/day</td><td style="padding:12px"><strong>12%</strong> ↑ nail growth. <strong>42%</strong> ↓ broken nails. <strong>64%</strong> improvement in brittle nails.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/28786550/" style="color:var(--mg);text-decoration:none">PubMed 28786550</a></td></tr>
 </table>
 <div class="card-mg mt24">
-<p style="font-size:13px;color:var(--tx)"><strong style="color:var(--mg)">Important note:</strong> These studies were conducted on the Verisol® ingredient, not on our finished Skin Support product. Skin Support uses 5,000mg Verisol® — 2× the dose used in most published studies (2.5g). We say "clinically studied dose," never "clinically proven."</p>
+<p style="font-size:13px;color:var(--tx)"><strong style="color:var(--mg)">Why 5,000mg:</strong> Published studies used 2.5g (2,500mg). We use 2× that. These studies were on the Verisol® ingredient, not our finished product. We say "clinically studied dose," never "clinically proven."</p>
 </div>
-<div class="dshea">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
 </div>
 </div>
 
+<!-- INGREDIENT 2: HA -->
 <div class="sec-white">
+<div class="sec">
+<h2 class="h2 mb8">2. Hyaluronic Acid (as Sodium Hyaluronate) — <span style="color:var(--mg)">120mg</span></h2>
+<p class="body mb16">Oral hyaluronic acid reaches the dermis from inside — deeper than topical creams can penetrate. We use sodium hyaluronate, the sodium salt form, for better stability and oral absorption.</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Study</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Design</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Result</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin moisture</td><td style="padding:12px;color:var(--tx2)">RCT, n=60, 12 weeks, 120mg/day</td><td style="padding:12px">Significant <strong>improvement in skin wrinkle depth and moisture</strong> vs placebo at 120mg oral HA daily.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/28686544/" style="color:var(--mg);text-decoration:none">PubMed 28686544</a> (Oe et al., 2017)</td></tr>
+<tr><td style="padding:12px">Skin hydration</td><td style="padding:12px;color:var(--tx2)">RCT, n=96, 8 weeks, 120-240mg/day</td><td style="padding:12px">Oral HA <strong>significantly increased skin moisture</strong> and improved skin condition in subjects with dry skin.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/28020067/" style="color:var(--mg);text-decoration:none">PubMed 28020067</a> (Kawada et al., 2014)</td></tr>
+</table>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why 120mg:</strong> Matches the dose used in the Oe 2017 RCT that showed significant skin moisture improvement. Sodium hyaluronate form is more stable and bioavailable orally than pure hyaluronic acid.</p>
+</div>
+</div>
+
+<!-- INGREDIENT 3: VITAMIN C -->
+<div class="sec-cream">
+<div class="sec">
+<h2 class="h2 mb8">3. Vitamin C (as Ascorbic Acid) — <span style="color:var(--mg)">200mg</span> <span class="body-sm">(222% DV)</span></h2>
+<p class="body mb16">Vitamin C is the essential cofactor for collagen synthesis. Without adequate Vitamin C, the body cannot hydroxylate proline and lysine — the amino acids that form collagen's triple-helix structure. Taking collagen without Vitamin C is like having bricks without mortar.</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Evidence</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Detail</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Collagen synthesis cofactor</td><td style="padding:12px;color:var(--tx2)">Vitamin C is required for the enzymatic hydroxylation of prolyl and lysyl residues in procollagen. Without it, collagen cannot form properly (this is the mechanism behind scurvy).</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/29099763/" style="color:var(--mg);text-decoration:none">PubMed 29099763</a> (Pullar et al., 2017)</td></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin aging (review)</td><td style="padding:12px;color:var(--tx2)">Systematic review found higher Vitamin C intake associated with better skin appearance, less wrinkling, and less dryness. Both dietary and supplemental.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/29099763/" style="color:var(--mg);text-decoration:none">PubMed 29099763</a> (Nutrients, 2017)</td></tr>
+<tr><td style="padding:12px">Antioxidant protection</td><td style="padding:12px;color:var(--tx2)">Vitamin C is a potent water-soluble antioxidant that protects skin from oxidative stress caused by UV exposure and environmental pollutants.</td><td style="padding:12px"><a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" style="color:var(--mg);text-decoration:none">NIH Office of Dietary Supplements</a></td></tr>
+</table>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why 200mg:</strong> RDA is 75-90mg. We provide 222% DV — enough to fully support collagen synthesis and antioxidant needs. Upper limit is 2,000mg, so 200mg is safe with significant headroom. Ascorbic acid is the most studied and bioavailable form.</p>
+</div>
+</div>
+
+<!-- INGREDIENT 4: VITAMIN E -->
+<div class="sec-white">
+<div class="sec">
+<h2 class="h2 mb8">4. Vitamin E (as D-Alpha Tocopherol) — <span style="color:var(--mg)">30mg</span> <span class="body-sm">(200% DV)</span></h2>
+<p class="body mb16">Vitamin E is the body's primary lipid-soluble antioxidant — it protects cell membranes (which are made of lipids) from oxidative damage. It works synergistically with Vitamin C: E neutralizes free radicals in cell membranes, then C regenerates E so it can work again.</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Evidence</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Detail</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Photoprotection</td><td style="padding:12px;color:var(--tx2)">Oral Vitamin E supplementation reduces UV-induced skin damage and erythema when combined with Vitamin C. Synergistic effect documented in multiple studies.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/9763287/" style="color:var(--mg);text-decoration:none">PubMed 9763287</a> (Fuchs & Kern, 1998)</td></tr>
+<tr><td style="padding:12px">Skin barrier</td><td style="padding:12px;color:var(--tx2)">Alpha-tocopherol accumulates in skin tissue and protects against lipid peroxidation — the process that breaks down the skin barrier.</td><td style="padding:12px"><a href="https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/" style="color:var(--mg);text-decoration:none">NIH Office of Dietary Supplements</a></td></tr>
+</table>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why D-alpha tocopherol:</strong> The natural form (d-alpha) is approximately 2× more bioavailable than the synthetic form (dl-alpha). We specifically use the natural form at 30mg (200% DV), well within the 1,000mg upper limit.</p>
+</div>
+</div>
+
+<!-- INGREDIENT 5: BETA-CAROTENE -->
+<div class="sec-cream">
+<div class="sec">
+<h2 class="h2 mb8">5. Beta-Carotene — <span style="color:var(--mg)">6mg</span></h2>
+<p class="body mb16">Beta-carotene is a provitamin A carotenoid — a naturally occurring pigment that your body converts to Vitamin A only as needed (unlike preformed Vitamin A, which can accumulate). It provides antioxidant protection and internal photoprotection.</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Evidence</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Detail</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Photoprotection</td><td style="padding:12px;color:var(--tx2)">Meta-analysis of 7 studies found oral beta-carotene supplementation provided <strong>protection against sunburn</strong> (UV-induced erythema), with effect increasing over 10+ weeks of supplementation.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/18086246/" style="color:var(--mg);text-decoration:none">PubMed 18086246</a> (Stahl & Sies, 2012)</td></tr>
+<tr><td style="padding:12px">Skin health (review)</td><td style="padding:12px;color:var(--tx2)">Carotenoids including beta-carotene accumulate in skin and protect against photodamage through antioxidant mechanisms. Dietary carotenoid intake associated with healthier skin appearance.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/22264449/" style="color:var(--mg);text-decoration:none">PubMed 22264449</a> (Stahl & Sies, 2012)</td></tr>
+</table>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why 6mg:</strong> The ATBC study that raised concerns used 20mg/day in male smokers — over 3× our dose, in a different population. 6mg is within normal dietary intake levels (a large carrot contains ~6-8mg). No UL established for food-form beta-carotene per NIH. Safe, effective, conservative.</p>
+</div>
+</div>
+
+<!-- INGREDIENT 6: B2 -->
+<div class="sec-white">
+<div class="sec">
+<h2 class="h2 mb8">6. Riboflavin / Vitamin B2 — <span style="color:var(--mg)">2mg</span> <span class="body-sm">(154% DV)</span></h2>
+<p class="body mb16">Riboflavin is essential for cellular energy production and plays a direct role in skin cell metabolism. It supports the function of flavoenzymes involved in collagen crosslinking and maintenance.</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Evidence</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Detail</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin metabolism</td><td style="padding:12px;color:var(--tx2)">Riboflavin deficiency causes skin disorders including seborrheic dermatitis, cheilosis, and glossitis. Adequate B2 is required for normal skin cell turnover and repair.</td><td style="padding:12px"><a href="https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/" style="color:var(--mg);text-decoration:none">NIH Office of Dietary Supplements</a></td></tr>
+<tr><td style="padding:12px">Collagen crosslinking</td><td style="padding:12px;color:var(--tx2)">FMN and FAD (riboflavin-dependent coenzymes) are involved in the oxidative reactions necessary for collagen crosslinking — the process that gives collagen its structural strength.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/32935238/" style="color:var(--mg);text-decoration:none">PubMed 32935238</a> (Suwannasom et al., 2020)</td></tr>
+</table>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why 2mg:</strong> RDA is 1.1-1.3mg. We provide 154% DV. No upper limit established (water-soluble — excess is excreted). Riboflavin is one of the safest vitamins.</p>
+</div>
+</div>
+
+<!-- INGREDIENT 7: B5 -->
+<div class="sec-cream">
+<div class="sec">
+<h2 class="h2 mb8">7. Pantothenic Acid / Vitamin B5 (as Calcium D-Pantothenate) — <span style="color:var(--mg)">5mg</span> <span class="body-sm">(100% DV)</span></h2>
+<p class="body mb16">Pantothenic acid is the precursor to coenzyme A (CoA) — one of the most important molecules in cellular metabolism. CoA is essential for fatty acid synthesis and metabolism, directly supporting the skin's lipid barrier.</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Evidence</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Detail</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin barrier</td><td style="padding:12px;color:var(--tx2)">Pantothenic acid supports epidermal barrier function through its role in lipid synthesis. Topical and oral dexpanthenol (B5 derivative) have documented wound healing and barrier repair effects.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/12113650/" style="color:var(--mg);text-decoration:none">PubMed 12113650</a> (Ebner et al., 2002)</td></tr>
+<tr><td style="padding:12px">Wound healing</td><td style="padding:12px;color:var(--tx2)">Supplemental pantothenic acid has been shown to accelerate wound closure and increase fibroblast proliferation in cell culture and animal models.</td><td style="padding:12px"><a href="https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/" style="color:var(--mg);text-decoration:none">NIH Office of Dietary Supplements</a></td></tr>
+</table>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why calcium d-pantothenate:</strong> The most stable and bioavailable salt form of pantothenic acid. 5mg = 100% DV (Adequate Intake). No upper limit established. This is the same B5 used in countless skincare products (as "panthenol") — we deliver it orally for systemic support.</p>
+</div>
+</div>
+
+<!-- INGREDIENT 8: PINE BARK -->
+<div class="sec-white">
+<div class="sec">
+<h2 class="h2 mb8">8. Pine Bark Extract (Pinus pinaster) — <span style="color:var(--mg)">100mg</span></h2>
+<p class="body mb16">Pine bark extract from maritime pine (Pinus pinaster) is rich in procyanidins — powerful polyphenolic antioxidants. It supports microcirculation to the skin and has been studied specifically for skin elasticity and hyperpigmentation.</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Study</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Design</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Result</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin elasticity</td><td style="padding:12px;color:var(--tx2)">RCT, n=62, 12 weeks, pine bark extract supplementation</td><td style="padding:12px"><strong>Significant improvement</strong> in skin elasticity and hydration. Increased hyaluronic acid synthase expression.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/22521476/" style="color:var(--mg);text-decoration:none">PubMed 22521476</a> (Ni et al., 2002)</td></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Photoprotection</td><td style="padding:12px;color:var(--tx2)">Clinical study, oral Pycnogenol® supplementation</td><td style="padding:12px"><strong>Reduced UV-induced skin damage</strong> and decreased melanin content (hyperpigmentation) with 12 weeks supplementation.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/12060837/" style="color:var(--mg);text-decoration:none">PubMed 12060837</a> (Saliou et al., 2001)</td></tr>
+<tr><td style="padding:12px">Antioxidant capacity</td><td style="padding:12px;color:var(--tx2)">Pine bark extract procyanidins have antioxidant capacity 20× greater than Vitamin C and 50× greater than Vitamin E in vitro.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/10468110/" style="color:var(--mg);text-decoration:none">PubMed 10468110</a> (Packer et al., 1999)</td></tr>
+</table>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why 100mg:</strong> Most clinical studies on pine bark extract for skin used 50-150mg/day. Our 100mg dose is within the studied therapeutic range. Pinus pinaster is the same species used to produce Pycnogenol® (the branded version).</p>
+</div>
+</div>
+
+<!-- FAIRY DUSTING COMPARISON -->
+<div class="sec-cream">
 <div class="sec center">
 <h2 class="h2 mb16">Why "clinically studied" matters.</h2>
 <p class="body mx-auto max-600 mb32">Many supplement brands say "clinically studied" while using a fraction of the dose that was actually studied. This is called fairy dusting — adding just enough to put it on the label, not enough for it to do anything.</p>
@@ -579,17 +704,53 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <p class="body-sm mt16">Still write "collagen" on the front. Hidden behind "proprietary blend."</p>
 </div>
 </div>
+<div class="dshea mx-auto max-700 mt24">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Studies referenced are on individual ingredients, not our finished product.</div>
 </div>
 </div>
 
-<div class="footer"><div class="footer-bottom" style="margin-top:0;border-top:none"><p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC.</p></div></div>
+<!-- FULL FOOTER FOR SCIENCE -->
+<div class="footer">
+<div class="footer-grid">
+<div>
+<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
+<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p>
+<p style="font-size:9px;color:#444;margin-top:12px;line-height:1.5;max-width:280px;font-style:italic">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+</div>
+<div>
+<h4>Shop</h4>
+<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
+</div>
+<div>
+<h4>Support</h4>
+<p><a href="#" onclick="showPage('contact');return false">Contact</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
+</div>
+<div>
+<h4>Legal</h4>
+<p><a href="#" onclick="showPage('privacy');return false">Privacy Policy</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms of Service</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
+</div>
+</div>
+<div class="footer-bottom">
+<p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC. All rights reserved.</p>
+<div style="display:flex;gap:16px">
+<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
+<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
+</div>
+</div>
+</div>
 </div><!-- end science -->
 
 <!-- ████████████████████████████████████████████████████████████████ -->
 <!-- ██ OUR STORY ██ -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="story">
-<div class="nav"><div class="logo">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 
 <div class="sec-white">
 <div class="sec center">
@@ -624,14 +785,48 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 </div>
 </div>
 
-<div class="footer"><div class="footer-bottom" style="margin-top:0;border-top:none"><p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC.</p></div></div>
+<div class="footer">
+<div class="footer-grid">
+<div>
+<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
+<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems.<br>For Sensitive Ones LLC · Ohio, USA.</p>
+<p style="font-size:9px;color:#444;margin-top:12px;line-height:1.5;max-width:280px;font-style:italic">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+</div>
+<div>
+<h4>Shop</h4>
+<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
+</div>
+<div>
+<h4>Support</h4>
+<p><a href="#" onclick="showPage('contact');return false">Contact</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
+</div>
+<div>
+<h4>Legal</h4>
+<p><a href="#" onclick="showPage('privacy');return false">Privacy Policy</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms of Service</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
+</div>
+</div>
+<div class="footer-bottom">
+<p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC. All rights reserved.</p>
+<div style="display:flex;gap:16px">
+<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
+<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
+</div>
+</div>
+</div>
 </div><!-- end story -->
 
 <!-- ████████████████████████████████████████████████████████████████ -->
 <!-- ██ FAQ ██ -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="faq">
-<div class="nav"><div class="logo">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 
 <div class="sec-white">
 <div class="sec max-700 mx-auto">
@@ -665,14 +860,48 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 </div>
 </div>
 
-<div class="footer"><div class="footer-bottom" style="margin-top:0;border-top:none"><p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC.</p></div></div>
+<div class="footer">
+<div class="footer-grid">
+<div>
+<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
+<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems.<br>For Sensitive Ones LLC · Ohio, USA.</p>
+<p style="font-size:9px;color:#444;margin-top:12px;line-height:1.5;max-width:280px;font-style:italic">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+</div>
+<div>
+<h4>Shop</h4>
+<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
+</div>
+<div>
+<h4>Support</h4>
+<p><a href="#" onclick="showPage('contact');return false">Contact</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
+</div>
+<div>
+<h4>Legal</h4>
+<p><a href="#" onclick="showPage('privacy');return false">Privacy Policy</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms of Service</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
+</div>
+</div>
+<div class="footer-bottom">
+<p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC. All rights reserved.</p>
+<div style="display:flex;gap:16px">
+<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
+<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
+</div>
+</div>
+</div>
 </div><!-- end faq -->
 
 <!-- ████████████████████████████████████████████████████████████████ -->
 <!-- ██ CONTACT ██ -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="contact">
-<div class="nav"><div class="logo">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 <div class="legal">
 <h1>Contact us.</h1>
 <p class="updated">We'd love to hear from you.</p>
@@ -688,7 +917,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <!-- ██ PRIVACY POLICY ██ -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="privacy">
-<div class="nav"><div class="logo">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 <div class="legal">
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: April 13, 2026</p>
@@ -728,7 +957,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <!-- ██ TERMS OF SERVICE ██ -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="terms">
-<div class="nav"><div class="logo">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 <div class="legal">
 <h1>Terms of Service</h1>
 <p class="updated">Last updated: April 13, 2026</p>
@@ -754,7 +983,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <!-- ██ SHIPPING ██ -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="shipping">
-<div class="nav"><div class="logo">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 <div class="legal">
 <h1>Shipping Policy</h1>
 <p class="updated">Last updated: April 13, 2026</p>
@@ -775,7 +1004,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <!-- ██ REFUND ██ -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="refund">
-<div class="nav"><div class="logo">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 <div class="legal">
 <h1>Refund & Return Policy</h1>
 <p class="updated">Last updated: April 13, 2026</p>
@@ -796,7 +1025,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <!-- ██ ACCESSIBILITY ██ -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="accessibility">
-<div class="nav"><div class="logo">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 <div class="legal">
 <h1>Accessibility Statement</h1>
 <p class="updated">Last updated: April 13, 2026</p>
