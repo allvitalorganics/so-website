@@ -244,6 +244,55 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 .source-arrow{text-align:center;font-size:24px;color:var(--mg)}
 @media(max-width:600px){.source-arrow{transform:rotate(90deg);padding:16px 0}}
 .source-card{background:#fff;border:1px solid #eee;border-radius:12px;padding:24px;text-align:center}
+
+/* === V2.1 NEW: COMPARE VS (instant pattern-match) === */
+.compare-vs{background:#fff;border:1px solid #eee;border-radius:16px;overflow:hidden;max-width:900px;margin:0 auto;text-align:left}
+.compare-vs-head{display:grid;grid-template-columns:1.4fr 1fr 1fr;background:#f8f6f3;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--tx3)}
+.compare-vs-head > div{padding:16px}
+.compare-vs-head .col-us{background:var(--mg);color:#fff}
+.compare-vs-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid #f0f0f0;font-size:13px}
+.compare-vs-row > div{padding:18px 16px;display:flex;align-items:center}
+.compare-vs-row .col-label{font-weight:700;color:var(--bk)}
+.compare-vs-row .col-them{color:var(--tx3)}
+.compare-vs-row .col-us{background:var(--mg-soft);color:var(--bk);font-weight:700}
+.compare-vs-row .col-us:before{content:"✓ ";color:var(--mg);margin-right:6px;font-weight:800;flex-shrink:0}
+.compare-vs-row .col-them:before{content:"✗ ";color:var(--tx3);margin-right:6px;flex-shrink:0}
+@media(max-width:600px){.compare-vs-head,.compare-vs-row{grid-template-columns:1.2fr 1fr 1fr;font-size:11px}.compare-vs-head > div,.compare-vs-row > div{padding:10px 8px}}
+
+/* === V2.1 NEW: ANATOMY (dual-cap visual) === */
+.anatomy{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+@media(max-width:768px){.anatomy{grid-template-columns:1fr}}
+.anatomy-viz{background:linear-gradient(160deg,var(--mg-soft) 0%,#fff 100%);border:1px solid rgba(184,37,90,.15);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:8px}
+.anatomy-part{background:#fff;border:1px solid #eee;border-radius:12px;padding:14px 18px;position:relative}
+.anatomy-part-tag{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mg);margin-bottom:4px}
+.anatomy-part-name{font-size:14px;color:var(--bk);font-weight:700;margin-bottom:4px}
+.anatomy-part-detail{font-size:11px;color:var(--tx2);line-height:1.55}
+.anatomy-arrow{text-align:center;color:var(--mg);font-size:16px;line-height:1;margin:-2px 0;font-weight:700}
+.anatomy-stamp{background:var(--mg);color:#fff;text-align:center;padding:14px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:6px}
+
+/* === V2.1 NEW: AT A GLANCE === */
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--bk);border-radius:16px;overflow:hidden;color:#fff;max-width:900px;margin:0 auto}
+@media(max-width:768px){.glance{grid-template-columns:repeat(2,1fr)}}
+.glance > div{padding:24px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.glance > div:nth-child(4n){border-right:none}
+@media(max-width:768px){.glance > div:nth-child(2n){border-right:none}}
+.glance-n{font-family:'Times New Roman',Georgia,serif;font-size:32px;line-height:1;letter-spacing:-.5px;margin-bottom:6px;color:#fff}
+.glance-l{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;opacity:.7;line-height:1.4;color:#fff}
+
+/* === V2.1 NEW: ICON BADGES === */
+.badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;align-items:center}
+.badge-lg{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid #e8e4dd;border-radius:100px;background:#fff;font-size:11px;color:var(--tx);letter-spacing:.3px;font-weight:600}
+.badge-lg .dot{width:6px;height:6px;background:var(--mg);border-radius:50%;flex-shrink:0}
+
+/* === V2.1 NEW: 3-STEP ICONS === */
+.steps-icons{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;align-items:start}
+@media(max-width:600px){.steps-icons{grid-template-columns:1fr}}
+.step-ico{text-align:center;padding:0 12px;position:relative}
+.step-ico:not(:last-child):after{content:"→";position:absolute;right:-12px;top:18px;color:var(--mg);font-size:18px}
+@media(max-width:600px){.step-ico:not(:last-child):after{display:none}}
+.step-ico-num{font-family:'Times New Roman',Georgia,serif;font-size:42px;color:var(--mg);line-height:1;letter-spacing:-1px}
+.step-ico-name{font-weight:700;font-size:13px;color:var(--bk);margin:8px 0 4px}
+.step-ico-detail{font-size:11px;color:var(--tx3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -284,79 +333,93 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 
 <!-- HERO -->
 <div class="sec-white" style="padding:0">
-<div style="max-width:1100px;margin:0 auto;padding:90px 48px 70px">
+<div style="max-width:1100px;margin:0 auto;padding:90px 48px 56px">
 <div class="g2">
 <div>
 <p class="eyebrow mb16">sensitive ones</p>
 <h1 class="h1 mb16">Inner care for<br>sensitive problems.</h1>
-<p class="body-lg mb24" style="max-width:460px">A supplement brand that publishes everything. Every ingredient. Every dose. Every source. No proprietary blends. No hidden formulas.</p>
+<p class="body-lg mb24" style="max-width:460px">A supplement brand that publishes everything. Every active. Every dose. Every source.</p>
 <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
 <a class="btn btn-mg btn-lg" href="#" onclick="showPage('pdp');return false">Shop Skin Support</a>
 <a class="btn btn-outline" href="#" onclick="showPage('science');return false">See the science</a>
 </div>
-<p class="caption mt16">First product · Skin Support · Launching September 2026</p>
+<p class="caption mt16">First product · Launching September 2026</p>
 </div>
 <div class="img-placeholder img-hero">[BRAND HERO — product + brand identity]</div>
 </div>
 </div>
 </div>
 
-<!-- TRUST BAR -->
-<div class="sec-cream" style="padding:20px 48px">
-<div style="max-width:1100px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap">
-<span class="caption" style="color:var(--tx2)">✓ Every dose published</span>
-<span class="caption" style="color:var(--tx2)">✓ No proprietary blends</span>
-<span class="caption" style="color:var(--tx2)">✓ Clinically studied doses</span>
-<span class="caption" style="color:var(--tx2)">✓ GMP manufactured</span>
-<span class="caption" style="color:var(--tx2)">✓ Third-party tested</span>
+<!-- TRUST BADGES -->
+<div class="sec-cream" style="padding:24px 24px">
+<div class="badges" style="max-width:1100px;margin:0 auto">
+<span class="badge-lg"><span class="dot"></span>FDA registered</span>
+<span class="badge-lg"><span class="dot"></span>HACCP approved</span>
+<span class="badge-lg"><span class="dot"></span>GMP certified</span>
+<span class="badge-lg"><span class="dot"></span>Third-party tested</span>
+<span class="badge-lg"><span class="dot"></span>Every dose published</span>
 </div>
 </div>
 
-<!-- BRAND POSITIONING -->
-<div class="sec-white">
-<div class="sec center">
-<p class="eyebrow mb12">What we are</p>
-<h2 class="h2 mb24 mx-auto max-700">A supplement brand built on transparency, not optimization.</h2>
-<p class="body-lg mx-auto max-700 mb40">The wellness industry sells stacks. Routines. Optimization. We make a different argument: the most powerful thing a supplement brand can do is publish exactly what's inside, at the dose the studies actually used. Skin Support is the first product. The standard applies to everything we make next.</p>
-<div class="g3">
-<div>
-<p class="big-n">7</p>
-<p class="body-sm mt8">active ingredients<br>Every dose printed on the label</p>
+<!-- AT A GLANCE — 4 stats in dark panel -->
+<div class="sec-white" style="padding:56px 48px">
+<div style="max-width:1100px;margin:0 auto">
+<div class="center mb32">
+<p class="eyebrow mb12">At a glance</p>
+<h2 class="h2 mx-auto max-700">A supplement brand built on transparency, not optimization.</h2>
 </div>
-<div>
-<p class="big-n">0</p>
-<p class="body-sm mt8">proprietary blends<br>No "complex" hiding doses behind asterisks</p>
-</div>
-<div>
-<p class="big-n">5</p>
-<p class="body-sm mt8">future products planned<br>Same standard. Same disclosure rules.</p>
-</div>
+<div class="glance">
+<div><p class="glance-n">7</p><p class="glance-l">Active ingredients</p></div>
+<div><p class="glance-n">0</p><p class="glance-l">Proprietary blends</p></div>
+<div><p class="glance-n">28</p><p class="glance-l">Units per box</p></div>
+<div><p class="glance-n">$2.46</p><p class="glance-l">Per day · subscription</p></div>
 </div>
 </div>
 </div>
 
-<!-- THE PROBLEM -->
+<!-- THE PROBLEM — instant-scan comparison table -->
 <div class="sec-cream">
 <div class="sec center">
-<p class="eyebrow mb12">The problem</p>
-<h2 class="h2 mb24 mx-auto max-700">Most collagen supplements don't tell you how much is actually inside.</h2>
-<div class="g3">
-<div class="card">
-<p style="font-size:36px;font-weight:800;color:var(--mg)">46%</p>
-<p class="body-sm mt16">of supplements tested in independent analyses contain less than the labeled dose, or contain undisclosed adulterants.</p>
-<p class="caption mt16" style="color:var(--tx3)">Cohen PA. <em>J Clin Pharmacol</em>. 2016;56(12):1451-1457</p>
+<p class="eyebrow mb12">The problem, on one page</p>
+<h2 class="h2 mb32 mx-auto max-700">Most collagen supplements hide what's inside. We don't.</h2>
+<div class="compare-vs">
+<div class="compare-vs-head">
+<div>What you're comparing</div>
+<div>Industry standard</div>
+<div class="col-us">sensitive ones</div>
 </div>
-<div class="card">
-<p style="font-size:36px;font-weight:800;color:var(--mg)">50mg</p>
-<p class="body-sm mt16">Some brands add as little as 50mg of collagen and still write "collagen" on the front of the bottle. The clinical studies use 100× that amount.</p>
-<p class="caption mt16" style="color:var(--tx3)">Industry practice known as "fairy dusting"</p>
+<div class="compare-vs-row">
+<div class="col-label">Dose disclosure</div>
+<div class="col-them">Proprietary blend (hidden)</div>
+<div class="col-us">Every dose on the label</div>
 </div>
-<div class="card">
-<p style="font-size:36px;font-weight:800;color:var(--mg)">?</p>
-<p class="body-sm mt16">"Proprietary blend" is a legal way to list ingredients without disclosing individual amounts.</p>
-<p class="caption mt16" style="color:var(--tx3)">21 CFR 101.36 allows this labeling</p>
+<div class="compare-vs-row">
+<div class="col-label">Verisol® collagen amount</div>
+<div class="col-them">As little as 50–500mg</div>
+<div class="col-us">5,000mg · highest studied</div>
+</div>
+<div class="compare-vs-row">
+<div class="col-label">Number of actives</div>
+<div class="col-them">Often 1 (collagen alone)</div>
+<div class="col-us">7 · complete skin stack</div>
+</div>
+<div class="compare-vs-row">
+<div class="col-label">Format</div>
+<div class="col-them">Powder + scoop + blender</div>
+<div class="col-us">Dual-cap · under 30 sec</div>
+</div>
+<div class="compare-vs-row">
+<div class="col-label">Manufacturing</div>
+<div class="col-them">Often unspecified</div>
+<div class="col-us">FDA + HACCP + GMP</div>
+</div>
+<div class="compare-vs-row">
+<div class="col-label">Lab testing</div>
+<div class="col-them">Variable, often absent</div>
+<div class="col-us">Every lot · third-party</div>
 </div>
 </div>
+<p class="caption mt16" style="color:var(--tx3);max-width:700px;margin:16px auto 0">Independent testing has found 46% of supplements deliver less than labeled. <a href="https://pubmed.ncbi.nlm.nih.gov/27302420/" style="color:var(--mg);text-decoration:none">Cohen PA · <em>J Clin Pharmacol</em> 2016</a></p>
 </div>
 </div>
 
@@ -367,19 +430,58 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <p class="moment-cite">2026 industry signal · proprietary blend backlash intensifying</p>
 </div>
 
-<!-- THE SOLUTION -->
+<!-- THE SOLUTION — anatomy diagram -->
 <div class="sec-white">
 <div class="sec">
-<div class="g2">
-<div class="img-placeholder img-hero">[DUAL-CAP CLOSE-UP]</div>
+<div class="anatomy">
 <div>
-<p class="eyebrow mb12">The solution</p>
-<h2 class="h2 mb16">One unit. Under 30 seconds. Every morning.</h2>
-<p class="body mb16">Skin Support is a dual-cap format. A 25ml pineapple-flavored liquid shot with 2 tablets sealed in one unit. Twist open. Take the tablets. Drink the shot. Done.</p>
-<p class="body mb16"><strong style="color:var(--bk)">No water. No scoop. No blender. No measuring.</strong></p>
-<p class="body mb24">7 active ingredients. Every dose on the label. Backed by published research, not marketing.</p>
+<p class="eyebrow mb12">The format</p>
+<h2 class="h2 mb16">One unit. Two delivery systems. Under 30 seconds.</h2>
+<p class="body mb16">Each unit is a dual-cap. The cap holds two compressed tablets. The bottle holds a 25ml pineapple-flavored liquid shot. Twist, tablets, shot. Done.</p>
+<p class="body mb24"><strong style="color:var(--bk)">No water. No scoop. No blender. No measuring.</strong></p>
 <a class="btn btn-mg" href="#" onclick="showPage('pdp');return false">Shop Skin Support</a>
-<div class="dshea">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
+<div class="dshea">*This statement has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
+</div>
+<div class="anatomy-viz">
+<div class="anatomy-part">
+<p class="anatomy-part-tag">Cap · holds tablets</p>
+<p class="anatomy-part-name">2 stable tablets</p>
+<p class="anatomy-part-detail">Vitamin E (30mg) · Beta-Carotene (6mg) · Riboflavin B2 (2mg) · Pantothenic Acid B5 (5mg)</p>
+</div>
+<div class="anatomy-arrow">+</div>
+<div class="anatomy-part">
+<p class="anatomy-part-tag">Bottle · liquid shot</p>
+<p class="anatomy-part-name">25ml pineapple shot</p>
+<p class="anatomy-part-detail">Verisol® Collagen (5,000mg) · Hyaluronic Acid (120mg) · Vitamin C (200mg)</p>
+</div>
+<div class="anatomy-stamp">1 unit · under 30 seconds · daily</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 3-STEP HOW IT WORKS (replacing text-heavy explanation) -->
+<div class="sec-cream">
+<div class="sec">
+<div class="center mb40">
+<p class="eyebrow mb12">How it lands</p>
+<h2 class="h2 mb16">Cap. Tablets. Shot. Done.</h2>
+</div>
+<div class="steps-icons">
+<div class="step-ico">
+<p class="step-ico-num">1</p>
+<p class="step-ico-name">Twist open</p>
+<p class="step-ico-detail">Tablets sit in the cap. Sealed until you open it.</p>
+</div>
+<div class="step-ico">
+<p class="step-ico-num">2</p>
+<p class="step-ico-name">Take tablets</p>
+<p class="step-ico-detail">Fat-soluble + skin-barrier nutrients · most stable as tablets.</p>
+</div>
+<div class="step-ico">
+<p class="step-ico-num">3</p>
+<p class="step-ico-name">Drink shot</p>
+<p class="step-ico-detail">Collagen + HA + Vitamin C · most absorbable as liquid.</p>
 </div>
 </div>
 </div>
@@ -775,8 +877,8 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <div class="source-grid">
 <div class="source-card">
 <p class="eyebrow mb8" style="color:var(--mg)">Manufacture</p>
-<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:6px">NaturalWay · Korea</p>
-<p class="body-sm">cGMP-certified facility · 20+ years OEM experience · the only dual-cap line in Korea</p>
+<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:6px">FDA-registered · HACCP-approved · GMP-certified</p>
+<p class="body-sm">Korean facility · 20+ years dietary supplement OEM · third-party tested by lot</p>
 </div>
 <div class="source-arrow">→</div>
 <div class="source-card">
@@ -1309,7 +1411,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Is Skin Support safe?</div><div class="faq-a">Manufactured under GMP (Good Manufacturing Practice) standards. All ingredients are at doses within established safe intake levels per the NIH Office of Dietary Supplements. As with any supplement, consult your healthcare provider before starting — especially if you are pregnant, nursing, or taking medication.</div></div>
 <div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Does Skin Support contain allergens?</div><div class="faq-a">The collagen in Skin Support may be derived from fish. If you have a fish allergy, please check the allergen statement on the label or contact us before purchasing. Skin Support is free from gluten, dairy, soy, and artificial colors.</div></div>
 <div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Is sensitive ones FDA approved?</div><div class="faq-a">The FDA does not approve dietary supplements. All US dietary supplements must comply with FDA regulations including cGMP (21 CFR Part 111), proper labeling (21 CFR 101.36), and truthful advertising. We comply with all applicable FDA regulations.</div></div>
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Where is Skin Support manufactured?</div><div class="faq-a">In Korea by a GMP-certified facility (NaturalWay), shipped to the US under KORUS FTA Certificate of Origin. Tested for identity, potency, and purity before sale.</div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Where is Skin Support manufactured?</div><div class="faq-a">In Korea at an FDA-registered, HACCP-approved, GMP-certified facility, shipped to the US under KORUS FTA Certificate of Origin. Every production lot is tested for identity, potency, heavy metals, and microbial contamination before sale.</div></div>
 
 <h3 class="h3 mt32 mb16" style="color:var(--mg);font-size:14px;text-transform:uppercase;letter-spacing:2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">Subscription + Returns</h3>
 <div class="faq"><div class="faq-q" onclick="toggleFaq(this)">How does the subscription work?</div><div class="faq-a">Receive a fresh box of 28 units every month at $69 (30% off the $99 one-time price). Free shipping on subscriptions. Skip a month, pause, or cancel anytime in your account — no contracts, no penalties.</div></div>
