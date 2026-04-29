@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>sensitive ones — Skin Support</title>
+<title>sensitive ones — Inner care for sensitive problems</title>
+<meta name="description" content="Sensitive Ones publishes everything. Every ingredient. Every dose. Every source. No proprietary blends. Skin Support is our first product. The standard applies to everything we make next.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--mg:#B8255A;--bk:#0D0D0D;--wh:#FFFFFF;--cream:#FAF8F6;--lt:#F2F0ED;--tx:#333;--tx2:#666;--tx3:#999}
-body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh);color:var(--tx);margin:0;-webkit-font-smoothing:antialiased}
+:root{--mg:#B8255A;--mg-dk:#9e1d47;--mg-soft:#FFF0F3;--bk:#0D0D0D;--wh:#FFFFFF;--cream:#FAF8F6;--lt:#F2F0ED;--tx:#333;--tx2:#666;--tx3:#999;--tx4:#bbb;--ok:#2d7a4f;--warn:#c46a1e}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh);color:var(--tx);margin:0;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 
-/* === NAV TABS (page switcher) === */
+/* === DEV PAGE TABS === */
 .page-tabs{position:sticky;top:0;z-index:9999;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid #eee;padding:6px 16px;display:flex;gap:2px;flex-wrap:wrap}
 .ptab{padding:5px 10px;border-radius:100px;font-size:8px;font-weight:700;cursor:pointer;border:1px solid #ddd;color:#999;transition:.12s;letter-spacing:.3px;text-transform:uppercase}
 .ptab:hover{border-color:var(--mg);color:var(--mg)}
@@ -19,14 +20,14 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 /* === SITE NAV === */
 .nav{background:var(--wh);border-bottom:1px solid #f0f0f0;padding:16px 48px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:36px;z-index:999}
 .nav .logo{font-family:'Times New Roman',Georgia,serif;font-size:16px;letter-spacing:2px;color:var(--bk);font-weight:400;text-transform:lowercase;font-style:italic}
-.nav .links{display:flex;gap:28px;align-items:center}
+.nav .links{display:flex;gap:24px;align-items:center}
 .nav .links a{font-size:11px;color:var(--tx2);text-decoration:none;letter-spacing:.5px;transition:color .15s}
 .nav .links a:hover{color:var(--mg)}
 .nav .cta-nav{background:var(--mg);color:#fff;padding:8px 20px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.5px;text-decoration:none;transition:background .15s}
-.nav .cta-nav:hover{background:#9e1d47}
+.nav .cta-nav:hover{background:var(--mg-dk)}
 .nav .hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:4px;background:none;border:none}
 .nav .hamburger span{display:block;width:20px;height:2px;background:var(--bk);border-radius:2px;transition:transform .2s}
-@media(max-width:768px){
+@media(max-width:900px){
 .nav{padding:12px 20px}
 .nav .hamburger{display:flex}
 .nav .links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:16px 20px;gap:0;border-bottom:1px solid #eee;box-shadow:0 4px 12px rgba(0,0,0,.06)}
@@ -42,36 +43,49 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 /* === SECTIONS === */
 .sec{padding:80px 48px;max-width:1100px;margin:0 auto}
 @media(max-width:768px){.sec{padding:48px 20px}}
+.sec-tight{padding:48px 48px}
 .sec-white{background:var(--wh)}
 .sec-cream{background:var(--cream)}
 .sec-mg{background:var(--mg);color:#fff}
 .sec-dark{background:var(--bk);color:#fff}
+.sec-soft{background:var(--mg-soft)}
 
 /* === TYPOGRAPHY === */
-.h1{font-family:'Times New Roman',Georgia,serif;font-size:48px;font-weight:400;line-height:1.15;letter-spacing:-.5px;color:var(--bk)}
-.h2{font-family:'Times New Roman',Georgia,serif;font-size:36px;font-weight:400;line-height:1.2;letter-spacing:-.3px;color:var(--bk)}
+.h1{font-family:'Times New Roman',Georgia,serif;font-size:52px;font-weight:400;line-height:1.1;letter-spacing:-.6px;color:var(--bk)}
+.h2{font-family:'Times New Roman',Georgia,serif;font-size:38px;font-weight:400;line-height:1.18;letter-spacing:-.4px;color:var(--bk)}
 .h3{font-family:'Times New Roman',Georgia,serif;font-size:24px;font-weight:400;line-height:1.3}
-.h4{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mg);margin-bottom:8px}
-.body{font-size:15px;line-height:1.7;color:var(--tx2)}
-.body-sm{font-size:13px;line-height:1.6;color:var(--tx3)}
+.h4{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mg);margin-bottom:8px}
+.body{font-size:15px;line-height:1.75;color:var(--tx2)}
+.body-lg{font-size:17px;line-height:1.7;color:var(--tx)}
+.body-sm{font-size:13px;line-height:1.65;color:var(--tx3)}
 .caption{font-size:10px;color:var(--tx3);letter-spacing:.3px}
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--mg)}
+@media(max-width:768px){.h1{font-size:36px}.h2{font-size:28px}.h3{font-size:20px}}
 
 /* === BUTTONS === */
 .btn{display:inline-block;padding:14px 36px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:.5px;text-decoration:none;transition:all .15s;cursor:pointer;border:none}
-.btn-mg{background:var(--mg);color:#fff}.btn-mg:hover{background:#9e1d47}
+.btn-mg{background:var(--mg);color:#fff}.btn-mg:hover{background:var(--mg-dk)}
 .btn-outline{background:transparent;border:1.5px solid var(--bk);color:var(--bk)}.btn-outline:hover{background:var(--bk);color:#fff}
 .btn-white{background:#fff;color:var(--mg)}.btn-white:hover{background:#f5f5f5}
+.btn-ghost{background:transparent;color:var(--mg);border:1.5px solid var(--mg)}.btn-ghost:hover{background:var(--mg);color:#fff}
+.btn-lg{padding:18px 44px;font-size:13px}
+.btn-sm{padding:10px 22px;font-size:10px}
 
 /* === GRID === */
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.g2-tight{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
 .g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px}
-@media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+@media(max-width:768px){.g2,.g2-tight,.g3,.g4,.g5{grid-template-columns:1fr}}
+@media(max-width:1024px){.g4{grid-template-columns:1fr 1fr}.g5{grid-template-columns:1fr 1fr}}
 
 /* === CARDS === */
 .card{background:var(--cream);border-radius:12px;padding:32px;text-align:center}
 .card-white{background:#fff;border:1px solid #eee;border-radius:12px;padding:32px}
 .card-mg{background:rgba(184,37,90,.04);border:1px solid rgba(184,37,90,.12);border-radius:12px;padding:24px}
+.card-dark{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:12px;padding:28px;color:#fff}
+.card-tight{padding:20px}
 
 /* === INGREDIENT ROW === */
 .ingr{display:flex;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid #f0f0f0}
@@ -103,7 +117,7 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 .footer h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mg);margin-bottom:12px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1100px;margin:0 auto}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
-.footer-bottom{border-top:1px solid #222;padding-top:20px;margin-top:40px;max-width:1100px;margin-left:auto;margin-right:auto;display:flex;justify-content:space-between;align-items:center}
+.footer-bottom{border-top:1px solid #222;padding-top:20px;margin-top:40px;max-width:1100px;margin-left:auto;margin-right:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 
 /* === LEGAL PAGES === */
 .legal{max-width:720px;margin:0 auto;padding:60px 48px 80px}
@@ -115,31 +129,134 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 .legal li{font-size:13px;line-height:1.7;color:var(--tx2);margin-bottom:4px}
 
 /* === DSHEA DISCLAIMER === */
-.dshea{background:#FFF9FB;border:1px solid rgba(184,37,90,.1);border-radius:8px;padding:12px 16px;font-size:10px;color:var(--tx3);font-style:italic;margin-top:16px;line-height:1.5}
+.dshea{background:var(--mg-soft);border:1px solid rgba(184,37,90,.1);border-radius:8px;padding:12px 16px;font-size:10px;color:var(--tx3);font-style:italic;margin-top:16px;line-height:1.5}
 
 /* === UTILS === */
 .center{text-align:center}
-.mb8{margin-bottom:8px}.mb16{margin-bottom:16px}.mb24{margin-bottom:24px}.mb32{margin-bottom:32px}.mb48{margin-bottom:48px}
-.mt16{margin-top:16px}.mt24{margin-top:24px}.mt32{margin-top:32px}
+.mb4{margin-bottom:4px}.mb8{margin-bottom:8px}.mb12{margin-bottom:12px}.mb16{margin-bottom:16px}.mb24{margin-bottom:24px}.mb32{margin-bottom:32px}.mb40{margin-bottom:40px}.mb48{margin-bottom:48px}
+.mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt32{margin-top:32px}.mt40{margin-top:40px}.mt48{margin-top:48px}
 .mx-auto{margin-left:auto;margin-right:auto}
+.max-500{max-width:500px}
 .max-600{max-width:600px}
 .max-700{max-width:700px}
 .max-800{max-width:800px}
 
-/* === PRODUCT IMAGE PLACEHOLDER === */
-.img-placeholder{background:linear-gradient(135deg,#FAF0F3,#F5E6EB);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--mg);font-size:11px;letter-spacing:1px;font-weight:600;min-height:300px}
-.img-hero{min-height:400px}
+/* === IMAGE PLACEHOLDER === */
+.img-placeholder{background:linear-gradient(135deg,#FAF0F3,#F5E6EB);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--mg);font-size:11px;letter-spacing:1px;font-weight:600;min-height:300px;text-align:center;padding:16px}
+.img-hero{min-height:480px}
 .img-sm{min-height:200px}
+.img-tall{min-height:560px}
+
+/* === V2 NEW: TABLES === */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+.tbl th{padding:12px 14px;text-align:left;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tx3);font-weight:700;border-bottom:1px solid #ddd}
+.tbl td{padding:12px 14px;color:var(--tx2);border-bottom:1px solid #eee;vertical-align:top}
+.tbl td strong{color:var(--bk)}
+.tbl a{color:var(--mg);text-decoration:none}
+.tbl a:hover{text-decoration:underline}
+.tbl tr:last-child td{border-bottom:none}
+
+/* === V2 NEW: BAR CHART === */
+.bar-row{display:grid;grid-template-columns:160px 1fr 80px;gap:12px;align-items:center;padding:8px 0;font-size:12px}
+.bar-label{font-weight:600;color:var(--bk)}
+.bar-track{height:18px;background:#f0eeea;border-radius:100px;position:relative;overflow:hidden}
+.bar-fill{height:100%;background:var(--mg);border-radius:100px;transition:width .8s ease}
+.bar-fill.dim{background:#bbb}
+.bar-fill.success{background:var(--ok)}
+.bar-value{font-weight:700;color:var(--mg);text-align:right}
+.bar-value.dim{color:var(--tx3)}
+@media(max-width:600px){.bar-row{grid-template-columns:100px 1fr 60px;gap:8px;font-size:11px}}
+
+/* === V2 NEW: STAT === */
+.stat{padding:24px;text-align:center;border-radius:12px;background:#fff;border:1px solid #eee}
+.stat .n{font-family:'Times New Roman',Georgia,serif;font-size:42px;color:var(--mg);line-height:1;letter-spacing:-1px}
+.stat .l{font-size:11px;color:var(--tx3);margin-top:8px;letter-spacing:.5px;line-height:1.4}
+.stat-cream{background:var(--cream);border:none}
+
+/* === V2 NEW: SKU PIPELINE === */
+.sku-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:stretch}
+@media(max-width:1024px){.sku-flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.sku-flow{grid-template-columns:1fr}}
+.sku-card{background:#fff;border:1px solid #eee;border-radius:12px;padding:20px 18px;position:relative;display:flex;flex-direction:column}
+.sku-card.now{border-color:var(--mg);border-width:2px;background:var(--mg-soft)}
+.sku-card.next{border-color:#bbb;border-style:dashed}
+.sku-card.future{opacity:.7}
+.sku-num{font-family:'Times New Roman',Georgia,serif;font-size:32px;color:var(--mg);line-height:1;margin-bottom:8px}
+.sku-num.dim{color:var(--tx3)}
+.sku-tag{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:100px;display:inline-block;margin-bottom:8px}
+.sku-tag.now{background:var(--mg);color:#fff}
+.sku-tag.next{background:#fff;color:var(--mg);border:1px solid var(--mg)}
+.sku-tag.future{background:#eee;color:var(--tx2)}
+.sku-name{font-family:'Times New Roman',Georgia,serif;font-size:18px;color:var(--bk);margin-bottom:4px;line-height:1.2}
+.sku-when{font-size:10px;color:var(--tx3);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px;font-weight:700}
+.sku-desc{font-size:11px;color:var(--tx2);line-height:1.6}
+
+/* === V2 NEW: STANDARD CARD === */
+.standard-card{background:#fff;border:1px solid #eee;border-radius:12px;padding:28px;height:100%;display:flex;flex-direction:column;gap:8px}
+.standard-num{font-family:'Times New Roman',Georgia,serif;font-size:36px;color:var(--mg);line-height:1;letter-spacing:-1px}
+.standard-title{font-weight:700;font-size:15px;color:var(--bk)}
+.standard-rule{font-size:13px;color:var(--tx2);line-height:1.6}
+
+/* === V2 NEW: COMPARE TABLE === */
+.compare{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:0;background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden;font-size:12px}
+.compare > div{padding:14px 16px;border-bottom:1px solid #f0f0f0}
+.compare > div:nth-child(3n){border-right:none}
+.compare > div:nth-child(3n+2){background:var(--mg-soft)}
+.compare-head{background:#f8f6f3 !important;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--tx3)}
+.compare-head.us{background:var(--mg) !important;color:#fff !important}
+@media(max-width:600px){.compare{grid-template-columns:1fr 1fr 1fr;font-size:10px}.compare > div{padding:8px 10px}}
+
+/* === V2 NEW: TIMELINE === */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;position:relative}
+.timeline:before{content:'';position:absolute;top:32px;left:6%;right:6%;height:2px;background:linear-gradient(to right,var(--mg),#ddd);z-index:0}
+@media(max-width:768px){.timeline{grid-template-columns:1fr 1fr}.timeline:before{display:none}}
+.timeline-step{background:#fff;border:1px solid #eee;border-radius:12px;padding:20px 16px;text-align:center;position:relative;z-index:1}
+.timeline-dot{width:12px;height:12px;background:var(--mg);border-radius:50%;margin:0 auto 8px;border:3px solid #fff;box-shadow:0 0 0 1px var(--mg)}
+.timeline-when{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mg);margin-bottom:6px}
+.timeline-what{font-size:13px;color:var(--bk);font-weight:700;margin-bottom:4px}
+.timeline-detail{font-size:11px;color:var(--tx3);line-height:1.5}
+
+/* === V2 NEW: BIG NUMBER === */
+.big-n{font-family:'Times New Roman',Georgia,serif;font-size:96px;color:var(--mg);line-height:1;letter-spacing:-3px}
+@media(max-width:600px){.big-n{font-size:64px}}
+
+/* === V2 NEW: CULTURAL MOMENT BANNER === */
+.moment{background:linear-gradient(135deg,#1a1a1a,#0a0a0a);color:#fff;padding:60px 48px;border-radius:0;text-align:center}
+.moment .h2{color:#fff}
+.moment .body{color:var(--tx4)}
+.moment-quote{font-family:'Times New Roman',Georgia,serif;font-size:30px;line-height:1.3;color:#fff;font-style:italic;letter-spacing:-.3px;max-width:780px;margin:0 auto}
+.moment-cite{font-size:10px;color:var(--tx3);margin-top:16px;letter-spacing:1px;text-transform:uppercase;font-weight:700}
+
+/* === V2 NEW: LIST CHECK === */
+.checks{list-style:none;padding:0}
+.checks li{padding:8px 0 8px 24px;position:relative;font-size:13px;color:var(--tx2);line-height:1.6}
+.checks li:before{content:'✓';position:absolute;left:0;color:var(--mg);font-weight:700}
+
+/* === V2 NEW: EMAIL CAPTURE === */
+.capture{display:flex;gap:8px;max-width:480px;margin:0 auto}
+.capture input{flex:1;padding:14px 18px;border:1px solid #ddd;border-radius:100px;font-size:13px;outline:none;background:#fff;font-family:inherit}
+.capture input:focus{border-color:var(--mg)}
+@media(max-width:600px){.capture{flex-direction:column}.capture input{border-radius:8px}.capture .btn{border-radius:8px}}
+
+/* === V2 NEW: SOURCING MAP === */
+.source-grid{display:grid;grid-template-columns:1fr 40px 1fr;gap:0;align-items:center}
+@media(max-width:600px){.source-grid{grid-template-columns:1fr}}
+.source-arrow{text-align:center;font-size:24px;color:var(--mg)}
+@media(max-width:600px){.source-arrow{transform:rotate(90deg);padding:16px 0}}
+.source-card{background:#fff;border:1px solid #eee;border-radius:12px;padding:24px;text-align:center}
 </style>
 </head>
 <body>
 
-<!-- ========== PAGE TABS ========== -->
+<!-- ========== DEV PAGE TABS ========== -->
 <div class="page-tabs">
 <div class="ptab on" onclick="showPage('home')">Home</div>
 <div class="ptab" onclick="showPage('pdp')">Skin Support</div>
 <div class="ptab" onclick="showPage('science')">Science</div>
+<div class="ptab" onclick="showPage('coming')">What's Coming</div>
 <div class="ptab" onclick="showPage('story')">Our Story</div>
+<div class="ptab" onclick="showPage('wholesale')">Wholesale</div>
+<div class="ptab" onclick="showPage('ambassadors')">Ambassadors</div>
 <div class="ptab" onclick="showPage('faq')">FAQ</div>
 <div class="ptab" onclick="showPage('contact')">Contact</div>
 <div class="ptab" onclick="showPage('privacy')">Privacy</div>
@@ -147,44 +264,39 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <div class="ptab" onclick="showPage('shipping')">Shipping</div>
 <div class="ptab" onclick="showPage('refund')">Refund</div>
 <div class="ptab" onclick="showPage('accessibility')">Accessibility</div>
-<div class="ptab" onclick="showPage('ambassadors')">Ambassadors</div>
 </div>
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ HOME ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
+<!-- ████████████████████████ HOME ████████████████████████ -->
 <div class="pg show" id="home">
-
-<!-- Announcement -->
-<div class="announce">Coming soon — join the waitlist for early access. 30% off your first month.</div>
-
-<!-- Nav -->
+<div class="announce">Coming September 2026 — join the waitlist for early access. 30% off your first month.</div>
 <div class="nav">
 <div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div>
-<button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links">
+<button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="links">
 <a href="#" onclick="showPage('pdp');return false">Skin Support</a>
 <a href="#" onclick="showPage('science');return false">Science</a>
+<a href="#" onclick="showPage('coming');return false">What's Coming</a>
 <a href="#" onclick="showPage('story');return false">Our Story</a>
-<a href="#" onclick="showPage('faq');return false">FAQ</a>
+<a href="#" onclick="showPage('wholesale');return false">Wholesale</a>
 <a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a>
 </div>
 </div>
 
 <!-- HERO -->
 <div class="sec-white" style="padding:0">
-<div style="max-width:1100px;margin:0 auto;padding:100px 48px 80px">
+<div style="max-width:1100px;margin:0 auto;padding:90px 48px 70px">
 <div class="g2">
 <div>
-<p class="h4 mb8">Skin Support</p>
+<p class="eyebrow mb16">sensitive ones</p>
 <h1 class="h1 mb16">Inner care for<br>sensitive problems.</h1>
-<p class="body mb24" style="max-width:420px">7 active ingredients. Every dose published. No proprietary blends. Clinically studied Verisol® collagen at 5,000mg — matches the clinically studied dose used in published RCTs.</p>
+<p class="body-lg mb24" style="max-width:460px">A supplement brand that publishes everything. Every ingredient. Every dose. Every source. No proprietary blends. No hidden formulas.</p>
 <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
-<a class="btn btn-mg" href="#" onclick="showPage('pdp');return false">Subscribe — $69/mo</a>
-<a class="btn btn-outline" href="#" onclick="showPage('pdp');return false">One-time — $99</a>
+<a class="btn btn-mg btn-lg" href="#" onclick="showPage('pdp');return false">Shop Skin Support</a>
+<a class="btn btn-outline" href="#" onclick="showPage('science');return false">See the science</a>
 </div>
-<p class="caption mt16">28 units per box · Free shipping on subscriptions · Skip or cancel anytime</p>
+<p class="caption mt16">First product · Skin Support · Launching September 2026</p>
 </div>
-<div class="img-placeholder img-hero">[PRODUCT HERO — Apr 15 photoshoot]</div>
+<div class="img-placeholder img-hero">[BRAND HERO — product + brand identity]</div>
 </div>
 </div>
 </div>
@@ -192,94 +304,390 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <!-- TRUST BAR -->
 <div class="sec-cream" style="padding:20px 48px">
 <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap">
-<span class="caption" style="color:var(--tx2)">✓ 5,000mg Verisol® Collagen</span>
-<span class="caption" style="color:var(--tx2)">✓ No Proprietary Blends</span>
-<span class="caption" style="color:var(--tx2)">✓ Every Dose Published</span>
-<span class="caption" style="color:var(--tx2)">✓ GMP Manufactured</span>
-<span class="caption" style="color:var(--tx2)">✓ Clinically Studied Dose</span>
+<span class="caption" style="color:var(--tx2)">✓ Every dose published</span>
+<span class="caption" style="color:var(--tx2)">✓ No proprietary blends</span>
+<span class="caption" style="color:var(--tx2)">✓ Clinically studied doses</span>
+<span class="caption" style="color:var(--tx2)">✓ GMP manufactured</span>
+<span class="caption" style="color:var(--tx2)">✓ Third-party tested</span>
+</div>
+</div>
+
+<!-- BRAND POSITIONING -->
+<div class="sec-white">
+<div class="sec center">
+<p class="eyebrow mb12">What we are</p>
+<h2 class="h2 mb24 mx-auto max-700">A supplement brand built on transparency, not optimization.</h2>
+<p class="body-lg mx-auto max-700 mb40">The wellness industry sells stacks. Routines. Optimization. We make a different argument: the most powerful thing a supplement brand can do is publish exactly what's inside, at the dose the studies actually used. Skin Support is the first product. The standard applies to everything we make next.</p>
+<div class="g3">
+<div>
+<p class="big-n">7</p>
+<p class="body-sm mt8">active ingredients<br>Every dose printed on the label</p>
+</div>
+<div>
+<p class="big-n">0</p>
+<p class="body-sm mt8">proprietary blends<br>No "complex" hiding doses behind asterisks</p>
+</div>
+<div>
+<p class="big-n">5</p>
+<p class="body-sm mt8">future products planned<br>Same standard. Same disclosure rules.</p>
+</div>
+</div>
 </div>
 </div>
 
 <!-- THE PROBLEM -->
-<div class="sec-white">
+<div class="sec-cream">
 <div class="sec center">
-<p class="h4 mb8">The problem</p>
+<p class="eyebrow mb12">The problem</p>
 <h2 class="h2 mb24 mx-auto max-700">Most collagen supplements don't tell you how much is actually inside.</h2>
 <div class="g3">
 <div class="card">
-<p style="font-size:36px;font-weight:800;color:var(--mg);margin-bottom:8px">46%</p>
-<p class="body-sm">of supplements tested in independent analyses have been found to contain less than the labeled dose.</p>
-<p class="caption mt16"><a href="https://pubmed.ncbi.nlm.nih.gov/27400581/" style="color:var(--mg);text-decoration:none;font-size:9px">Cohen PA. J Clin Pharmacol. 2016;56(12):1451-1457</a></p>
+<p style="font-size:36px;font-weight:800;color:var(--mg)">46%</p>
+<p class="body-sm mt16">of supplements tested in independent analyses contain less than the labeled dose, or contain undisclosed adulterants.</p>
+<p class="caption mt16" style="color:var(--tx3)">Cohen PA. <em>J Clin Pharmacol</em>. 2016;56(12):1451-1457</p>
 </div>
 <div class="card">
-<p style="font-size:36px;font-weight:800;color:var(--mg);margin-bottom:8px">50mg</p>
-<p class="body-sm">Some brands add as little as 50mg of collagen and still write "collagen" on the front of the bottle.</p>
-<p class="caption mt16">Industry practice known as "fairy dusting"</p>
+<p style="font-size:36px;font-weight:800;color:var(--mg)">50mg</p>
+<p class="body-sm mt16">Some brands add as little as 50mg of collagen and still write "collagen" on the front of the bottle. The clinical studies use 100× that amount.</p>
+<p class="caption mt16" style="color:var(--tx3)">Industry practice known as "fairy dusting"</p>
 </div>
 <div class="card">
-<p style="font-size:36px;font-weight:800;color:var(--mg);margin-bottom:8px">?</p>
-<p class="body-sm">"Proprietary blend" is a legal way to list ingredients without disclosing individual amounts.</p>
-<p class="caption mt16">21 CFR 101.36 allows this labeling</p>
+<p style="font-size:36px;font-weight:800;color:var(--mg)">?</p>
+<p class="body-sm mt16">"Proprietary blend" is a legal way to list ingredients without disclosing individual amounts.</p>
+<p class="caption mt16" style="color:var(--tx3)">21 CFR 101.36 allows this labeling</p>
 </div>
 </div>
 </div>
 </div>
 
+<!-- CULTURAL MOMENT -->
+<div class="moment">
+<p class="eyebrow mb16" style="color:var(--mg)">A category-wide reckoning</p>
+<p class="moment-quote">"The proprietary blend era is ending. Underdosing is finally being called out."</p>
+<p class="moment-cite">2026 industry signal · proprietary blend backlash intensifying</p>
+</div>
+
 <!-- THE SOLUTION -->
-<div class="sec-cream">
+<div class="sec-white">
 <div class="sec">
 <div class="g2">
-<div class="img-placeholder img-hero">[DUAL-CAP CLOSE-UP — Apr 15]</div>
+<div class="img-placeholder img-hero">[DUAL-CAP CLOSE-UP]</div>
 <div>
-<p class="h4 mb8">The solution</p>
+<p class="eyebrow mb12">The solution</p>
 <h2 class="h2 mb16">One unit. Under 30 seconds. Every morning.</h2>
-<p class="body mb24">Skin Support is a dual-cap format — a 25ml pineapple-flavored liquid shot with 2 tablets sealed in one unit. Twist open. Take the tablets. Drink the shot. Done.</p>
+<p class="body mb16">Skin Support is a dual-cap format. A 25ml pineapple-flavored liquid shot with 2 tablets sealed in one unit. Twist open. Take the tablets. Drink the shot. Done.</p>
 <p class="body mb16"><strong style="color:var(--bk)">No water. No scoop. No blender. No measuring.</strong></p>
-<p class="body">7 active ingredients. Every one published with its exact dose. Nothing hidden, nothing proprietary.</p>
+<p class="body mb24">7 active ingredients. Every dose on the label. Backed by published research, not marketing.</p>
+<a class="btn btn-mg" href="#" onclick="showPage('pdp');return false">Shop Skin Support</a>
 <div class="dshea">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
 </div>
 </div>
 </div>
 </div>
 
-<!-- KEY INGREDIENTS (abbreviated — full on Science page) -->
-<div class="sec-white">
-<div class="sec center">
-<p class="h4 mb8">What's inside</p>
+<!-- FULL 7 INGREDIENT GRID -->
+<div class="sec-cream">
+<div class="sec">
+<div class="center mb40">
+<p class="eyebrow mb12">What's inside Skin Support</p>
 <h2 class="h2 mb16">7 ingredients. Every dose published.</h2>
-<p class="body mb32 mx-auto max-600">No proprietary blends. No fairy dusting. Full transparency on every ingredient, every dose, every source.</p>
+<p class="body mx-auto max-600">No proprietary blends. No hidden amounts. No fairy dusting. Full transparency on every active.</p>
+</div>
 <div class="g4">
-<div class="card">
+<div class="stat stat-cream">
 <p style="font-size:11px;color:var(--mg);font-weight:700;letter-spacing:1px;margin-bottom:4px">HERO</p>
-<p style="font-size:24px;font-weight:800;color:var(--bk);margin-bottom:2px">5,000mg</p>
-<p style="font-weight:700;font-size:13px;color:var(--bk)">Verisol® Collagen</p>
-<p class="body-sm mt16">At the highest clinically studied dose. Structure and elasticity from the inside.</p>
+<p style="font-size:24px;font-weight:800;color:var(--bk)">5,000mg</p>
+<p style="font-weight:700;font-size:13px;color:var(--bk);margin-top:2px">Verisol® Collagen</p>
+<p class="body-sm mt8">Highest clinically studied dose</p>
 </div>
-<div class="card">
-<p style="font-size:24px;font-weight:800;color:var(--bk);margin-bottom:2px">120mg</p>
-<p style="font-weight:700;font-size:13px;color:var(--bk)">Hyaluronic Acid</p>
-<p class="body-sm mt16">As sodium hyaluronate. Gets to the dermis from inside — deeper than topicals.</p>
+<div class="stat stat-cream">
+<p style="font-size:24px;font-weight:800;color:var(--bk)">120mg</p>
+<p style="font-weight:700;font-size:13px;color:var(--bk);margin-top:2px">Hyaluronic Acid</p>
+<p class="body-sm mt8">Gets to the dermis from inside</p>
 </div>
-<div class="card">
-<p style="font-size:24px;font-weight:800;color:var(--bk);margin-bottom:2px">200mg</p>
-<p style="font-weight:700;font-size:13px;color:var(--bk)">Vitamin C</p>
-<p class="body-sm mt16">Essential cofactor for collagen synthesis. Without it, the collagen can't do its job.</p>
+<div class="stat stat-cream">
+<p style="font-size:24px;font-weight:800;color:var(--bk)">200mg</p>
+<p style="font-weight:700;font-size:13px;color:var(--bk);margin-top:2px">Vitamin C</p>
+<p class="body-sm mt8">Cofactor for collagen synthesis</p>
 </div>
-<div class="card">
-<p style="font-size:24px;font-weight:800;color:var(--bk);margin-bottom:2px">+4 more</p>
-<p style="font-weight:700;font-size:13px;color:var(--bk)">Supporting Actives</p>
-<p class="body-sm mt16">Vitamin E, Beta-Carotene, B2, B5. Every dose on the label.</p>
+<div class="stat stat-cream">
+<p style="font-size:24px;font-weight:800;color:var(--bk)">30mg</p>
+<p style="font-weight:700;font-size:13px;color:var(--bk);margin-top:2px">Vitamin E</p>
+<p class="body-sm mt8">Lipid-soluble antioxidant</p>
 </div>
 </div>
-<a class="btn btn-outline mt32" href="#" onclick="showPage('science');return false">See the full formula →</a>
-<div class="dshea mx-auto max-700">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
+<div class="g4 mt16">
+<div class="stat stat-cream">
+<p style="font-size:24px;font-weight:800;color:var(--bk)">6mg</p>
+<p style="font-weight:700;font-size:13px;color:var(--bk);margin-top:2px">Beta-Carotene</p>
+<p class="body-sm mt8">Internal photoprotection</p>
+</div>
+<div class="stat stat-cream">
+<p style="font-size:24px;font-weight:800;color:var(--bk)">2mg</p>
+<p style="font-weight:700;font-size:13px;color:var(--bk);margin-top:2px">Riboflavin (B2)</p>
+<p class="body-sm mt8">Skin cell metabolism</p>
+</div>
+<div class="stat stat-cream">
+<p style="font-size:24px;font-weight:800;color:var(--bk)">5mg</p>
+<p style="font-weight:700;font-size:13px;color:var(--bk);margin-top:2px">Pantothenic Acid (B5)</p>
+<p class="body-sm mt8">Skin barrier support</p>
+</div>
+<div class="stat" style="background:var(--mg-soft);border:1px solid rgba(184,37,90,.2)">
+<p style="font-size:24px;font-weight:800;color:var(--mg)">+ studies</p>
+<p style="font-weight:700;font-size:13px;color:var(--bk);margin-top:2px">Read every citation</p>
+<a href="#" onclick="showPage('science');return false" class="btn btn-ghost btn-sm mt8" style="margin-top:12px">Open the research →</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- DOSE COMPARISON BAR CHART -->
+<div class="sec-white">
+<div class="sec">
+<div class="center mb32">
+<p class="eyebrow mb12">Dose, visualized</p>
+<h2 class="h2 mb16">5,000mg vs the industry.</h2>
+<p class="body mx-auto max-600">Most "clinically studied" claims are made on collagen products with a fraction of the studied dose.</p>
+</div>
+<div class="card-white" style="padding:32px">
+<div class="bar-row">
+<div class="bar-label">Skin Support</div>
+<div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+<div class="bar-value">5,000mg</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">RCT mid-dose</div>
+<div class="bar-track"><div class="bar-fill dim" style="width:50%"></div></div>
+<div class="bar-value dim">2,500mg</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">Common DTC</div>
+<div class="bar-track"><div class="bar-fill dim" style="width:20%"></div></div>
+<div class="bar-value dim">1,000mg</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">"Fairy dusted"</div>
+<div class="bar-track"><div class="bar-fill dim" style="width:1%"></div></div>
+<div class="bar-value dim">50mg</div>
+</div>
+<p class="caption mt24" style="color:var(--tx3)">Verisol® RCTs (Proksch 2014) used 2.5g and 5g daily. Skin Support uses 5g — the highest clinically studied dose. <a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" style="color:var(--mg);text-decoration:none">PubMed 24401291</a></p>
+</div>
+</div>
+</div>
+
+<!-- WHAT'S COMING TEASE -->
+<div class="sec-cream">
+<div class="sec">
+<div class="center mb32">
+<p class="eyebrow mb12">What's coming</p>
+<h2 class="h2 mb16">Skin is just the start.</h2>
+<p class="body mx-auto max-700">We're building a complete inner-care line under one rule: every active, every dose, every source — published. Skin Support launches first. The next four are already on the map.</p>
+</div>
+<div class="sku-flow">
+<div class="sku-card now">
+<div class="sku-tag now">Now</div>
+<div class="sku-num">01</div>
+<p class="sku-name">Skin Support</p>
+<p class="sku-when">Sept 2026</p>
+<p class="sku-desc">Verisol® collagen + 6 supporting actives. The launch product.</p>
+</div>
+<div class="sku-card next">
+<div class="sku-tag next">Next</div>
+<div class="sku-num">02</div>
+<p class="sku-name">Bloat Support</p>
+<p class="sku-when">H1 2027</p>
+<p class="sku-desc">Probiotics + digestive enzymes + ginger + peppermint + fennel.</p>
+</div>
+<div class="sku-card future">
+<div class="sku-tag future">Coming</div>
+<div class="sku-num dim">03</div>
+<p class="sku-name">Sleep Support</p>
+<p class="sku-when">H2 2027</p>
+<p class="sku-desc">Magnesium glycinate, L-theanine, GABA, passionflower.</p>
+</div>
+<div class="sku-card future">
+<div class="sku-tag future">Coming</div>
+<div class="sku-num dim">04</div>
+<p class="sku-name">Stress Support</p>
+<p class="sku-when">2028</p>
+<p class="sku-desc">KSM-66® Ashwagandha, rhodiola, L-theanine, B-complex.</p>
+</div>
+<div class="sku-card future">
+<div class="sku-tag future">Coming</div>
+<div class="sku-num dim">05</div>
+<p class="sku-name">Energy Support</p>
+<p class="sku-when">2028+</p>
+<p class="sku-desc">B12, CoQ10, green tea extract, cordyceps.</p>
+</div>
+</div>
+<div class="center mt32">
+<a class="btn btn-ghost" href="#" onclick="showPage('coming');return false">Read the full roadmap →</a>
+</div>
+</div>
+</div>
+
+<!-- WAITLIST -->
+<div class="sec-cream">
+<div class="sec center">
+<p class="eyebrow mb12">Get on the list</p>
+<h2 class="h2 mb16">Be first.</h2>
+<p class="body mb24 mx-auto max-600">Founding-member pricing on Skin Support at launch. First to hear about every product after.</p>
+<form onsubmit="event.preventDefault();alert('Thank you. You are on the list.');" class="capture">
+<input type="email" required placeholder="you@email.com">
+<button type="submit" class="btn btn-mg">Join waitlist</button>
+</form>
+<p class="caption mt16" style="color:var(--tx3)">No spam. Just updates. Unsubscribe anytime.</p>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<div class="footer-grid">
+<div>
+<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
+<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p>
+<p style="font-size:9px;color:#444;margin-top:12px;line-height:1.5;max-width:280px;font-style:italic">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+</div>
+<div>
+<h4>Shop</h4>
+<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('coming');return false">What's Coming</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
+</div>
+<div>
+<h4>Partner</h4>
+<p><a href="#" onclick="showPage('wholesale');return false">Wholesale</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('ambassadors');return false">Ambassadors</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('contact');return false">Contact</a></p>
+</div>
+<div>
+<h4>Support</h4>
+<p><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('privacy');return false">Privacy</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms</a></p>
+<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
+</div>
+</div>
+<div class="footer-bottom">
+<p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC. All rights reserved.</p>
+<div style="display:flex;gap:16px">
+<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
+<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
+</div>
+</div>
+</div>
+</div><!-- end home -->
+
+<!-- ████████████████████████ PDP ████████████████████████ -->
+<div class="pg" id="pdp">
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('coming');return false">What's Coming</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('wholesale');return false">Wholesale</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+
+<div class="sec-white">
+<div class="sec">
+<div class="g2" style="padding-top:32px">
+<div class="img-placeholder img-tall">[PRODUCT — multiple angles]</div>
+<div>
+<p class="eyebrow mb12">Skin Support</p>
+<h1 class="h2 mb12">Pineapple flavored dual-delivery formula for skin hydration + glow.</h1>
+<p class="body-sm mb16">★★★★★ — Reviews coming soon</p>
+<p class="body mb24">Daily dietary supplement. 28 units per box. One unit per day. 25ml liquid shot + 2 tablets in one sealed unit. Pineapple flavor.</p>
+
+<div id="sub-opt" style="border:2px solid var(--mg);border-radius:12px;padding:16px;margin-bottom:8px;cursor:pointer;position:relative" onclick="selectPlan('sub')">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div>
+<p style="font-weight:700;font-size:14px;color:var(--bk)">Subscribe — $69 / month <span style="background:var(--mg);color:#fff;font-size:9px;padding:2px 8px;border-radius:100px;margin-left:6px;letter-spacing:1px">SAVE 30%</span></p>
+<p class="body-sm">28 units · $2.46/day · Free shipping · Skip or cancel anytime</p>
+</div>
+<p style="font-size:12px;color:var(--tx3);text-decoration:line-through">$99</p>
+</div>
+</div>
+
+<div id="ot-opt" style="border:2px solid #eee;border-radius:12px;padding:16px;cursor:pointer" onclick="selectPlan('ot')">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div>
+<p style="font-weight:700;font-size:14px;color:var(--bk)">One-time — $99</p>
+<p class="body-sm">28 units · $3.54/day · Shipping calc'd at checkout</p>
+</div>
+</div>
+</div>
+
+<a class="btn btn-mg btn-lg mt24" href="#" style="width:100%;text-align:center;padding:18px">Add to cart — $69/month</a>
+<p class="caption center mt12" style="color:var(--tx3)">Or try a 14-pack for $49 · one-time · free returns</p>
+<div class="dshea">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- TIMELINE EXPECTATIONS -->
+<div class="sec-cream">
+<div class="sec">
+<div class="center mb32">
+<p class="eyebrow mb12">What to expect</p>
+<h2 class="h2 mb16">A daily ritual measured in weeks, not days.</h2>
+<p class="body mx-auto max-600">Collagen supplementation is not an overnight change. Published Verisol® RCTs measured improvements at the windows below.</p>
+</div>
+<div class="timeline">
+<div class="timeline-step">
+<div class="timeline-dot"></div>
+<p class="timeline-when">Day 1</p>
+<p class="timeline-what">Begin the ritual</p>
+<p class="timeline-detail">Twist open. Tablets, then shot. Under 30 seconds.</p>
+</div>
+<div class="timeline-step">
+<div class="timeline-dot"></div>
+<p class="timeline-when">Week 4</p>
+<p class="timeline-what">First measurable signal</p>
+<p class="timeline-detail">Verisol® RCTs measured significant elasticity improvement at 4 weeks vs placebo.</p>
+</div>
+<div class="timeline-step">
+<div class="timeline-dot"></div>
+<p class="timeline-when">Week 8</p>
+<p class="timeline-what">Wrinkle reduction window</p>
+<p class="timeline-detail">20% reduction in eye wrinkle volume measured at 8 weeks (Proksch 2014).</p>
+</div>
+<div class="timeline-step">
+<div class="timeline-dot"></div>
+<p class="timeline-when">Week 24+</p>
+<p class="timeline-what">Continued support</p>
+<p class="timeline-detail">Cellulite (6mo) and nail health (24wk) studies measured at this window.</p>
+</div>
+</div>
+<p class="caption center mt24" style="color:var(--tx3)">Studies referenced are on the Verisol® ingredient, not our finished product. Individual results vary.*</p>
+</div>
+</div>
+
+<!-- INGREDIENTS DEEP -->
+<div class="sec-white">
+<div class="sec">
+<div class="center mb32">
+<p class="eyebrow mb12">Full ingredient transparency</p>
+<h2 class="h2">7 actives. Every dose. Every citation.</h2>
+</div>
+<div>
+<div class="ingr"><div class="ingr-dot"></div><div style="flex:1"><p class="ingr-name">Verisol® Collagen Peptides — <span class="ingr-dose">5,000mg</span></p><p class="ingr-role">Bioactive collagen peptides by GELITA AG (Germany). At the highest clinically studied dose. Supports skin elasticity and structure from inside. <a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" style="color:var(--mg);text-decoration:none;font-size:11px">PubMed 24401291</a></p></div></div>
+<div class="ingr"><div class="ingr-dot"></div><div style="flex:1"><p class="ingr-name">Hyaluronic Acid (as Sodium Hyaluronate) — <span class="ingr-dose">120mg</span></p><p class="ingr-role">Supports skin hydration from inside. Reaches the dermis — deeper than topical creams. <a href="https://pubmed.ncbi.nlm.nih.gov/28686544/" style="color:var(--mg);text-decoration:none;font-size:11px">PubMed 28686544</a></p></div></div>
+<div class="ingr"><div class="ingr-dot"></div><div style="flex:1"><p class="ingr-name">Vitamin C (as Ascorbic Acid) — <span class="ingr-dose">200mg (222% DV)</span></p><p class="ingr-role">Essential cofactor for collagen synthesis. Without Vitamin C, the body cannot properly form collagen. <a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" style="color:var(--mg);text-decoration:none;font-size:11px">NIH ODS</a></p></div></div>
+<div class="ingr"><div class="ingr-dot"></div><div style="flex:1"><p class="ingr-name">Vitamin E (as D-Alpha Tocopherol) — <span class="ingr-dose">30mg (200% DV)</span></p><p class="ingr-role">Lipid-soluble antioxidant. Protects cell membranes. Works synergistically with Vitamin C. Natural form. <a href="https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/" style="color:var(--mg);text-decoration:none;font-size:11px">NIH ODS</a></p></div></div>
+<div class="ingr"><div class="ingr-dot"></div><div style="flex:1"><p class="ingr-name">Beta-Carotene — <span class="ingr-dose">6mg</span></p><p class="ingr-role">Provitamin A carotenoid. Antioxidant. Supports internal photoprotection from UV damage. <a href="https://pubmed.ncbi.nlm.nih.gov/11340098/" style="color:var(--mg);text-decoration:none;font-size:11px">PubMed 11340098</a></p></div></div>
+<div class="ingr"><div class="ingr-dot"></div><div style="flex:1"><p class="ingr-name">Riboflavin (Vitamin B2) — <span class="ingr-dose">2mg (154% DV)</span></p><p class="ingr-role">Supports skin cell metabolism and energy production. Cofactor for FAD/FMN flavoenzymes. <a href="https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/" style="color:var(--mg);text-decoration:none;font-size:11px">NIH ODS</a></p></div></div>
+<div class="ingr"><div class="ingr-dot"></div><div style="flex:1"><p class="ingr-name">Pantothenic Acid / B5 (as Calcium D-Pantothenate) — <span class="ingr-dose">5mg (100% DV)</span></p><p class="ingr-role">Coenzyme A precursor. Supports skin barrier through fatty acid synthesis. <a href="https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/" style="color:var(--mg);text-decoration:none;font-size:11px">NIH ODS</a></p></div></div>
+</div>
+<div class="card-mg mt32">
+<p style="font-weight:700;font-size:13px;color:var(--bk);margin-bottom:8px">Supplement Facts panel</p>
+<p class="body-sm">Serving Size: 1 Unit (25ml liquid shot + 2 tablets) · Servings Per Container: 28 · Other Ingredients: Purified Water, Pineapple Flavor (Natural), Citric Acid, Sucralose, Potassium Sorbate (preservative).</p>
+</div>
+<a class="btn btn-outline mt32" href="#" onclick="showPage('science');return false">Read every study →</a>
 </div>
 </div>
 
 <!-- HOW IT WORKS -->
 <div class="sec-cream">
 <div class="sec center">
-<p class="h4 mb8">How it works</p>
+<p class="eyebrow mb12">How it works</p>
 <h2 class="h2 mb32">Cap. Tablets. Shot. Done.</h2>
 <div class="g3">
 <div class="card-white">
@@ -295,375 +703,103 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <div class="card-white">
 <p style="font-size:48px;color:var(--mg);font-weight:200;margin-bottom:12px">3</p>
 <p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:8px">Drink the shot</p>
-<p class="body-sm">25ml pineapple-flavored liquid with 5,000mg Verisol® collagen, 120mg hyaluronic acid, and 200mg Vitamin C. Rapid absorption.</p>
+<p class="body-sm">25ml pineapple-flavored liquid with 5,000mg Verisol®, 120mg HA, 200mg Vitamin C. Rapid absorption.</p>
 </div>
 </div>
 </div>
 </div>
 
-<!-- CLINICAL EVIDENCE TEASER -->
-<div class="sec-white">
-<div class="sec">
-<div class="g2">
-<div>
-<p class="h4 mb8">Clinically studied</p>
-<h2 class="h2 mb16">The research behind Verisol®.</h2>
-<p class="body mb16">Verisol® is not generic collagen. It's a specific bioactive collagen peptide by GELITA AG (Germany) — the most clinically studied collagen brand for skin outcomes.</p>
-<div style="margin-bottom:12px">
-<p class="body"><strong style="color:var(--bk)">20%</strong> reduction in eye wrinkle volume at 8 weeks</p>
-<p class="caption">Proksch et al., 2014. <a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" style="color:var(--mg);text-decoration:none">PubMed 24401291</a></p>
-</div>
-<div style="margin-bottom:12px">
-<p class="body"><strong style="color:var(--bk)">65%</strong> increase in procollagen type I production</p>
-<p class="caption">Same study. RCT, n=114, double-blind, placebo-controlled.</p>
-</div>
-<div style="margin-bottom:12px">
-<p class="body"><strong style="color:var(--bk)">18%</strong> increase in skin elastin</p>
-<p class="caption">Measured at 2.5g/day. Skin Support matches the clinically studied dose.</p>
-</div>
-<a class="btn btn-outline mt16" href="#" onclick="showPage('science');return false">Read the science →</a>
-</div>
-<div class="img-placeholder img-hero">[CLINICAL / INGREDIENT VISUAL — Apr 15]</div>
-</div>
-<div class="dshea">*These statements refer to studies on the Verisol® ingredient, not our finished product. This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
-</div>
-</div>
-
-<!-- PRICING -->
-<div class="sec-cream">
-<div class="sec center">
-<p class="h4 mb8">Choose your plan</p>
-<h2 class="h2 mb32">One product. Two ways to buy.</h2>
-<div class="g2" style="max-width:700px;margin:0 auto">
-<div class="price-card featured">
-<div class="price-badge">Most popular — save 30%</div>
-<p style="font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--mg);margin-top:8px">Subscribe</p>
-<p class="price-amount">$69</p>
-<p class="price-per">/month · 28 units · $2.46/day</p>
-<p class="price-old">$99</p>
-<ul style="text-align:left;list-style:none;margin:20px 0;padding:0">
-<li style="font-size:12px;color:var(--tx2);padding:6px 0;border-bottom:1px solid #f0f0f0">✓ Free shipping every month</li>
-<li style="font-size:12px;color:var(--tx2);padding:6px 0;border-bottom:1px solid #f0f0f0">✓ Skip, pause, or cancel anytime</li>
-<li style="font-size:12px;color:var(--tx2);padding:6px 0;border-bottom:1px solid #f0f0f0">✓ Delivered to your door monthly</li>
-<li style="font-size:12px;color:var(--tx2);padding:6px 0">✓ Lock in your price</li>
-</ul>
-<a class="btn btn-mg" style="width:100%;text-align:center" href="#">Subscribe now</a>
-<p style="font-size:12px;color:#888;margin-top:8px;text-align:center">
-  <a href="#" style="color:#888;text-decoration:underline">Or try a 14-pack for $49</a> · one-time · free returns
-</p>
-</div>
-<div class="price-card">
-<p style="font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">One-time purchase</p>
-<p class="price-amount">$99</p>
-<p class="price-per">28 units · $3.54/day</p>
-<ul style="text-align:left;list-style:none;margin:20px 0;padding:0">
-<li style="font-size:12px;color:var(--tx2);padding:6px 0;border-bottom:1px solid #f0f0f0">✓ No commitment</li>
-<li style="font-size:12px;color:var(--tx2);padding:6px 0;border-bottom:1px solid #f0f0f0">✓ Ships once</li>
-<li style="font-size:12px;color:var(--tx2);padding:6px 0;border-bottom:1px solid #f0f0f0">✓ Shipping calculated at checkout</li>
-<li style="font-size:12px;color:var(--tx2);padding:6px 0">✓ Try it first</li>
-</ul>
-<a class="btn btn-outline" style="width:100%;text-align:center" href="#">Buy now</a>
-</div>
-</div>
-</div>
-</div>
-
-<!-- EMAIL CAPTURE -->
-<div class="sec-mg" style="padding:60px 48px">
-<div class="sec center" style="padding:0">
-<h2 style="font-family:'Times New Roman',Georgia,serif;font-size:32px;font-weight:400;margin-bottom:8px">Not ready yet? Get on the list.</h2>
-<p style="font-size:14px;opacity:.8;margin-bottom:24px">Be the first to know when Skin Support launches. No spam. Just updates.</p>
-<div style="display:flex;gap:8px;justify-content:center;max-width:480px;margin:0 auto">
-<input type="email" placeholder="Enter your email" style="flex:1;padding:12px 16px;border:none;border-radius:100px;font-size:13px;outline:none">
-<button class="btn btn-white" style="padding:12px 24px">Join waitlist</button>
-</div>
-<p style="font-size:9px;opacity:.5;margin-top:8px">By signing up, you agree to our Privacy Policy.</p>
-</div>
-</div>
-
-<!-- FOOTER -->
 <div class="footer">
 <div class="footer-grid">
-<div>
-<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
-<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p>
-<p style="font-size:9px;color:#444;margin-top:12px;line-height:1.5;max-width:280px;font-style:italic">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+<div><p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p><p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p></div>
+<div><h4>Shop</h4><p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('coming');return false">What's Coming</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p></div>
+<div><h4>Partner</h4><p><a href="#" onclick="showPage('wholesale');return false">Wholesale</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('ambassadors');return false">Ambassadors</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('contact');return false">Contact</a></p></div>
+<div><h4>Support</h4><p><a href="#" onclick="showPage('shipping');return false">Shipping</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('privacy');return false">Privacy</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms</a></p></div>
 </div>
-<div>
-<h4>Shop</h4>
-<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
-</div>
-<div>
-<h4>Support</h4>
-<p><a href="#" onclick="showPage('contact');return false">Contact</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
-<p style="margin-top:6px"><a href="#">Account</a></p>
-</div>
-<div>
-<h4>Legal</h4>
-<p><a href="#" onclick="showPage('privacy');return false">Privacy Policy</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms of Service</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
-</div>
-</div>
-<div class="footer-bottom">
-<p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC. All rights reserved.</p>
-<div style="display:flex;gap:16px">
-<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
-<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
-</div>
-</div>
-</div>
-
-</div><!-- end home -->
-
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ PRODUCT DETAIL PAGE ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
-<div class="pg" id="pdp">
-<div class="announce">Subscribe & save 30% — free shipping every month.</div>
-<div class="nav">
-<div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div>
-<button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links">
-<a href="#" onclick="showPage('pdp');return false">Skin Support</a>
-<a href="#" onclick="showPage('science');return false">Science</a>
-<a href="#" onclick="showPage('story');return false">Our Story</a>
-<a href="#" onclick="showPage('faq');return false">FAQ</a>
-<a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a>
-</div>
-</div>
-
-<div class="sec-white">
-<div class="sec">
-<div class="g2" style="gap:48px">
-<!-- Product Images -->
-<div>
-<div class="img-placeholder img-hero mb16">[PRODUCT — FRONT VIEW]</div>
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
-<div class="img-placeholder img-sm">[ANGLE 2]</div>
-<div class="img-placeholder img-sm">[CAP DETAIL]</div>
-<div class="img-placeholder img-sm">[BOX + UNIT]</div>
-</div>
-</div>
-
-<!-- Product Info -->
-<div>
-<p class="h4 mb8">Dietary Supplement · 28 Units</p>
-<h1 style="font-family:'Times New Roman',Georgia,serif;font-size:36px;font-weight:400;margin-bottom:4px">Skin Support</h1>
-<p class="body mb16">Pineapple flavored dual-delivery formula for skin hydration + glow.</p>
-
-<!-- Rating placeholder -->
-<p class="body-sm mb24">★★★★★ <span style="color:var(--tx3)">— Reviews coming soon</span></p>
-
-<!-- Purchase Options -->
-<div style="margin-bottom:24px">
-<div id="sub-opt" style="border:2px solid var(--mg);border-radius:12px;padding:16px;margin-bottom:8px;cursor:pointer;position:relative" onclick="selectPlan('sub')">
-<div style="position:absolute;top:-8px;right:16px;background:var(--mg);color:#fff;font-size:8px;font-weight:700;padding:2px 10px;border-radius:100px;letter-spacing:1px">SAVE 30%</div>
-<div style="display:flex;justify-content:space-between;align-items:center">
-<div>
-<p style="font-weight:700;font-size:13px;color:var(--bk)">Subscribe & save</p>
-<p class="body-sm">Free shipping · Skip or cancel anytime</p>
-</div>
-<div style="text-align:right">
-<p style="font-size:24px;font-weight:800;color:var(--bk)">$69</p>
-<p style="font-size:11px;color:var(--tx3);text-decoration:line-through">$99</p>
-</div>
-</div>
-</div>
-<div id="ot-opt" style="border:2px solid #eee;border-radius:12px;padding:16px;cursor:pointer" onclick="selectPlan('ot')">
-<div style="display:flex;justify-content:space-between;align-items:center">
-<div>
-<p style="font-weight:700;font-size:13px;color:var(--bk)">One-time purchase</p>
-<p class="body-sm">Ships once · No commitment</p>
-</div>
-<p style="font-size:24px;font-weight:800;color:var(--bk)">$99</p>
-</div>
-</div>
-</div>
-
-<a class="btn btn-mg" style="width:100%;text-align:center;padding:16px;font-size:14px" href="#">Add to cart</a>
-<p style="font-size:12px;color:#888;margin-top:8px;text-align:center">
-  <a href="#" style="color:#888;text-decoration:underline">Or try a 14-pack for $49</a> · one-time · free returns
-</p>
-
-<p class="caption mt16 center">Free shipping on subscriptions · 30-day satisfaction guarantee</p>
-
-<!-- Quick Benefits -->
-<div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
-<div style="background:var(--cream);border-radius:8px;padding:12px;text-align:center">
-<p style="font-weight:700;font-size:12px;color:var(--bk)">5,000mg</p>
-<p class="caption">Verisol® Collagen</p>
-</div>
-<div style="background:var(--cream);border-radius:8px;padding:12px;text-align:center">
-<p style="font-weight:700;font-size:12px;color:var(--bk)">7 Actives</p>
-<p class="caption">Every dose published</p>
-</div>
-<div style="background:var(--cream);border-radius:8px;padding:12px;text-align:center">
-<p style="font-weight:700;font-size:12px;color:var(--bk)">Dual-cap</p>
-<p class="caption">Liquid + tablets</p>
-</div>
-<div style="background:var(--cream);border-radius:8px;padding:12px;text-align:center">
-<p style="font-weight:700;font-size:12px;color:var(--bk)">Pineapple</p>
-<p class="caption">Natural flavor</p>
-</div>
-</div>
-
-<div class="dshea">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PDP: Ingredients Accordion -->
-<div class="sec-cream">
-<div class="sec">
-<h2 class="h2 center mb32">Full ingredient transparency.</h2>
-<div class="ingr"><div class="ingr-dot"></div><div><span class="ingr-name">Verisol® Collagen Peptides</span> — <span class="ingr-dose">5,000mg</span><p class="ingr-role">Bioactive collagen peptides by GELITA (Germany). At the highest clinically studied dose. Supports skin elasticity and structure from inside. <a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" style="color:var(--mg);font-size:10px">PubMed 24401291</a></p></div></div>
-<div class="ingr"><div class="ingr-dot"></div><div><span class="ingr-name">Hyaluronic Acid</span> (as Sodium Hyaluronate) — <span class="ingr-dose">120mg</span><p class="ingr-role">Supports skin hydration from inside. Gets to the dermis — deeper than topical creams. <a href="https://pubmed.ncbi.nlm.nih.gov/28686544/" style="color:var(--mg);font-size:10px">PubMed 28686544</a></p></div></div>
-<div class="ingr"><div class="ingr-dot"></div><div><span class="ingr-name">Vitamin C</span> (as Ascorbic Acid) — <span class="ingr-dose">200mg</span> <span class="caption">222% DV</span><p class="ingr-role">Essential cofactor for collagen synthesis. Without Vitamin C, the body cannot properly form collagen. <a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" style="color:var(--mg);font-size:10px">NIH ODS</a></p></div></div>
-<div class="ingr"><div class="ingr-dot"></div><div><span class="ingr-name">Vitamin E</span> (as D-Alpha Tocopherol) — <span class="ingr-dose">30mg</span> <span class="caption">200% DV</span><p class="ingr-role">Lipid-soluble antioxidant. Protects cell membranes. Works synergistically with Vitamin C. Natural form. <a href="https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/" style="color:var(--mg);font-size:10px">NIH ODS</a></p></div></div>
-<div class="ingr"><div class="ingr-dot"></div><div><span class="ingr-name">Beta-Carotene</span> — <span class="ingr-dose">6mg</span><p class="ingr-role">Antioxidant. Converts to Vitamin A as needed. Supports photoprotection — protects skin from UV damage from inside. <a href="https://pubmed.ncbi.nlm.nih.gov/11340098/" style="color:var(--mg);font-size:10px">PubMed 11340098</a></p></div></div>
-<div class="ingr"><div class="ingr-dot"></div><div><span class="ingr-name">Riboflavin</span> (Vitamin B2) — <span class="ingr-dose">2mg</span> <span class="caption">154% DV</span><p class="ingr-role">Supports skin cell metabolism and energy production. Helps maintain collagen levels. <a href="https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/" style="color:var(--mg);font-size:10px">NIH ODS</a></p></div></div>
-<div class="ingr"><div class="ingr-dot"></div><div><span class="ingr-name">Pantothenic Acid</span> (as Calcium D-Pantothenate, Vitamin B5) — <span class="ingr-dose">5mg</span> <span class="caption">100% DV</span><p class="ingr-role">Supports skin barrier function. Essential for coenzyme A, which is critical for lipid metabolism in skin. <a href="https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/" style="color:var(--mg);font-size:10px">NIH ODS</a></p></div></div>
-<div class="dshea">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
-</div>
-</div>
-
-<!-- SUPPLEMENT FACTS PANEL -->
-<div class="sec-white">
-<div class="sec" style="max-width:480px;margin:0 auto">
-<div style="border:2px solid var(--bk);padding:0">
-<div style="background:var(--bk);padding:4px 8px">
-<p style="font-size:28px;font-weight:900;color:#fff;letter-spacing:-0.5px;margin:0;font-family:Helvetica,Arial,sans-serif">Supplement Facts</p>
-</div>
-<div style="padding:4px 8px;border-bottom:1px solid var(--bk)">
-<p style="font-size:11px;color:var(--bk);margin:0"><strong>Serving Size:</strong> 1 Unit (25 mL liquid shot + 2 tablets)</p>
-<p style="font-size:11px;color:var(--bk);margin:0"><strong>Servings Per Container:</strong> 28</p>
-</div>
-<div style="border-bottom:8px solid var(--bk);padding:0 8px">
-<table style="width:100%;border-collapse:collapse;font-size:11px">
-<thead>
-<tr style="border-bottom:1px solid var(--bk)">
-<th style="text-align:left;padding:4px 0;font-weight:400;font-size:9px"></th>
-<th style="text-align:right;padding:4px 0;font-weight:700;font-size:9px">Amount Per Serving</th>
-<th style="text-align:right;padding:4px 0;font-weight:700;font-size:9px;width:50px">% DV</th>
-</tr>
-</thead>
-<tbody>
-<tr style="border-bottom:1px solid #ccc">
-<td style="padding:4px 0;font-weight:700">Vitamin C <span style="font-weight:400">(as Ascorbic Acid)</span></td>
-<td style="text-align:right;padding:4px 0">200 mg</td>
-<td style="text-align:right;padding:4px 0">222%</td>
-</tr>
-<tr style="border-bottom:1px solid #ccc">
-<td style="padding:4px 0;font-weight:700">Vitamin E <span style="font-weight:400">(as D-Alpha Tocopherol)</span></td>
-<td style="text-align:right;padding:4px 0">30 mg</td>
-<td style="text-align:right;padding:4px 0">200%</td>
-</tr>
-<tr style="border-bottom:1px solid #ccc">
-<td style="padding:4px 0;font-weight:700">Riboflavin <span style="font-weight:400">(Vitamin B2)</span></td>
-<td style="text-align:right;padding:4px 0">2 mg</td>
-<td style="text-align:right;padding:4px 0">154%</td>
-</tr>
-<tr style="border-bottom:1px solid #ccc">
-<td style="padding:4px 0;font-weight:700">Pantothenic Acid <span style="font-weight:400">(as Calcium D-Pantothenate)</span></td>
-<td style="text-align:right;padding:4px 0">5 mg</td>
-<td style="text-align:right;padding:4px 0">100%</td>
-</tr>
-<tr style="border-bottom:1px solid #ccc;background:#f9f9f9">
-<td style="padding:4px 0;font-weight:700">Verisol<sup>&reg;</sup> Bioactive Collagen Peptides</td>
-<td style="text-align:right;padding:4px 0">5,000 mg</td>
-<td style="text-align:right;padding:4px 0">&dagger;</td>
-</tr>
-<tr style="border-bottom:1px solid #ccc">
-<td style="padding:4px 0;font-weight:700">Hyaluronic Acid <span style="font-weight:400">(as Sodium Hyaluronate)</span></td>
-<td style="text-align:right;padding:4px 0">120 mg</td>
-<td style="text-align:right;padding:4px 0">&dagger;</td>
-</tr>
-<tr style="border-bottom:1px solid #ccc;background:#f9f9f9">
-<td style="padding:4px 0;font-weight:700">Beta-Carotene</td>
-<td style="text-align:right;padding:4px 0">6 mg</td>
-<td style="text-align:right;padding:4px 0">&dagger;</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div style="padding:6px 8px">
-<p style="font-size:9px;color:var(--tx2);margin:0 0 4px 0">&dagger; Daily Value (DV) not established.</p>
-<p style="font-size:9px;color:var(--tx2);margin:0 0 4px 0">Percent Daily Values are based on a 2,000 calorie diet.</p>
-<p style="font-size:9px;color:var(--tx2);margin:0"><strong>Other Ingredients:</strong> Purified Water, Pineapple Flavor (Natural), Citric Acid, Sucralose, Potassium Sorbate (preservative).</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PDP FOOTER -->
-<div class="footer">
-<div class="footer-grid">
-<div>
-<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
-<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems.<br>For Sensitive Ones LLC · Ohio, USA.</p>
-<p style="font-size:9px;color:#444;margin-top:12px;line-height:1.5;max-width:280px;font-style:italic">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
-</div>
-<div>
-<h4>Shop</h4>
-<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
-</div>
-<div>
-<h4>Support</h4>
-<p><a href="#" onclick="showPage('contact');return false">Contact</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
-</div>
-<div>
-<h4>Legal</h4>
-<p><a href="#" onclick="showPage('privacy');return false">Privacy Policy</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms of Service</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
-</div>
-</div>
-<div class="footer-bottom">
-<p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC. All rights reserved.</p>
-<div style="display:flex;gap:16px">
-<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
-<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
-</div>
-</div>
+<div class="footer-bottom"><p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC.</p><div style="display:flex;gap:16px"><a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a><a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a></div></div>
 </div>
 </div><!-- end pdp -->
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ SCIENCE ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
+<!-- ████████████████████████ SCIENCE ████████████████████████ -->
 <div class="pg" id="science">
-<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('coming');return false">What's Coming</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('wholesale');return false">Wholesale</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 
 <div class="sec-white">
 <div class="sec center">
-<p class="h4 mb8">The science</p>
+<p class="eyebrow mb12">The science</p>
 <h1 class="h1 mb16">We don't ask you to trust us.<br>We ask you to check.</h1>
-<p class="body mx-auto max-600">Every claim we make is grounded in published, peer-reviewed research. Here's the evidence behind Skin Support's key ingredients.</p>
+<p class="body mx-auto max-700">Every claim we make is grounded in published, peer-reviewed research. This is the standard we apply to Skin Support today, and to every product after.</p>
+</div>
+</div>
+
+<!-- OUR FORMULATION STANDARD (BRAND-LEVEL) -->
+<div class="sec-cream">
+<div class="sec">
+<div class="center mb32">
+<p class="eyebrow mb12">Our formulation standard</p>
+<h2 class="h2 mb16">Four rules for every product we make.</h2>
+<p class="body mx-auto max-700">These apply to Skin Support, Bloat Support, Sleep Support, Stress Support, Energy Support — and any future SKU. The product changes. The discipline does not.</p>
+</div>
+<div class="g2-tight">
+<div class="standard-card">
+<div class="standard-num">01</div>
+<p class="standard-title">Every active. Every dose. On the label.</p>
+<p class="standard-rule">No proprietary blends. No "complex" hiding individual amounts. The Supplement Facts panel discloses every active and the exact amount per serving. If we can't disclose it, we don't add it.</p>
+</div>
+<div class="standard-card">
+<div class="standard-num">02</div>
+<p class="standard-title">Doses match published clinical studies.</p>
+<p class="standard-rule">When peer-reviewed RCTs exist for an ingredient, we formulate at or near the studied dose — never the trace amount. Where the literature shows a range, we choose toward the upper studied dose, within established safety limits.</p>
+</div>
+<div class="standard-card">
+<div class="standard-num">03</div>
+<p class="standard-title">Sources, forms, and bioavailability disclosed.</p>
+<p class="standard-rule">We state the supplier where it matters (Verisol® by GELITA AG · Germany) and the chemical form where it changes absorption (Sodium Hyaluronate, D-Alpha Tocopherol, Calcium D-Pantothenate). Form is part of dose.</p>
+</div>
+<div class="standard-card">
+<div class="standard-num">04</div>
+<p class="standard-title">Manufactured under cGMP. Tested before sale.</p>
+<p class="standard-rule">21 CFR Part 111 compliance. Identity, potency, heavy metals, and microbial testing on every production lot. Korean Certificate of Origin for KORUS FTA. FSVP-documented import path.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- HOW WE SOURCE -->
+<div class="sec-white">
+<div class="sec">
+<div class="center mb32">
+<p class="eyebrow mb12">How we source</p>
+<h2 class="h2 mb16">Korea to your door, documented end-to-end.</h2>
+</div>
+<div class="source-grid">
+<div class="source-card">
+<p class="eyebrow mb8" style="color:var(--mg)">Manufacture</p>
+<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:6px">NaturalWay · Korea</p>
+<p class="body-sm">cGMP-certified facility · 20+ years OEM experience · the only dual-cap line in Korea</p>
+</div>
+<div class="source-arrow">→</div>
+<div class="source-card">
+<p class="eyebrow mb8" style="color:var(--mg)">Deliver</p>
+<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:6px">Direct to US</p>
+<p class="body-sm">KORUS FTA Certificate of Origin · 0% duty · FDA Foreign Facility Registration on file · FSVP records maintained · 3PL warehoused in US</p>
+</div>
+</div>
 </div>
 </div>
 
 <!-- INGREDIENT 1: VERISOL -->
 <div class="sec-cream">
 <div class="sec">
-<h2 class="h2 mb8">1. Verisol® Collagen Peptides — <span style="color:var(--mg)">5,000mg</span></h2>
+<p class="eyebrow mb8">Skin Support · ingredient 1 of 7</p>
+<h2 class="h2 mb8">Verisol® Collagen Peptides — <span style="color:var(--mg)">5,000mg</span></h2>
 <p class="body mb16">The most clinically studied collagen peptide for skin. Produced by GELITA AG (Eberbach, Germany). Not generic collagen — a specific bioactive composition optimized for skin outcomes.</p>
-<table style="width:100%;border-collapse:collapse;font-size:13px">
-<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Study</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Design</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Result</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
-<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin wrinkles</td><td style="padding:12px;color:var(--tx2)">RCT, n=114, 8 weeks, 2.5g/day</td><td style="padding:12px"><strong>20% reduction</strong> in eye wrinkle volume. <strong>65%</strong> ↑ procollagen type I. <strong>18%</strong> ↑ elastin.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" style="color:var(--mg);text-decoration:none">PubMed 24401291</a></td></tr>
-<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin elasticity</td><td style="padding:12px;color:var(--tx2)">RCT, n=69, 8 weeks, 2.5g & 5g/day</td><td style="padding:12px">Statistically significant <strong>improvement in elasticity</strong> at 4 and 8 weeks vs placebo.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/23949208/" style="color:var(--mg);text-decoration:none">PubMed 23949208</a></td></tr>
-<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Cellulite</td><td style="padding:12px;color:var(--tx2)">RCT, n=105, 6 months, 2.5g/day</td><td style="padding:12px">Significant <strong>reduction in cellulite score</strong> in normal and overweight women.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/26561784/" style="color:var(--mg);text-decoration:none">PubMed 26561784</a></td></tr>
-<tr><td style="padding:12px">Nail health</td><td style="padding:12px;color:var(--tx2)">Open-label, n=25, 24 weeks, 2.5g/day</td><td style="padding:12px"><strong>12%</strong> ↑ nail growth. <strong>42%</strong> ↓ broken nails. <strong>64%</strong> improvement in brittle nails.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/28786550/" style="color:var(--mg);text-decoration:none">PubMed 28786550</a></td></tr>
+<table class="tbl">
+<tr><th>Study</th><th>Design</th><th>Result</th><th>Source</th></tr>
+<tr><td>Skin wrinkles</td><td>RCT, n=114, 8 weeks, 2.5g/day</td><td><strong>20% reduction</strong> in eye wrinkle volume. <strong>65%</strong> ↑ procollagen type I. <strong>18%</strong> ↑ elastin.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/24401291/">PubMed 24401291</a> · Proksch 2014</td></tr>
+<tr><td>Skin elasticity</td><td>RCT, n=69, 8 weeks, 2.5g & 5g/day</td><td>Statistically significant <strong>improvement in elasticity</strong> at 4 and 8 weeks vs placebo.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/23949208/">PubMed 23949208</a></td></tr>
+<tr><td>Cellulite</td><td>RCT, n=105, 6 months, 2.5g/day</td><td>Significant <strong>reduction in cellulite score</strong> in normal and overweight women.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/26561784/">PubMed 26561784</a> · Schunck 2015</td></tr>
+<tr><td>Nail health</td><td>Open-label, n=25, 24 weeks, 2.5g/day</td><td><strong>12%</strong> ↑ nail growth. <strong>42%</strong> ↓ broken nails. <strong>64%</strong> improvement in brittle nails.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/28786550/">PubMed 28786550</a> · Hexsel 2017</td></tr>
 </table>
 <div class="card-mg mt24">
 <p style="font-size:13px;color:var(--tx)"><strong style="color:var(--mg)">Why 5,000mg:</strong> Published studies used 2.5g (2,500mg) and 5g (5,000mg). We match the highest clinically studied dose. These studies were on the Verisol® ingredient, not our finished product. We say "clinically studied dose," never "clinically proven."</p>
@@ -674,12 +810,13 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <!-- INGREDIENT 2: HA -->
 <div class="sec-white">
 <div class="sec">
-<h2 class="h2 mb8">2. Hyaluronic Acid (as Sodium Hyaluronate) — <span style="color:var(--mg)">120mg</span></h2>
+<p class="eyebrow mb8">Skin Support · ingredient 2 of 7</p>
+<h2 class="h2 mb8">Hyaluronic Acid (as Sodium Hyaluronate) — <span style="color:var(--mg)">120mg</span></h2>
 <p class="body mb16">Oral hyaluronic acid reaches the dermis from inside — deeper than topical creams can penetrate. We use sodium hyaluronate, the sodium salt form, for better stability and oral absorption.</p>
-<table style="width:100%;border-collapse:collapse;font-size:13px">
-<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Study</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Design</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Result</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
-<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin moisture</td><td style="padding:12px;color:var(--tx2)">RCT, n=60, 12 weeks, 120mg/day</td><td style="padding:12px">Significant <strong>improvement in skin wrinkle depth and moisture</strong> vs placebo at 120mg oral HA daily.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/28686544/" style="color:var(--mg);text-decoration:none">PubMed 28686544</a> (Oe et al., 2017)</td></tr>
-<tr><td style="padding:12px">Skin hydration</td><td style="padding:12px;color:var(--tx2)">RCT, n=96, 8 weeks, 120-240mg/day</td><td style="padding:12px">Oral HA <strong>significantly increased skin moisture</strong> and improved skin condition in subjects with dry skin.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/28020067/" style="color:var(--mg);text-decoration:none">PubMed 28020067</a> (Kawada et al., 2014)</td></tr>
+<table class="tbl">
+<tr><th>Study</th><th>Design</th><th>Result</th><th>Source</th></tr>
+<tr><td>Skin moisture</td><td>RCT, n=60, 12 weeks, 120mg/day</td><td>Significant <strong>improvement in skin wrinkle depth and moisture</strong> vs placebo at 120mg oral HA daily.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/28686544/">PubMed 28686544</a> · Oe 2017</td></tr>
+<tr><td>Skin hydration</td><td>RCT, n=96, 8 weeks, 120-240mg/day</td><td>Oral HA <strong>significantly increased skin moisture</strong> and improved skin condition in subjects with dry skin.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/28020067/">PubMed 28020067</a> · Kawada 2014</td></tr>
 </table>
 <p class="body-sm mt16"><strong style="color:var(--bk)">Why 120mg:</strong> Matches the dose used in the Oe 2017 RCT that showed significant skin moisture improvement. Sodium hyaluronate form is more stable and bioavailable orally than pure hyaluronic acid.</p>
 </div>
@@ -688,88 +825,93 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 <!-- INGREDIENT 3: VITAMIN C -->
 <div class="sec-cream">
 <div class="sec">
-<h2 class="h2 mb8">3. Vitamin C (as Ascorbic Acid) — <span style="color:var(--mg)">200mg</span> <span class="body-sm">(222% DV)</span></h2>
+<p class="eyebrow mb8">Skin Support · ingredient 3 of 7</p>
+<h2 class="h2 mb8">Vitamin C (as Ascorbic Acid) — <span style="color:var(--mg)">200mg (222% DV)</span></h2>
 <p class="body mb16">Vitamin C is the essential cofactor for collagen synthesis. Without adequate Vitamin C, the body cannot hydroxylate proline and lysine — the amino acids that form collagen's triple-helix structure. Taking collagen without Vitamin C is like having bricks without mortar.</p>
-<table style="width:100%;border-collapse:collapse;font-size:13px">
-<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Evidence</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Detail</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
-<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Collagen synthesis cofactor</td><td style="padding:12px;color:var(--tx2)">Vitamin C is required for the enzymatic hydroxylation of prolyl and lysyl residues in procollagen. Without it, collagen cannot form properly (this is the mechanism behind scurvy).</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/29099763/" style="color:var(--mg);text-decoration:none">PubMed 29099763</a> (Pullar et al., 2017)</td></tr>
-<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin aging (review)</td><td style="padding:12px;color:var(--tx2)">Systematic review found higher Vitamin C intake associated with better skin appearance, less wrinkling, and less dryness. Both dietary and supplemental.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/29099763/" style="color:var(--mg);text-decoration:none">PubMed 29099763</a> (Nutrients, 2017)</td></tr>
-<tr><td style="padding:12px">Antioxidant protection</td><td style="padding:12px;color:var(--tx2)">Vitamin C is a potent water-soluble antioxidant that protects skin from oxidative stress caused by UV exposure and environmental pollutants.</td><td style="padding:12px"><a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" style="color:var(--mg);text-decoration:none">NIH Office of Dietary Supplements</a></td></tr>
+<table class="tbl">
+<tr><th>Evidence</th><th>Detail</th><th>Source</th></tr>
+<tr><td>Cofactor for collagen synthesis</td><td>Vitamin C is required for the enzymatic hydroxylation of prolyl and lysyl residues in procollagen. Without it, collagen cannot form properly.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/29099763/">PubMed 29099763</a> · Pullar 2017</td></tr>
+<tr><td>Skin aging review</td><td>Higher Vitamin C intake associated with better skin appearance, less wrinkling, less dryness. Both dietary and supplemental.</td><td><em>Nutrients</em> 2017 · <a href="https://pubmed.ncbi.nlm.nih.gov/29099763/">PubMed 29099763</a></td></tr>
+<tr><td>Antioxidant protection</td><td>Potent water-soluble antioxidant that protects skin from oxidative stress caused by UV and environmental pollutants.</td><td><a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/">NIH ODS</a></td></tr>
 </table>
-<p class="body-sm mt16"><strong style="color:var(--bk)">Why 200mg:</strong> RDA is 75-90mg. We provide 222% DV — enough to fully support collagen synthesis and antioxidant needs. Upper limit is 2,000mg, so 200mg is safe with significant headroom. Ascorbic acid is the most studied and bioavailable form.</p>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why 200mg:</strong> RDA is 75-90mg. We provide 222% DV — enough to fully support collagen synthesis and antioxidant needs. Upper limit is 2,000mg. Significant safety headroom.</p>
 </div>
 </div>
 
 <!-- INGREDIENT 4: VITAMIN E -->
 <div class="sec-white">
 <div class="sec">
-<h2 class="h2 mb8">4. Vitamin E (as D-Alpha Tocopherol) — <span style="color:var(--mg)">30mg</span> <span class="body-sm">(200% DV)</span></h2>
+<p class="eyebrow mb8">Skin Support · ingredient 4 of 7</p>
+<h2 class="h2 mb8">Vitamin E (as D-Alpha Tocopherol) — <span style="color:var(--mg)">30mg (200% DV)</span></h2>
 <p class="body mb16">Vitamin E is the body's primary lipid-soluble antioxidant — it protects cell membranes (which are made of lipids) from oxidative damage. It works synergistically with Vitamin C: E neutralizes free radicals in cell membranes, then C regenerates E so it can work again.</p>
-<table style="width:100%;border-collapse:collapse;font-size:13px">
-<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Evidence</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Detail</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
-<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Photoprotection</td><td style="padding:12px;color:var(--tx2)">Oral Vitamin E supplementation reduces UV-induced skin damage and erythema when combined with Vitamin C. Synergistic effect documented in multiple studies.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/9763287/" style="color:var(--mg);text-decoration:none">PubMed 9763287</a> (Fuchs & Kern, 1998)</td></tr>
-<tr><td style="padding:12px">Skin barrier</td><td style="padding:12px;color:var(--tx2)">Alpha-tocopherol accumulates in skin tissue and protects against lipid peroxidation — the process that breaks down the skin barrier.</td><td style="padding:12px"><a href="https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/" style="color:var(--mg);text-decoration:none">NIH Office of Dietary Supplements</a></td></tr>
+<table class="tbl">
+<tr><th>Evidence</th><th>Detail</th><th>Source</th></tr>
+<tr><td>Photoprotection</td><td>Oral Vitamin E supplementation reduces UV-induced skin damage and erythema when combined with Vitamin C. Synergistic effect documented.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/9763287/">PubMed 9763287</a> · Fuchs & Kern 1998</td></tr>
+<tr><td>Skin barrier</td><td>Alpha-tocopherol accumulates in skin tissue and protects against lipid peroxidation — the process that breaks down the skin barrier.</td><td><a href="https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/">NIH ODS</a></td></tr>
 </table>
-<p class="body-sm mt16"><strong style="color:var(--bk)">Why D-alpha tocopherol:</strong> The natural form (d-alpha) is approximately 2× more bioavailable than the synthetic form (dl-alpha). We specifically use the natural form at 30mg (200% DV), well within the 1,000mg upper limit.</p>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why D-alpha tocopherol:</strong> The natural form (d-alpha) is approximately 2× more bioavailable than the synthetic form (dl-alpha). 30mg = 200% DV. UL is 1,000mg.</p>
 </div>
 </div>
 
 <!-- INGREDIENT 5: BETA-CAROTENE -->
 <div class="sec-cream">
 <div class="sec">
-<h2 class="h2 mb8">5. Beta-Carotene — <span style="color:var(--mg)">6mg</span></h2>
-<p class="body mb16">Beta-carotene is a provitamin A carotenoid — a naturally occurring pigment that your body converts to Vitamin A only as needed (unlike preformed Vitamin A, which can accumulate). It provides antioxidant protection and internal photoprotection.</p>
-<table style="width:100%;border-collapse:collapse;font-size:13px">
-<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Evidence</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Detail</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
-<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Photoprotection</td><td style="padding:12px;color:var(--tx2)">Oral beta-carotene supplementation provides <strong>protection against sunburn</strong> (UV-induced erythema). Carotenoids accumulate in skin and act as internal photoprotectors, with protective effect increasing over 10+ weeks of supplementation.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/11340098/" style="color:var(--mg);text-decoration:none">PubMed 11340098</a> (Stahl & Sies, 2000)</td></tr>
-<tr><td style="padding:12px">Skin health (review)</td><td style="padding:12px;color:var(--tx2)">Carotenoids including beta-carotene accumulate in skin and protect against photodamage through antioxidant mechanisms. Dietary carotenoid intake associated with healthier skin appearance.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/22264449/" style="color:var(--mg);text-decoration:none">PubMed 22264449</a> (Stahl & Sies, 2012)</td></tr>
+<p class="eyebrow mb8">Skin Support · ingredient 5 of 7</p>
+<h2 class="h2 mb8">Beta-Carotene — <span style="color:var(--mg)">6mg</span></h2>
+<p class="body mb16">Beta-carotene is a provitamin A carotenoid — a naturally occurring pigment that your body converts to Vitamin A only as needed. It provides antioxidant protection and internal photoprotection.</p>
+<table class="tbl">
+<tr><th>Evidence</th><th>Detail</th><th>Source</th></tr>
+<tr><td>Photoprotection</td><td>Oral beta-carotene supplementation provides <strong>protection against sunburn</strong> (UV-induced erythema). Carotenoids accumulate in skin and act as internal photoprotectors.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/11340098/">PubMed 11340098</a> · Stahl & Sies 2000</td></tr>
+<tr><td>Skin health review</td><td>Carotenoids accumulate in skin and protect against photodamage through antioxidant mechanisms.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/22264449/">PubMed 22264449</a> · Stahl & Sies 2012</td></tr>
 </table>
-<p class="body-sm mt16"><strong style="color:var(--bk)">Why 6mg:</strong> The ATBC study that raised concerns used 20mg/day in male smokers — over 3× our dose, in a different population. 6mg is within normal dietary intake levels (a large carrot contains ~6-8mg). No UL established for food-form beta-carotene per NIH. Safe, effective, conservative.</p>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why 6mg:</strong> The ATBC study that raised concerns used 20mg/day in male smokers — over 3× our dose, in a different population. 6mg is within normal dietary intake (a large carrot contains ~6-8mg). No UL established for food-form beta-carotene per NIH.</p>
 </div>
 </div>
 
 <!-- INGREDIENT 6: B2 -->
 <div class="sec-white">
 <div class="sec">
-<h2 class="h2 mb8">6. Riboflavin / Vitamin B2 — <span style="color:var(--mg)">2mg</span> <span class="body-sm">(154% DV)</span></h2>
+<p class="eyebrow mb8">Skin Support · ingredient 6 of 7</p>
+<h2 class="h2 mb8">Riboflavin / Vitamin B2 — <span style="color:var(--mg)">2mg (154% DV)</span></h2>
 <p class="body mb16">Riboflavin is essential for cellular energy production and plays a direct role in skin cell metabolism. It supports the function of flavoenzymes involved in collagen crosslinking and maintenance.</p>
-<table style="width:100%;border-collapse:collapse;font-size:13px">
-<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Evidence</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Detail</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
-<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin metabolism</td><td style="padding:12px;color:var(--tx2)">Riboflavin deficiency causes skin disorders including seborrheic dermatitis, cheilosis, and glossitis. Adequate B2 is required for normal skin cell turnover and repair.</td><td style="padding:12px"><a href="https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/" style="color:var(--mg);text-decoration:none">NIH Office of Dietary Supplements</a></td></tr>
-<tr><td style="padding:12px">Collagen crosslinking</td><td style="padding:12px;color:var(--tx2)">FMN and FAD (riboflavin-dependent coenzymes) are involved in the oxidative reactions necessary for collagen crosslinking — the process that gives collagen its structural strength.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/32935238/" style="color:var(--mg);text-decoration:none">PubMed 32935238</a> (Suwannasom et al., 2020)</td></tr>
+<table class="tbl">
+<tr><th>Evidence</th><th>Detail</th><th>Source</th></tr>
+<tr><td>Skin metabolism</td><td>Riboflavin deficiency causes skin disorders. Adequate B2 is required for normal skin cell turnover and repair.</td><td><a href="https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/">NIH ODS</a></td></tr>
+<tr><td>Collagen crosslinking</td><td>FMN and FAD (riboflavin-dependent coenzymes) are involved in oxidative reactions necessary for collagen crosslinking — the process that gives collagen its structural strength.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/32935238/">PubMed 32935238</a> · Suwannasom 2020</td></tr>
 </table>
-<p class="body-sm mt16"><strong style="color:var(--bk)">Why 2mg:</strong> RDA is 1.1-1.3mg. We provide 154% DV. No upper limit established (water-soluble — excess is excreted). Riboflavin is one of the safest vitamins.</p>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why 2mg:</strong> RDA 1.1-1.3mg. We provide 154% DV. No UL (water-soluble; excess excreted).</p>
 </div>
 </div>
 
 <!-- INGREDIENT 7: B5 -->
 <div class="sec-cream">
 <div class="sec">
-<h2 class="h2 mb8">7. Pantothenic Acid / Vitamin B5 (as Calcium D-Pantothenate) — <span style="color:var(--mg)">5mg</span> <span class="body-sm">(100% DV)</span></h2>
+<p class="eyebrow mb8">Skin Support · ingredient 7 of 7</p>
+<h2 class="h2 mb8">Pantothenic Acid / Vitamin B5 — <span style="color:var(--mg)">5mg (100% DV)</span></h2>
 <p class="body mb16">Pantothenic acid is the precursor to coenzyme A (CoA) — one of the most important molecules in cellular metabolism. CoA is essential for fatty acid synthesis and metabolism, directly supporting the skin's lipid barrier.</p>
-<table style="width:100%;border-collapse:collapse;font-size:13px">
-<tr style="border-bottom:1px solid #ddd"><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Evidence</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Detail</th><th style="padding:12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)">Source</th></tr>
-<tr style="border-bottom:1px solid #eee"><td style="padding:12px">Skin barrier</td><td style="padding:12px;color:var(--tx2)">Pantothenic acid supports epidermal barrier function through its role in lipid synthesis. Topical and oral dexpanthenol (B5 derivative) have documented wound healing and barrier repair effects.</td><td style="padding:12px"><a href="https://pubmed.ncbi.nlm.nih.gov/12113650/" style="color:var(--mg);text-decoration:none">PubMed 12113650</a> (Ebner et al., 2002)</td></tr>
-<tr><td style="padding:12px">Wound healing</td><td style="padding:12px;color:var(--tx2)">Supplemental pantothenic acid has been shown to accelerate wound closure and increase fibroblast proliferation in cell culture and animal models.</td><td style="padding:12px"><a href="https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/" style="color:var(--mg);text-decoration:none">NIH Office of Dietary Supplements</a></td></tr>
+<table class="tbl">
+<tr><th>Evidence</th><th>Detail</th><th>Source</th></tr>
+<tr><td>Skin barrier</td><td>Pantothenic acid supports epidermal barrier function through its role in lipid synthesis. Topical and oral dexpanthenol have documented wound healing and barrier repair effects.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/12113650/">PubMed 12113650</a> · Ebner 2002</td></tr>
+<tr><td>Wound healing</td><td>Supplemental pantothenic acid has been shown to accelerate wound closure and increase fibroblast proliferation.</td><td><a href="https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/">NIH ODS</a></td></tr>
 </table>
-<p class="body-sm mt16"><strong style="color:var(--bk)">Why calcium d-pantothenate:</strong> The most stable and bioavailable salt form of pantothenic acid. 5mg = 100% DV (Adequate Intake). No upper limit established. This is the same B5 used in countless skincare products (as "panthenol") — we deliver it orally for systemic support.</p>
+<p class="body-sm mt16"><strong style="color:var(--bk)">Why calcium d-pantothenate:</strong> Most stable and bioavailable salt form. 5mg = 100% DV (Adequate Intake). No UL established.</p>
 </div>
 </div>
-
 
 <!-- FAIRY DUSTING COMPARISON -->
-<div class="sec-cream">
+<div class="sec-white">
 <div class="sec center">
-<h2 class="h2 mb16">Why "clinically studied" matters.</h2>
-<p class="body mx-auto max-600 mb32">Many supplement brands say "clinically studied" while using a fraction of the dose that was actually studied. This is called fairy dusting — adding just enough to put it on the label, not enough for it to do anything.</p>
+<p class="eyebrow mb12">Why "clinically studied" matters</p>
+<h2 class="h2 mb16">Many brands say "clinically studied." Few use the studied dose.</h2>
+<p class="body mx-auto max-700 mb32">"Fairy dusting" means adding just enough of an ingredient to put it on the label, not enough for it to do anything. Verisol® RCTs used 2,500mg and 5,000mg. We use 5,000mg.</p>
 <div class="g2" style="max-width:600px;margin:0 auto">
-<div class="card" style="background:#FFF0F3;border:1px solid rgba(184,37,90,.15)">
-<p style="font-size:36px;font-weight:800;color:var(--mg)">5,000mg</p>
+<div class="card" style="background:var(--mg-soft);border:1px solid rgba(184,37,90,.15)">
+<p style="font-size:42px;font-weight:800;color:var(--mg);font-family:'Times New Roman',Georgia,serif">5,000mg</p>
 <p style="font-weight:700;color:var(--bk);margin-top:4px">Skin Support</p>
-<p class="body-sm mt16">At the highest clinically studied dose. Published on the label.</p>
+<p class="body-sm mt16">At the highest clinically studied Verisol® dose. Published on the label.</p>
 </div>
 <div class="card" style="background:#f5f5f5">
-<p style="font-size:36px;font-weight:800;color:var(--tx3)">50mg</p>
+<p style="font-size:42px;font-weight:800;color:var(--tx3);font-family:'Times New Roman',Georgia,serif">50mg</p>
 <p style="font-weight:700;color:var(--tx3);margin-top:4px">Some other brands</p>
 <p class="body-sm mt16">Still write "collagen" on the front. Hidden behind "proprietary blend."</p>
 </div>
@@ -778,155 +920,404 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 </div>
 </div>
 
-<!-- FULL FOOTER FOR SCIENCE -->
 <div class="footer">
 <div class="footer-grid">
-<div>
-<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
-<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p>
-<p style="font-size:9px;color:#444;margin-top:12px;line-height:1.5;max-width:280px;font-style:italic">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+<div><p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p><p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p></div>
+<div><h4>Shop</h4><p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('coming');return false">What's Coming</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p></div>
+<div><h4>Partner</h4><p><a href="#" onclick="showPage('wholesale');return false">Wholesale</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('ambassadors');return false">Ambassadors</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('contact');return false">Contact</a></p></div>
+<div><h4>Support</h4><p><a href="#" onclick="showPage('shipping');return false">Shipping</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('privacy');return false">Privacy</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms</a></p></div>
 </div>
-<div>
-<h4>Shop</h4>
-<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
-</div>
-<div>
-<h4>Support</h4>
-<p><a href="#" onclick="showPage('contact');return false">Contact</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
-</div>
-<div>
-<h4>Legal</h4>
-<p><a href="#" onclick="showPage('privacy');return false">Privacy Policy</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms of Service</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
-</div>
-</div>
-<div class="footer-bottom">
-<p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC. All rights reserved.</p>
-<div style="display:flex;gap:16px">
-<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
-<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
-</div>
-</div>
+<div class="footer-bottom"><p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC.</p><div style="display:flex;gap:16px"><a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a><a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a></div></div>
 </div>
 </div><!-- end science -->
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ OUR STORY ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
-<div class="pg" id="story">
-<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<!-- ████████████████████████ WHAT'S COMING ████████████████████████ -->
+<div class="pg" id="coming">
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('coming');return false">What's Coming</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('wholesale');return false">Wholesale</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 
 <div class="sec-white">
 <div class="sec center">
-<p class="h4 mb8">Our story</p>
+<p class="eyebrow mb12">What's coming</p>
+<h1 class="h1 mb16">Skin is the start.<br>The standard travels.</h1>
+<p class="body-lg mx-auto max-700">We're building one of the few inner-care lines that publishes everything. Five products planned. One naming convention. One disclosure rule. The same brand promise across every SKU.</p>
+</div>
+</div>
+
+<div class="sec-cream">
+<div class="sec">
+<div class="center mb40">
+<p class="eyebrow mb12">The naming</p>
+<h2 class="h2 mb16">"(Function) + Support"</h2>
+<p class="body mx-auto max-600">Each product is named for what it supports. Not what it cures. Not what it claims. Structure-function language, the way DSHEA actually permits.</p>
+</div>
+
+<div class="sku-flow">
+<div class="sku-card now">
+<div class="sku-tag now">Now</div>
+<div class="sku-num">01</div>
+<p class="sku-name">Skin Support</p>
+<p class="sku-when">Sept 2026</p>
+<p class="sku-desc">Verisol® collagen 5,000mg + 6 supporting actives. Dual-cap format. Pineapple flavored. The launch.</p>
+</div>
+<div class="sku-card next">
+<div class="sku-tag next">Next</div>
+<div class="sku-num">02</div>
+<p class="sku-name">Bloat Support</p>
+<p class="sku-when">H1 2027</p>
+<p class="sku-desc">Probiotics + digestive enzymes + ginger + peppermint + fennel. The category that made gut health mainstream is also where transparency is worst.</p>
+</div>
+<div class="sku-card future">
+<div class="sku-tag future">Coming</div>
+<div class="sku-num dim">03</div>
+<p class="sku-name">Sleep Support</p>
+<p class="sku-when">H2 2027</p>
+<p class="sku-desc">Magnesium glycinate + L-theanine + GABA + passionflower + tart cherry. Gentle, not sedating.</p>
+</div>
+<div class="sku-card future">
+<div class="sku-tag future">Coming</div>
+<div class="sku-num dim">04</div>
+<p class="sku-name">Stress Support</p>
+<p class="sku-when">2028</p>
+<p class="sku-desc">KSM-66® Ashwagandha + rhodiola + L-theanine + B-complex + magnesium. Cortisol balance, not numbness.</p>
+</div>
+<div class="sku-card future">
+<div class="sku-tag future">Coming</div>
+<div class="sku-num dim">05</div>
+<p class="sku-name">Energy Support</p>
+<p class="sku-when">2028+</p>
+<p class="sku-desc">B12 + CoQ10 + green tea extract + cordyceps + iron. Sustained, not stimulant.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="sec-white">
+<div class="sec">
+<div class="center mb32">
+<p class="eyebrow mb12">The discipline</p>
+<h2 class="h2 mb16 mx-auto max-700">Discipline rule: SKU 2 ships when SKU 1 has 6 months of data and 500+ active subscribers.</h2>
+<p class="body mx-auto max-700">Multi-SKU launches kill brands. We sequence on purpose. Every product earns the next one. Focus is the strategy.</p>
+</div>
+</div>
+</div>
+
+<div class="sec-cream">
+<div class="sec center">
+<p class="eyebrow mb12">Be first</p>
+<h2 class="h2 mb16">Get on the list. Choose what you want first.</h2>
+<p class="body mb32 mx-auto max-600">When the next product is close, founding-member pricing goes to the list before anyone else.</p>
+<form onsubmit="event.preventDefault();alert('Thank you. You are on the list.');" class="capture">
+<input type="email" required placeholder="you@email.com">
+<button type="submit" class="btn btn-mg">Join waitlist</button>
+</form>
+<p class="caption mt16" style="color:var(--tx3)">Tell us which products interest you most when we follow up.</p>
+</div>
+</div>
+
+<div class="footer">
+<div class="footer-grid">
+<div><p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p><p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p></div>
+<div><h4>Shop</h4><p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('coming');return false">What's Coming</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p></div>
+<div><h4>Partner</h4><p><a href="#" onclick="showPage('wholesale');return false">Wholesale</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('ambassadors');return false">Ambassadors</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('contact');return false">Contact</a></p></div>
+<div><h4>Support</h4><p><a href="#" onclick="showPage('shipping');return false">Shipping</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('privacy');return false">Privacy</a></p></div>
+</div>
+<div class="footer-bottom"><p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC.</p><div style="display:flex;gap:16px"><a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a><a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a></div></div>
+</div>
+</div><!-- end coming -->
+
+<!-- ████████████████████████ STORY ████████████████████████ -->
+<div class="pg" id="story">
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('coming');return false">What's Coming</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('wholesale');return false">Wholesale</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+
+<div class="sec-white">
+<div class="sec center">
+<p class="eyebrow mb12">Our story</p>
 <h1 class="h1 mb24">We didn't start this brand<br>to sell collagen.</h1>
 </div>
 </div>
 
 <div class="sec-white">
 <div class="sec max-700 mx-auto" style="padding-top:0">
-<p class="body mb24" style="font-size:16px;line-height:1.8;color:var(--tx)">We started it because we couldn't find a supplement we trusted.</p>
-<p class="body mb24">The supplement industry has a transparency problem. Brands hide doses behind "proprietary blends." They put 50mg of collagen in a product and write "clinically studied" on the label — when the study used 100× that amount. They charge $60 for products with $2 worth of ingredients.</p>
+<p class="body-lg mb24" style="color:var(--tx)">We started it because we couldn't find a supplement we trusted.</p>
+
+<p class="body mb24">The supplement industry has a transparency problem. Brands hide doses behind "proprietary blends." They put 50mg of collagen in a product and write "clinically studied" on the label — when the study used 100× that amount. They charge $60 for products with $2 worth of ingredients. They ride the wellness optimization wave, sell stacks, and hope you don't ask what's actually inside.</p>
+
 <p class="body mb24">We decided to build the opposite.</p>
-<p class="body mb24"><strong style="color:var(--bk)">sensitive ones publishes everything.</strong> Every ingredient. Every dose. Every source. If you flip the box over, you'll see exactly what you're getting. No proprietary blends. No fairy dusting. No hidden formulas.</p>
-<p class="body mb24">Our first product is Skin Support — a dual-cap format with 5,000mg of Verisol® collagen peptides and 7 supporting active ingredients. We chose Verisol because it's the most clinically studied collagen peptide for skin. We chose 5,000mg because it matches the highest clinically studied dose used in published RCTs. We chose the dual-cap format because collagen absorbs best as liquid, and vitamins are most stable as tablets.</p>
-<p class="body mb24">We didn't design this product to look good on a shelf. We designed it to work.</p>
 
-<div class="dshea">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
+<p class="body mb24"><strong style="color:var(--bk)">sensitive ones publishes everything.</strong> Every ingredient. Every dose. Every source. If you flip the box over, you'll see exactly what you're getting. No proprietary blends. No fairy dusting. No hidden formulas. No wellness theater.</p>
 
-<div class="g3 mt32">
-<div class="card center">
-<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:4px">Alex Kim</p>
-<p class="body-sm">CEO · Brand strategy, product development, creative direction.</p>
-</div>
-<div class="card center">
-<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:4px">Justin Kim</p>
-<p class="body-sm">COO · Operations, manufacturing, finance, legal, export.</p>
-</div>
-<div class="card center">
-<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:4px">Daesung Seo</p>
-<p class="body-sm">CMO · Content, community building, creator network. 2.6M+ followers.</p>
+<p class="body mb24">Our first product is Skin Support — a dual-cap format with 5,000mg of Verisol® collagen peptides and six supporting active ingredients. We chose Verisol because it's the most clinically studied collagen peptide for skin. We chose 5,000mg because it matches the highest clinically studied dose used in published RCTs. We chose the dual-cap format because collagen absorbs best as liquid, and vitamins are most stable as tablets. Science dictated the format. Trends did not.</p>
+
+<p class="body mb24">We didn't design this product to look good on a shelf. We designed it to work — and to invite you to verify every claim.</p>
 </div>
 </div>
+
+<!-- WHERE WE'RE GOING -->
+<div class="sec-cream">
+<div class="sec">
+<div class="center mb32">
+<p class="eyebrow mb12">Where we're going</p>
+<h2 class="h2 mb16 mx-auto max-700">Skin is the start. The standard is the brand.</h2>
+<p class="body mx-auto max-700">Skin Support proves the discipline. Bloat Support, Sleep Support, Stress Support, Energy Support — the same rules apply. Every active disclosed. Every dose backed by published research. Every ingredient form named. Every supplier confirmed.</p>
+</div>
+<div class="center">
+<a class="btn btn-mg" href="#" onclick="showPage('coming');return false">See the roadmap →</a>
+</div>
+</div>
+</div>
+
+<!-- BRAND PROMISE -->
+<div class="sec-white">
+<div class="sec max-700 mx-auto center">
+<p class="eyebrow mb12">The promise</p>
+<h2 class="h2 mb24">If we make it, it's published.<br>If it isn't published, we don't make it.</h2>
+<p class="body mb24">That is the entire brand. No optimization stack. No celebrity faces. No mystery blends. No "proprietary." Just doses, sources, and the studies they were taken from.</p>
+<p class="caption" style="color:var(--tx3)">For Sensitive Ones LLC · Ohio, USA</p>
+<div class="dshea mt32">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
 </div>
 </div>
 
 <div class="footer">
 <div class="footer-grid">
-<div>
-<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
-<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems.<br>For Sensitive Ones LLC · Ohio, USA.</p>
-<p style="font-size:9px;color:#444;margin-top:12px;line-height:1.5;max-width:280px;font-style:italic">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+<div><p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p><p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p></div>
+<div><h4>Shop</h4><p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('coming');return false">What's Coming</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p></div>
+<div><h4>Partner</h4><p><a href="#" onclick="showPage('wholesale');return false">Wholesale</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('ambassadors');return false">Ambassadors</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('contact');return false">Contact</a></p></div>
+<div><h4>Support</h4><p><a href="#" onclick="showPage('shipping');return false">Shipping</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('privacy');return false">Privacy</a></p></div>
 </div>
-<div>
-<h4>Shop</h4>
-<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
-</div>
-<div>
-<h4>Support</h4>
-<p><a href="#" onclick="showPage('contact');return false">Contact</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
-</div>
-<div>
-<h4>Legal</h4>
-<p><a href="#" onclick="showPage('privacy');return false">Privacy Policy</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms of Service</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
-</div>
-</div>
-<div class="footer-bottom">
-<p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC. All rights reserved.</p>
-<div style="display:flex;gap:16px">
-<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
-<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
-</div>
-</div>
+<div class="footer-bottom"><p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC.</p><div style="display:flex;gap:16px"><a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a><a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a></div></div>
 </div>
 </div><!-- end story -->
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ FAQ ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
-<div class="pg" id="faq">
-<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<!-- ████████████████████████ WHOLESALE ████████████████████████ -->
+<div class="pg" id="wholesale">
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('coming');return false">What's Coming</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('wholesale');return false">Wholesale</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 
 <div class="sec-white">
-<div class="sec max-700 mx-auto">
-<h1 class="h1 center mb32">Frequently asked questions.</h1>
+<div class="sec center">
+<p class="eyebrow mb12">Wholesale</p>
+<h1 class="h1 mb16">Stock the brand built on transparency.</h1>
+<p class="body-lg mx-auto max-700">For premium retailers, derm clinics, medspas, wellness studios, gyms, and hospitality groups. Skin Support is the first SKU. The brand pipeline gives you long-term shelf relevance.</p>
+</div>
+</div>
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">What is Skin Support?</div><div class="faq-a">Skin Support is a daily dietary supplement in a dual-cap format — a 25ml pineapple-flavored liquid shot sealed beneath a cap that holds 2 tablets. It contains 7 active ingredients including 5,000mg Verisol® collagen peptides, 120mg hyaluronic acid, 200mg Vitamin C, and 4 supporting vitamins. One unit per day.</div></div>
+<!-- WHO WE WORK WITH -->
+<div class="sec-cream">
+<div class="sec">
+<div class="center mb40">
+<p class="eyebrow mb12">Who we work with</p>
+<h2 class="h2 mb16">Six categories of partner.</h2>
+</div>
+<div class="g3">
+<div class="card-white">
+<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:8px">Premium retail</p>
+<p class="body-sm">Erewhon · Foxtrot-style upmarket grocers · clean beauty boutiques · curated apothecaries.</p>
+</div>
+<div class="card-white">
+<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:8px">Dermatology + medspa</p>
+<p class="body-sm">Board-certified derm clinics, medspas, plastic surgery practices, integrative MD offices.</p>
+</div>
+<div class="card-white">
+<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:8px">Wellness studios</p>
+<p class="body-sm">Pilates, yoga, recovery, IV therapy, contrast therapy — front-desk retail and amenity placement.</p>
+</div>
+<div class="card-white">
+<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:8px">Hospitality</p>
+<p class="body-sm">Wellness hotels, resort spas, members clubs, retreat properties — minibar inclusion or guest welcome.</p>
+</div>
+<div class="card-white">
+<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:8px">Korea + Asia accounts</p>
+<p class="body-sm">Premium wellness venues, beauty studios, sauna concepts. Distribution via vetted Korean partners.</p>
+</div>
+<div class="card-white">
+<p style="font-weight:700;font-size:14px;color:var(--bk);margin-bottom:8px">Practitioners</p>
+<p class="body-sm">Functional medicine, naturopathic, RD/RDN — direct dispensing or recommendation tier.</p>
+</div>
+</div>
+</div>
+</div>
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">How do I take it?</div><div class="faq-a">Twist open the cap. Take the 2 tablets. Drink the 25ml pineapple-flavored liquid shot. Done — under 30 seconds. No water, no scoop, no blender needed. Take one unit daily, preferably in the morning.</div></div>
+<!-- WHY US -->
+<div class="sec-white">
+<div class="sec">
+<div class="center mb32">
+<p class="eyebrow mb12">Why partner with us</p>
+<h2 class="h2 mb16">Five things you don't get from most supplement brands.</h2>
+</div>
+<div class="g2">
+<div>
+<ul class="checks">
+<li><strong style="color:var(--bk)">Transparent formulation.</strong> Every dose disclosed. Easier to defend at the counter when a customer asks "what's actually in this?"</li>
+<li><strong style="color:var(--bk)">Premium positioning.</strong> Sub-$70 retail price with documented Verisol® hero ingredient at the highest clinically studied dose.</li>
+<li><strong style="color:var(--bk)">Long-term shelf relevance.</strong> Five-product roadmap means one onboarding, multi-SKU rollout over 24 months.</li>
+<li><strong style="color:var(--bk)">Founder-grade support.</strong> Direct relationship with the brand team. Co-branded marketing materials. Custom education.</li>
+<li><strong style="color:var(--bk)">Compliance-ready.</strong> cGMP-manufactured. FSVP-documented. KORUS FTA Certificate of Origin. Third-party tested.</li>
+</ul>
+</div>
+<div class="img-placeholder">[WHOLESALE LIFESTYLE — clinic / spa / studio retail counter]</div>
+</div>
+</div>
+</div>
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">What makes Skin Support different from other collagen supplements?</div><div class="faq-a">Three things: (1) We use Verisol® at 5,000mg — that matches the highest clinically studied dose used in published RCTs, and it's a specific bioactive peptide, not generic collagen. (2) We publish every ingredient and every dose on the label — no proprietary blends. (3) The dual-cap format combines liquid collagen (for rapid absorption) with vitamin tablets (for stability) in one sealed unit.</div></div>
+<!-- TERMS SUMMARY -->
+<div class="sec-cream">
+<div class="sec">
+<div class="center mb32">
+<p class="eyebrow mb12">Terms (summary)</p>
+<h2 class="h2 mb16">Honest about how this works.</h2>
+<p class="body mx-auto max-600">These are starting terms. Final terms are negotiated by partner type. Larger volumes and longer commitments unlock better pricing.</p>
+</div>
+<table class="tbl" style="font-size:13px;background:#fff;border-radius:12px;overflow:hidden">
+<tr><th>Item</th><th>Detail</th></tr>
+<tr><td><strong>Wholesale margin</strong></td><td>~40-50% off MSRP for qualified accounts. Final margin scales with order volume and category.</td></tr>
+<tr><td><strong>Minimum opening order</strong></td><td>Starts at 24 boxes per SKU for first order; 12-box reorders.</td></tr>
+<tr><td><strong>Payment terms</strong></td><td>Pre-paid for first order. Net-30 available after second order on accepted accounts.</td></tr>
+<tr><td><strong>Exclusivity</strong></td><td>Negotiable by territory or vertical. Available to anchor accounts only.</td></tr>
+<tr><td><strong>MAP policy</strong></td><td>Minimum advertised price enforced across all channels to protect brand and partner margins.</td></tr>
+<tr><td><strong>Co-branded marketing</strong></td><td>Custom shelf-talkers, ingredient cards, education sheets, social media kits provided. Joint launch event support for anchor accounts.</td></tr>
+<tr><td><strong>Onboarding</strong></td><td>Product training for staff (live or recorded). Ingredient-by-ingredient education kit. FAQ deck for customer-facing teams.</td></tr>
+<tr><td><strong>Lead time</strong></td><td>2-3 weeks from approved PO to ship for stocked SKUs. 4-6 weeks for first-order accounts.</td></tr>
+</table>
+</div>
+</div>
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">What is Verisol®?</div><div class="faq-a">Verisol® is a specific brand of bioactive collagen peptides produced by GELITA AG in Germany. It is the most clinically studied collagen peptide for skin outcomes, with published randomized controlled trials showing improvements in skin elasticity, wrinkle depth, and nail health. It is not generic "collagen peptides" — it is a specific optimized composition. <a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" style="color:var(--mg)">Read the research →</a></div></div>
+<!-- WHOLESALE APPLICATION -->
+<div class="sec-white">
+<div class="sec max-700 mx-auto center">
+<p class="eyebrow mb12">Apply</p>
+<h2 class="h2 mb16">Talk to us.</h2>
+<p class="body mb32 mx-auto max-600">Every wholesale account is reviewed by a founder. We'll respond within 5 business days.</p>
+<form onsubmit="event.preventDefault();alert('Thank you. We will review your application and respond within 5 business days.');" style="text-align:left;max-width:520px;margin:0 auto">
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Business name *</label><input type="text" required placeholder="e.g. The Garden Spa" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;font-family:inherit"></div>
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Your name + role *</label><input type="text" required placeholder="e.g. Jane Smith, Owner" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;font-family:inherit"></div>
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Email *</label><input type="email" required placeholder="you@business.com" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;font-family:inherit"></div>
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Business type *</label><select required style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;background:#fff;font-family:inherit"><option value="">Select</option><option>Premium retail / boutique</option><option>Dermatology / medspa</option><option>Wellness studio</option><option>Hospitality / hotel</option><option>Korea or Asia account</option><option>Practitioner / clinic</option><option>Other</option></select></div>
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Location(s)</label><input type="text" placeholder="City, State / Country" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;font-family:inherit"></div>
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Website / IG</label><input type="text" placeholder="URL or @handle" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;font-family:inherit"></div>
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Estimated monthly volume</label><select style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;background:#fff;font-family:inherit"><option value="">Select</option><option>Under 50 units / mo</option><option>50-200 units / mo</option><option>200-1,000 units / mo</option><option>1,000+ units / mo</option></select></div>
+<div style="margin-bottom:24px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Why sensitive ones? *</label><textarea required rows="4" placeholder="Tell us about your customer, what gap we fill, and what success looks like for the partnership..." style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;resize:vertical;font-family:inherit"></textarea></div>
+<button type="submit" class="btn btn-mg" style="width:100%;text-align:center;padding:16px;font-size:14px">Submit wholesale inquiry</button>
+<p class="caption center mt16" style="color:var(--tx3)">Founder review · response within 5 business days</p>
+</form>
+</div>
+</div>
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">What does "no proprietary blend" mean?</div><div class="faq-a">A "proprietary blend" is a legal loophole that allows supplement brands to list multiple ingredients without disclosing individual amounts — only the total weight of the blend. This means you have no idea how much of each ingredient you're actually getting. sensitive ones does not use proprietary blends. Every ingredient and its exact dose is published on our Supplement Facts panel.</div></div>
+<div class="footer">
+<div class="footer-grid">
+<div><p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p><p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p></div>
+<div><h4>Shop</h4><p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('coming');return false">What's Coming</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p></div>
+<div><h4>Partner</h4><p><a href="#" onclick="showPage('wholesale');return false">Wholesale</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('ambassadors');return false">Ambassadors</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('contact');return false">Contact</a></p></div>
+<div><h4>Support</h4><p><a href="#" onclick="showPage('shipping');return false">Shipping</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('privacy');return false">Privacy</a></p></div>
+</div>
+<div class="footer-bottom"><p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC.</p><div style="display:flex;gap:16px"><a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a><a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a></div></div>
+</div>
+</div><!-- end wholesale -->
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">How long until I see results?</div><div class="faq-a">Collagen supplementation is not an overnight change. The published clinical studies on Verisol® measured improvements at 4-8 weeks of daily use at 2.5g. We recommend taking Skin Support daily for at least 8-12 weeks before evaluating results. Individual experiences will vary.*</div></div>
+<!-- ████████████████████████ AMBASSADORS ████████████████████████ -->
+<div class="pg" id="ambassadors">
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('coming');return false">What's Coming</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('wholesale');return false">Wholesale</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Is Skin Support safe?</div><div class="faq-a">Skin Support is manufactured under GMP (Good Manufacturing Practice) standards. All ingredients are used at doses within established safe intake levels as defined by the NIH Office of Dietary Supplements. As with any dietary supplement, we recommend consulting your healthcare provider before starting, especially if you are pregnant, nursing, or taking medication.</div></div>
+<div class="sec-white">
+<div class="sec center">
+<p class="eyebrow mb12">Ambassadors</p>
+<h1 class="h1 mb16">Share what you believe in.<br>Get rewarded for it.</h1>
+<p class="body mx-auto max-600 mb32">Two ways to work with us depending on your audience. Want to stock the product instead? <a href="#" onclick="showPage('wholesale');return false" style="color:var(--mg);text-decoration:none">See wholesale →</a></p>
+</div>
+</div>
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Does Skin Support contain allergens?</div><div class="faq-a">The collagen in Skin Support may be derived from fish. If you have a fish allergy, please check the allergen statement on the product label or contact us before purchasing. Skin Support is free from gluten, dairy, soy, and artificial colors.</div></div>
+<div class="sec-cream">
+<div class="sec">
+<div class="g2">
+<div class="card-white" style="text-align:center">
+<p style="font-size:11px;color:var(--mg);font-weight:700;letter-spacing:1px;margin-bottom:8px;text-transform:uppercase">Tier 1</p>
+<h3 class="h3" style="margin-bottom:4px">Referral</h3>
+<p class="body-sm mb24">For anyone who loves sensitive ones.</p>
+<div style="background:var(--cream);border-radius:8px;padding:16px;margin-bottom:16px"><p style="font-size:24px;font-weight:800;color:var(--mg)">Give $10 / Get $10</p></div>
+<ul style="text-align:left;list-style:none;padding:0;margin:0">
+<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Share your unique referral link</li>
+<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Friend gets $10 off first order</li>
+<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">You get $10 credit per referral</li>
+<li style="font-size:12px;color:var(--tx2);padding:8px 0">No follower count required</li>
+</ul>
+<p class="caption mt16">Open to all customers automatically.</p>
+</div>
+<div class="card-white" style="text-align:center;border:2px solid var(--mg);position:relative">
+<div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--mg);color:#fff;font-size:8px;font-weight:700;padding:3px 12px;border-radius:100px;letter-spacing:1px;text-transform:uppercase">Most Popular</div>
+<p style="font-size:11px;color:var(--mg);font-weight:700;letter-spacing:1px;margin-bottom:8px;text-transform:uppercase">Tier 2</p>
+<h3 class="h3" style="margin-bottom:4px">Creator</h3>
+<p class="body-sm mb24">For content creators and influencers.</p>
+<div style="background:var(--cream);border-radius:8px;padding:16px;margin-bottom:16px"><p style="font-size:24px;font-weight:800;color:var(--mg)">10% Commission</p></div>
+<ul style="text-align:left;list-style:none;padding:0;margin:0">
+<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">10% commission per sale via your link</li>
+<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Free product shipped monthly</li>
+<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Custom discount code for your audience</li>
+<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Early access to new products</li>
+<li style="font-size:12px;color:var(--tx2);padding:8px 0">Monthly payouts via PayPal or bank</li>
+</ul>
+<p class="caption mt16">Application required. Any platform welcome.</p>
+</div>
+</div>
+<p class="caption center mt32" style="color:var(--tx3)">Looking for wholesale partnership instead? <a href="#" onclick="showPage('wholesale');return false" style="color:var(--mg)">See the wholesale page →</a></p>
+</div>
+</div>
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">How does the subscription work?</div><div class="faq-a">When you subscribe, you receive a fresh box of 28 units every month at $69/month (30% off the one-time price of $99). Shipping is free on all subscriptions. You can skip a month, pause, or cancel anytime from your account — no contracts, no penalties, no questions asked.</div></div>
+<div class="sec-white">
+<div class="sec max-700 mx-auto center">
+<h2 class="h2 mb8">Apply to join.</h2>
+<p class="body mb32 mx-auto max-600">Tell us about yourself and how you'd like to work with sensitive ones. We review every application and respond within 5 business days.</p>
+<form onsubmit="event.preventDefault();alert('Thank you. Your application has been submitted.');" style="text-align:left;max-width:520px;margin:0 auto">
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Full Name *</label><input type="text" required placeholder="Your name" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;font-family:inherit"></div>
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Email *</label><input type="email" required placeholder="you@example.com" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;font-family:inherit"></div>
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Tier *</label><select required style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;background:#fff;font-family:inherit"><option value="">Select</option><option>Referral (Give $10 / Get $10)</option><option>Creator (10% commission + free product)</option></select></div>
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Instagram / TikTok / Website</label><input type="text" placeholder="@handle or URL" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;font-family:inherit"></div>
+<div style="margin-bottom:16px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Audience Size (approx)</label><input type="text" placeholder="e.g. 5,000 followers" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;font-family:inherit"></div>
+<div style="margin-bottom:24px"><label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Why partner with sensitive ones? *</label><textarea required rows="4" placeholder="Tell us about yourself and your audience..." style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;resize:vertical;font-family:inherit"></textarea></div>
+<button type="submit" class="btn btn-mg" style="width:100%;text-align:center;padding:16px;font-size:14px">Submit Application</button>
+</form>
+</div>
+</div>
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">What is your return policy?</div><div class="faq-a">We offer a 30-day satisfaction guarantee. If you're not happy with Skin Support, contact us within 30 days of delivery for a full refund. <a href="#" onclick="showPage('refund');return false" style="color:var(--mg)">Read our full refund policy →</a></div></div>
+<div class="footer">
+<div class="footer-grid">
+<div><p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p><p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p></div>
+<div><h4>Shop</h4><p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('coming');return false">What's Coming</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p></div>
+<div><h4>Partner</h4><p><a href="#" onclick="showPage('wholesale');return false">Wholesale</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('ambassadors');return false">Ambassadors</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('contact');return false">Contact</a></p></div>
+<div><h4>Support</h4><p><a href="#" onclick="showPage('shipping');return false">Shipping</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('privacy');return false">Privacy</a></p></div>
+</div>
+<div class="footer-bottom"><p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC.</p><div style="display:flex;gap:16px"><a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a><a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a></div></div>
+</div>
+</div><!-- end ambassadors -->
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Where is Skin Support manufactured?</div><div class="faq-a">Skin Support is manufactured in Korea by a GMP-certified facility and shipped to the US. The product is formulated to meet all US FDA requirements for dietary supplements and is tested for identity, potency, and purity before sale.</div></div>
+<!-- ████████████████████████ FAQ ████████████████████████ -->
+<div class="pg" id="faq">
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('coming');return false">What's Coming</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('wholesale');return false">Wholesale</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 
-<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Is sensitive ones FDA approved?</div><div class="faq-a">The FDA does not approve dietary supplements. However, all dietary supplements sold in the US must comply with FDA regulations including Good Manufacturing Practice (21 CFR Part 111), proper labeling (21 CFR 101.36), and truthful advertising. sensitive ones complies with all applicable FDA regulations.</div></div>
+<div class="sec-white">
+<div class="sec center"><p class="eyebrow mb12">FAQ</p><h1 class="h1 mb16">Frequently asked questions.</h1></div>
+</div>
+
+<div class="sec-cream">
+<div class="sec max-800 mx-auto">
+<h3 class="h3 mb16" style="color:var(--mg);font-size:14px;text-transform:uppercase;letter-spacing:2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">Product</h3>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">What is Skin Support?</div><div class="faq-a">A daily dietary supplement in dual-cap format — 25ml pineapple-flavored liquid shot sealed beneath a cap holding 2 tablets. 7 active ingredients including 5,000mg Verisol® collagen peptides, 120mg hyaluronic acid, 200mg Vitamin C, and 4 supporting vitamins. One unit per day.</div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">How do I take it?</div><div class="faq-a">Twist open the cap. Take the 2 tablets. Drink the 25ml pineapple-flavored shot. Done in under 30 seconds. No water, scoop, or blender. One unit daily, preferably morning.</div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">What makes Skin Support different from other collagen supplements?</div><div class="faq-a">Three things. (1) We use Verisol® at 5,000mg — the highest clinically studied dose. Verisol is a specific bioactive peptide, not generic collagen. (2) Every ingredient and dose is on the label — no proprietary blends. (3) The dual-cap format combines liquid collagen for rapid absorption with stable vitamin tablets in one sealed unit.</div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">What is Verisol®?</div><div class="faq-a">A specific brand of bioactive collagen peptides produced by GELITA AG (Germany). The most clinically studied collagen peptide for skin outcomes — published RCTs measure improvements in elasticity, wrinkle depth, and nail health. <a href="#" onclick="showPage('science');return false" style="color:var(--mg);text-decoration:none">Read the research →</a></div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">What does "no proprietary blend" mean?</div><div class="faq-a">A "proprietary blend" is a legal labeling option that lets brands list multiple ingredients without disclosing individual amounts (only the total). You don't know how much of each you're getting. We do not use proprietary blends. Every ingredient and dose is on the Supplement Facts panel.</div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">How long until I see results?</div><div class="faq-a">Collagen supplementation is not overnight. Verisol® RCTs measured improvements at 4-8 weeks of daily use. We recommend taking Skin Support daily for at least 8-12 weeks before evaluating. Results vary by individual.*</div></div>
+
+<h3 class="h3 mt32 mb16" style="color:var(--mg);font-size:14px;text-transform:uppercase;letter-spacing:2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">Safety + Allergens</h3>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Is Skin Support safe?</div><div class="faq-a">Manufactured under GMP (Good Manufacturing Practice) standards. All ingredients are at doses within established safe intake levels per the NIH Office of Dietary Supplements. As with any supplement, consult your healthcare provider before starting — especially if you are pregnant, nursing, or taking medication.</div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Does Skin Support contain allergens?</div><div class="faq-a">The collagen in Skin Support may be derived from fish. If you have a fish allergy, please check the allergen statement on the label or contact us before purchasing. Skin Support is free from gluten, dairy, soy, and artificial colors.</div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Is sensitive ones FDA approved?</div><div class="faq-a">The FDA does not approve dietary supplements. All US dietary supplements must comply with FDA regulations including cGMP (21 CFR Part 111), proper labeling (21 CFR 101.36), and truthful advertising. We comply with all applicable FDA regulations.</div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Where is Skin Support manufactured?</div><div class="faq-a">In Korea by a GMP-certified facility (NaturalWay), shipped to the US under KORUS FTA Certificate of Origin. Tested for identity, potency, and purity before sale.</div></div>
+
+<h3 class="h3 mt32 mb16" style="color:var(--mg);font-size:14px;text-transform:uppercase;letter-spacing:2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">Subscription + Returns</h3>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">How does the subscription work?</div><div class="faq-a">Receive a fresh box of 28 units every month at $69 (30% off the $99 one-time price). Free shipping on subscriptions. Skip a month, pause, or cancel anytime in your account — no contracts, no penalties.</div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">What is your return policy?</div><div class="faq-a">30-day satisfaction guarantee. Not happy? Contact us within 30 days of delivery for a full refund. <a href="#" onclick="showPage('refund');return false" style="color:var(--mg);text-decoration:none">Read full policy →</a></div></div>
+
+<h3 class="h3 mt32 mb16" style="color:var(--mg);font-size:14px;text-transform:uppercase;letter-spacing:2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700">Brand + Future</h3>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Are you launching more products?</div><div class="faq-a">Yes. Skin Support is product 01. Bloat Support is next (H1 2027). After that: Sleep Support, Stress Support, Energy Support. Same disclosure rules apply to every SKU. <a href="#" onclick="showPage('coming');return false" style="color:var(--mg);text-decoration:none">See the roadmap →</a></div></div>
+<div class="faq"><div class="faq-q" onclick="toggleFaq(this)">Do you sell wholesale?</div><div class="faq-a">Yes. We work with premium retail, dermatology and medspa, wellness studios, hospitality, Korea/Asia accounts, and practitioners. <a href="#" onclick="showPage('wholesale');return false" style="color:var(--mg);text-decoration:none">See wholesale →</a></div></div>
 
 <div class="dshea mt32">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
 </div>
@@ -934,352 +1325,110 @@ body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--wh
 
 <div class="footer">
 <div class="footer-grid">
-<div>
-<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
-<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems.<br>For Sensitive Ones LLC · Ohio, USA.</p>
-<p style="font-size:9px;color:#444;margin-top:12px;line-height:1.5;max-width:280px;font-style:italic">*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+<div><p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p><p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems. For Sensitive Ones LLC · Ohio, USA.</p></div>
+<div><h4>Shop</h4><p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('coming');return false">What's Coming</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p></div>
+<div><h4>Partner</h4><p><a href="#" onclick="showPage('wholesale');return false">Wholesale</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('ambassadors');return false">Ambassadors</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('contact');return false">Contact</a></p></div>
+<div><h4>Support</h4><p><a href="#" onclick="showPage('shipping');return false">Shipping</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns</a></p><p style="margin-top:6px"><a href="#" onclick="showPage('privacy');return false">Privacy</a></p></div>
 </div>
-<div>
-<h4>Shop</h4>
-<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
-</div>
-<div>
-<h4>Support</h4>
-<p><a href="#" onclick="showPage('contact');return false">Contact</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
-</div>
-<div>
-<h4>Legal</h4>
-<p><a href="#" onclick="showPage('privacy');return false">Privacy Policy</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms of Service</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
-</div>
-</div>
-<div class="footer-bottom">
-<p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC. All rights reserved.</p>
-<div style="display:flex;gap:16px">
-<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
-<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
-</div>
-</div>
+<div class="footer-bottom"><p style="font-size:10px;color:#444">© 2026 For Sensitive Ones LLC.</p><div style="display:flex;gap:16px"><a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a><a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a></div></div>
 </div>
 </div><!-- end faq -->
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ CONTACT ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
+<!-- ████████████████████████ CONTACT ████████████████████████ -->
 <div class="pg" id="contact">
-<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('coming');return false">What's Coming</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('wholesale');return false">Wholesale</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
 <div class="legal">
 <h1>Contact us.</h1>
 <p class="updated">We'd love to hear from you.</p>
-<p><strong style="color:var(--bk)">Email:</strong> hello@forsensitiveones.com</p>
-<p><strong style="color:var(--bk)">Instagram:</strong> <a href="https://instagram.com/sensitiveones" style="color:var(--mg);font-size:13px">@sensitiveones</a></p>
-<p><strong style="color:var(--bk)">Response time:</strong> We typically respond within 24-48 hours on business days.</p>
-<p style="margin-top:24px"><strong style="color:var(--bk)">Mailing address:</strong><br>For Sensitive Ones LLC<br>Registered Agent Address<br>Ohio, USA</p>
-<p style="margin-top:24px">For subscription management (skip, pause, cancel), log into your account or email us.</p>
+<h2>Email</h2><p>hello@forsensitiveones.com</p>
+<h2>Wholesale + partnerships</h2><p>For wholesale inquiries, use the <a href="#" onclick="showPage('wholesale');return false" style="color:var(--mg)">wholesale application</a>. For ambassador / creator applications, use the <a href="#" onclick="showPage('ambassadors');return false" style="color:var(--mg)">ambassador form</a>.</p>
+<h2>Social</h2><p><a href="https://instagram.com/sensitiveones" style="color:var(--mg)">@sensitiveones</a> on Instagram and TikTok</p>
+<h2>Response time</h2><p>Within 24-48 hours on business days.</p>
+<h2>Mailing address</h2><p>For Sensitive Ones LLC · Ohio, USA</p>
+<h2>Subscription management</h2><p>Skip, pause, or cancel from your account, or email us.</p>
 </div>
-</div>
+</div><!-- end contact -->
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ PRIVACY POLICY ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
+<!-- ████████████████████████ LEGAL PAGES ████████████████████████ -->
 <div class="pg" id="privacy">
-<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div></div>
 <div class="legal">
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: April 13, 2026</p>
-<p>For Sensitive Ones LLC ("we," "us," "our") operates the website www.forsensitiveones.com. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or make a purchase.</p>
-<h2>Information We Collect</h2>
-<p><strong>Personal information:</strong> Name, email address, shipping address, billing address, phone number, payment information (processed securely via Shopify Payments/Stripe — we do not store your full card number).</p>
-<p><strong>Automatically collected:</strong> IP address, browser type, device information, pages visited, referring URL, time spent on pages. Collected via cookies and analytics tools (Google Analytics, Klaviyo).</p>
-<h2>How We Use Your Information</h2>
-<ul>
-<li>To process and fulfill your orders</li>
-<li>To manage your subscription (renewals, shipping updates, account management)</li>
-<li>To send you marketing emails (only if you opt in — you can unsubscribe anytime)</li>
-<li>To improve our website and product offerings</li>
-<li>To comply with legal obligations</li>
-</ul>
-<h2>Third-Party Services</h2>
-<p>We use the following third-party services that may process your data:</p>
-<ul>
-<li><strong>Shopify</strong> — ecommerce platform and payment processing</li>
-<li><strong>Klaviyo</strong> — email marketing (stores your email and engagement data)</li>
-<li><strong>Recharge</strong> — subscription management</li>
-<li><strong>Google Analytics</strong> — website analytics</li>
-<li><strong>ShipBob / 3PL</strong> — order fulfillment (receives your shipping address)</li>
-</ul>
-<h2>Your Rights</h2>
-<p>You have the right to: access your personal data, request deletion of your data, opt out of marketing emails, and request a copy of data we hold about you. To exercise these rights, email us at hello@forsensitiveones.com.</p>
-<h2>California Residents (CCPA)</h2>
-<p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information we collect, the right to delete, and the right to opt out of the sale of personal information. We do not sell your personal information.</p>
-<h2>Data Retention</h2>
-<p>We retain your personal information for as long as your account is active or as needed to provide you services, comply with legal obligations, resolve disputes, and enforce our agreements.</p>
-<h2>Contact</h2>
-<p>For privacy-related questions: hello@forsensitiveones.com</p>
+<h2>Information we collect</h2><p>Personal information: name, email, shipping address, billing address, phone number, payment information (processed via Shopify Payments / Stripe — we do not store your full card number).</p><p>Automatically collected: IP address, browser type, device, pages visited, referring URL, time on page. Via cookies and analytics (Google Analytics, Klaviyo).</p>
+<h2>How we use your information</h2><ul><li>Process and fulfill orders</li><li>Manage subscriptions, renewals, shipping updates</li><li>Send marketing emails (only if you opt in — unsubscribe anytime)</li><li>Improve our website and product offerings</li><li>Comply with legal obligations</li></ul>
+<h2>Third-party services</h2><ul><li>Shopify — ecommerce + payment processing</li><li>Klaviyo — email marketing</li><li>Recharge — subscription management</li><li>Google Analytics — site analytics</li><li>3PL — order fulfillment</li></ul>
+<h2>Your rights</h2><p>Access your data, request deletion, opt out of marketing, request a copy. Email hello@forsensitiveones.com.</p>
+<h2>California residents (CCPA)</h2><p>You have additional rights under CCPA: know what we collect, delete, opt out of sale. We do not sell your personal information.</p>
+<h2>Data retention</h2><p>We retain your data as long as your account is active or as needed to provide services, comply with legal obligations, resolve disputes, and enforce agreements.</p>
+<h2>Contact</h2><p>hello@forsensitiveones.com</p>
 </div>
 </div>
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ TERMS OF SERVICE ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="terms">
-<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div></div>
 <div class="legal">
 <h1>Terms of Service</h1>
 <p class="updated">Last updated: April 13, 2026</p>
 <p>By accessing or using www.forsensitiveones.com, you agree to be bound by these Terms of Service. If you do not agree, do not use this website.</p>
-<h2>Products</h2>
-<p>Sensitive Ones products are dietary supplements, not drugs. They are not intended to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider before starting any supplement regimen.</p>
-<h2>Subscriptions</h2>
-<p>Subscriptions auto-renew monthly unless you skip, pause, or cancel. You can manage your subscription at any time through your account or by contacting us. Cancellations take effect at the end of your current billing cycle.</p>
-<h2>Pricing</h2>
-<p>All prices are in US dollars and are subject to change. We will notify subscribers before any price changes take effect.</p>
-<h2>Intellectual Property</h2>
-<p>All content on this website — including text, images, logos, and design — is the property of For Sensitive Ones LLC and is protected by copyright and trademark law. You may not reproduce, distribute, or create derivative works without our written permission.</p>
-<h2>Limitation of Liability</h2>
-<p>To the fullest extent permitted by law, For Sensitive Ones LLC shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our products or website.</p>
-<h2>Governing Law</h2>
-<p>These terms are governed by the laws of the State of Ohio, without regard to conflict of law principles.</p>
-<h2>Contact</h2>
-<p>hello@forsensitiveones.com</p>
+<h2>Products</h2><p>Sensitive Ones products are dietary supplements, not drugs. Not intended to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider before starting any supplement regimen.</p>
+<h2>Subscriptions</h2><p>Subscriptions auto-renew monthly unless skipped, paused, or canceled. Manage anytime through your account or by contacting us. Cancellations take effect at the end of your current billing cycle.</p>
+<h2>Pricing</h2><p>All prices are in US dollars and subject to change. We notify subscribers before any price change.</p>
+<h2>Intellectual property</h2><p>All website content — text, images, logos, design — is the property of For Sensitive Ones LLC and protected by copyright and trademark law. No reproduction without written permission.</p>
+<h2>Limitation of liability</h2><p>To the fullest extent permitted by law, For Sensitive Ones LLC shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of products or website.</p>
+<h2>Governing law</h2><p>These terms are governed by the laws of the State of Ohio, without regard to conflict of law principles.</p>
+<h2>Contact</h2><p>hello@forsensitiveones.com</p>
 </div>
 </div>
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ SHIPPING ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="shipping">
-<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div></div>
 <div class="legal">
 <h1>Shipping Policy</h1>
 <p class="updated">Last updated: April 13, 2026</p>
-<h2>Subscription Orders</h2>
-<p><strong>Free standard shipping</strong> on all subscription orders within the continental United States. Orders typically ship within 1-3 business days and arrive within 5-7 business days via USPS Priority Mail.</p>
-<h2>One-Time Orders</h2>
-<p>Shipping is calculated at checkout based on your location. Standard shipping (5-7 business days) and expedited options are available.</p>
-<h2>Order Tracking</h2>
-<p>You will receive a shipping confirmation email with tracking information once your order ships. You can also track your order through your account.</p>
-<h2>Shipping Destinations</h2>
-<p>We currently ship to the continental United States (48 states). We do not yet ship to Alaska, Hawaii, US territories, or internationally. International shipping is planned for a future date.</p>
-<h2>Delivery Issues</h2>
-<p>If your package is lost, damaged, or significantly delayed, contact us at hello@forsensitiveones.com and we will work with our carrier to resolve the issue. We will reship or refund orders confirmed lost in transit.</p>
+<h2>Subscription orders</h2><p>Free standard shipping on subscriptions within the continental US. Ships within 1-3 business days, arrives in 5-7 business days via USPS Priority Mail.</p>
+<h2>One-time orders</h2><p>Shipping calculated at checkout based on location. Standard (5-7 business days) and expedited options available.</p>
+<h2>Order tracking</h2><p>Tracking information sent via email when your order ships. Also accessible in your account.</p>
+<h2>Shipping destinations</h2><p>Continental US (48 states). Not yet shipping to Alaska, Hawaii, US territories, or internationally. International planned for the future.</p>
+<h2>Delivery issues</h2><p>If your package is lost, damaged, or significantly delayed, contact hello@forsensitiveones.com. We will work with the carrier to resolve. Reship or refund on confirmed lost packages.</p>
 </div>
 </div>
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ REFUND ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="refund">
-<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div></div>
 <div class="legal">
-<h1>Refund & Return Policy</h1>
+<h1>Refund &amp; Return Policy</h1>
 <p class="updated">Last updated: April 13, 2026</p>
-<h2>30-Day Satisfaction Guarantee</h2>
-<p>If you are not satisfied with Skin Support for any reason, contact us within 30 days of delivery for a full refund of your purchase price. You do not need to return the product.</p>
-<h2>How to Request a Refund</h2>
-<p>Email hello@forsensitiveones.com with your order number and reason for the refund. Refunds are processed within 5-7 business days to your original payment method.</p>
-<h2>Subscription Cancellations</h2>
-<p>You can cancel your subscription at any time through your account or by contacting us. Cancellations take effect at the end of your current billing cycle — you will not be charged again, but you will receive any orders already processed.</p>
-<h2>Damaged or Defective Products</h2>
-<p>If you receive a damaged or defective product, contact us immediately with a photo and your order number. We will reship at no cost.</p>
-<h2>Non-Refundable</h2>
-<p>Refund requests made after 30 days from delivery are handled on a case-by-case basis. Shipping costs on one-time orders are non-refundable.</p>
+<h2>30-day satisfaction guarantee</h2><p>If you are not satisfied with Skin Support, contact us within 30 days of delivery for a full refund. You do not need to return the product.</p>
+<h2>How to request a refund</h2><p>Email hello@forsensitiveones.com with your order number and reason. Refunds processed within 5-7 business days to original payment method.</p>
+<h2>Subscription cancellations</h2><p>Cancel anytime through your account or contact us. Cancellations take effect at the end of your current billing cycle. You won't be charged again, but you will receive any orders already processed.</p>
+<h2>Damaged or defective products</h2><p>Contact us immediately with a photo and your order number. We reship at no cost.</p>
+<h2>Non-refundable</h2><p>Requests after 30 days are case-by-case. Shipping costs on one-time orders are non-refundable.</p>
 </div>
 </div>
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ ACCESSIBILITY ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
 <div class="pg" id="accessibility">
-<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
+<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div></div>
 <div class="legal">
 <h1>Accessibility Statement</h1>
 <p class="updated">Last updated: April 13, 2026</p>
-<p>For Sensitive Ones LLC is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.</p>
-<h2>Conformance Status</h2>
-<p>We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. These guidelines explain how to make web content more accessible to people with a wide range of disabilities.</p>
-<h2>Measures We Take</h2>
-<ul>
-<li>Semantic HTML structure for screen reader compatibility</li>
-<li>Sufficient color contrast ratios (minimum 4.5:1 for normal text)</li>
-<li>Keyboard navigable interface</li>
-<li>Alt text on product images</li>
-<li>Resizable text without loss of functionality</li>
-<li>Clear, descriptive link text</li>
-</ul>
-<h2>Feedback</h2>
-<p>If you encounter accessibility barriers on our website, please contact us at hello@forsensitiveones.com. We take accessibility feedback seriously and will work to address issues promptly.</p>
+<p>For Sensitive Ones LLC is committed to ensuring digital accessibility for people with disabilities. We continually improve the user experience and apply relevant accessibility standards.</p>
+<h2>Conformance status</h2><p>We aim to conform to Web Content Accessibility Guidelines (WCAG) 2.1, Level AA.</p>
+<h2>Measures</h2><ul><li>Semantic HTML for screen reader compatibility</li><li>Sufficient color contrast (minimum 4.5:1 for normal text)</li><li>Keyboard navigable interface</li><li>Alt text on product images</li><li>Resizable text without loss of functionality</li><li>Clear, descriptive link text</li></ul>
+<h2>Feedback</h2><p>Encountered an accessibility barrier? Email hello@forsensitiveones.com. We take accessibility feedback seriously and will work to address issues promptly.</p>
 </div>
 </div>
 
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!-- ██ AMBASSADORS ██ -->
-<!-- ████████████████████████████████████████████████████████████████ -->
-<div class="pg" id="ambassadors">
-<div class="nav"><div class="logo" style="cursor:pointer" onclick="showPage('home')">sensitive ones</div><button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button><div class="links"><a href="#" onclick="showPage('pdp');return false">Skin Support</a><a href="#" onclick="showPage('science');return false">Science</a><a href="#" onclick="showPage('story');return false">Our Story</a><a href="#" onclick="showPage('faq');return false">FAQ</a><a href="#" class="cta-nav" onclick="showPage('pdp');return false">Shop</a></div></div>
-
-<div class="sec-white">
-<div class="sec center">
-<p class="h4 mb8">Ambassador Program</p>
-<h1 class="h1 mb16">Share what you believe in.<br>Get rewarded for it.</h1>
-<p class="body mx-auto max-600 mb32">Whether you tell one friend or reach a million followers, there's a tier for you. Earn commissions, free product, and wholesale pricing when you spread the word about sensitive ones.</p>
-</div>
-</div>
-
-<div class="sec-cream">
-<div class="sec">
-<div class="g3">
-<!-- TIER 1: REFERRAL -->
-<div class="card-white" style="text-align:center">
-<p style="font-size:11px;color:var(--mg);font-weight:700;letter-spacing:1px;margin-bottom:8px;text-transform:uppercase">Tier 1</p>
-<h3 class="h3" style="margin-bottom:4px">Referral</h3>
-<p class="body-sm mb24">For anyone who loves sensitive ones.</p>
-<div style="background:var(--cream);border-radius:8px;padding:16px;margin-bottom:16px">
-<p style="font-size:24px;font-weight:800;color:var(--mg)">Give $10 / Get $10</p>
-</div>
-<ul style="text-align:left;list-style:none;padding:0;margin:0">
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Share your unique referral link</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Your friend gets $10 off their first order</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">You get $10 credit for every successful referral</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0">No follower count required</li>
-</ul>
-<p class="caption mt16">Open to all customers automatically.</p>
-</div>
-
-<!-- TIER 2: CREATOR -->
-<div class="card-white" style="text-align:center;border:2px solid var(--mg);position:relative">
-<div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--mg);color:#fff;font-size:8px;font-weight:700;padding:3px 12px;border-radius:100px;letter-spacing:1px;text-transform:uppercase">Most Popular</div>
-<p style="font-size:11px;color:var(--mg);font-weight:700;letter-spacing:1px;margin-bottom:8px;text-transform:uppercase">Tier 2</p>
-<h3 class="h3" style="margin-bottom:4px">Creator</h3>
-<p class="body-sm mb24">For content creators and influencers.</p>
-<div style="background:var(--cream);border-radius:8px;padding:16px;margin-bottom:16px">
-<p style="font-size:24px;font-weight:800;color:var(--mg)">10% Commission</p>
-</div>
-<ul style="text-align:left;list-style:none;padding:0;margin:0">
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">10% commission on every sale through your link</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Free product shipped monthly</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Custom discount code for your audience</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Early access to new products</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0">Monthly payouts via PayPal or bank transfer</li>
-</ul>
-<p class="caption mt16">Application required. Any platform welcome.</p>
-</div>
-
-<!-- TIER 3: PARTNER -->
-<div class="card-white" style="text-align:center">
-<p style="font-size:11px;color:var(--mg);font-weight:700;letter-spacing:1px;margin-bottom:8px;text-transform:uppercase">Tier 3</p>
-<h3 class="h3" style="margin-bottom:4px">Partner</h3>
-<p class="body-sm mb24">For retailers, practitioners, and studios.</p>
-<div style="background:var(--cream);border-radius:8px;padding:16px;margin-bottom:16px">
-<p style="font-size:24px;font-weight:800;color:var(--mg)">Wholesale Pricing</p>
-</div>
-<ul style="text-align:left;list-style:none;padding:0;margin:0">
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Wholesale pricing on bulk orders</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Dedicated account manager</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Co-branded marketing materials</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0;border-bottom:1px solid #f0f0f0">Priority access to new SKUs</li>
-<li style="font-size:12px;color:var(--tx2);padding:8px 0">Custom terms available</li>
-</ul>
-<p class="caption mt16">Application required. Minimum order quantities apply.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- APPLICATION FORM -->
-<div class="sec-white">
-<div class="sec max-700 mx-auto center">
-<h2 class="h2 mb8">Apply to join.</h2>
-<p class="body mb32 mx-auto max-600">Tell us about yourself and how you'd like to work with sensitive ones. We review every application and respond within 5 business days.</p>
-<form onsubmit="event.preventDefault();alert('Thank you! Your application has been submitted. We will review and respond within 5 business days.');" style="text-align:left;max-width:520px;margin:0 auto">
-<div style="margin-bottom:16px">
-<label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Full Name *</label>
-<input type="text" required placeholder="Your name" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--mg)'" onblur="this.style.borderColor='#ddd'">
-</div>
-<div style="margin-bottom:16px">
-<label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Email *</label>
-<input type="email" required placeholder="you@example.com" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--mg)'" onblur="this.style.borderColor='#ddd'">
-</div>
-<div style="margin-bottom:16px">
-<label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Which tier are you applying for? *</label>
-<select required style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;background:#fff;transition:border-color .15s" onfocus="this.style.borderColor='var(--mg)'" onblur="this.style.borderColor='#ddd'">
-<option value="">Select a tier</option>
-<option value="referral">Referral (Give $10 / Get $10)</option>
-<option value="creator">Creator (10% Commission + Free Product)</option>
-<option value="partner">Partner (Wholesale Pricing)</option>
-</select>
-</div>
-<div style="margin-bottom:16px">
-<label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Instagram / TikTok / Website</label>
-<input type="text" placeholder="@handle or URL" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--mg)'" onblur="this.style.borderColor='#ddd'">
-</div>
-<div style="margin-bottom:16px">
-<label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Audience Size (approximate)</label>
-<input type="text" placeholder="e.g. 5,000 followers" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--mg)'" onblur="this.style.borderColor='#ddd'">
-</div>
-<div style="margin-bottom:24px">
-<label style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bk);display:block;margin-bottom:4px">Why do you want to partner with sensitive ones? *</label>
-<textarea required rows="4" placeholder="Tell us about yourself and your audience..." style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:13px;outline:none;resize:vertical;font-family:inherit;transition:border-color .15s" onfocus="this.style.borderColor='var(--mg)'" onblur="this.style.borderColor='#ddd'"></textarea>
-</div>
-<button type="submit" class="btn btn-mg" style="width:100%;text-align:center;padding:16px;font-size:14px">Submit Application</button>
-<p class="caption center mt16">We review every application personally. You'll hear back within 5 business days.</p>
-</form>
-</div>
-</div>
-
-<!-- AMBASSADOR FOOTER -->
-<div class="footer">
-<div class="footer-grid">
-<div>
-<p style="font-family:'Times New Roman',Georgia,serif;font-size:16px;font-style:italic;margin-bottom:12px">sensitive ones</p>
-<p style="font-size:11px;color:#666;line-height:1.7;max-width:280px">Inner care for sensitive problems.<br>For Sensitive Ones LLC · Ohio, USA.</p>
-</div>
-<div>
-<h4>Shop</h4>
-<p><a href="#" onclick="showPage('pdp');return false">Skin Support</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('science');return false">Science</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('story');return false">Our Story</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('faq');return false">FAQ</a></p>
-</div>
-<div>
-<h4>Support</h4>
-<p><a href="#" onclick="showPage('contact');return false">Contact</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('shipping');return false">Shipping</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('refund');return false">Returns & Refunds</a></p>
-</div>
-<div>
-<h4>Legal</h4>
-<p><a href="#" onclick="showPage('privacy');return false">Privacy Policy</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('terms');return false">Terms of Service</a></p>
-<p style="margin-top:6px"><a href="#" onclick="showPage('accessibility');return false">Accessibility</a></p>
-</div>
-</div>
-<div class="footer-bottom">
-<p style="font-size:10px;color:#444">&copy; 2026 For Sensitive Ones LLC. All rights reserved.</p>
-<div style="display:flex;gap:16px">
-<a href="https://instagram.com/sensitiveones" style="font-size:10px">Instagram</a>
-<a href="https://tiktok.com/@sensitiveones" style="font-size:10px">TikTok</a>
-</div>
-</div>
-</div>
-</div><!-- end ambassadors -->
-
-<!-- ████████████████████████████████████████████████████████████████ -->
 <script>
 function showPage(id){
 document.querySelectorAll('.pg').forEach(p=>p.classList.remove('show'));
 document.querySelectorAll('.ptab').forEach(t=>t.classList.remove('on'));
 document.querySelectorAll('.links.open').forEach(l=>l.classList.remove('open'));
-document.getElementById(id).classList.add('show');
+var el=document.getElementById(id);
+if(el)el.classList.add('show');
 document.querySelectorAll('.ptab').forEach(function(t){
-var label=t.textContent.trim().toLowerCase().replace(/\s+/g,'');
-if(label===id||(label==='skinsupport'&&id==='pdp')||(label==='ourstory'&&id==='story'))t.classList.add('on');
+var label=t.textContent.trim().toLowerCase().replace(/\s+/g,'').replace(/[^a-z]/g,'');
+if(label===id||(label==='skinsupport'&&id==='pdp')||(label==='ourstory'&&id==='story')||(label==='whatscoming'&&id==='coming'))t.classList.add('on');
 });
 window.scrollTo(0,0);
 }
