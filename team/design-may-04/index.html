@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SO · Design Work Order · Week of May 4</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--mg:#B8255A;--mg-dk:#9e1d47;--mg-soft:rgba(184,37,90,.08);--bk:#0A0A0A;--near:#141414;--char:#1E1E1E;--line:#2A2A2A;--tx:#ddd;--tx2:#999;--tx3:#666;--tx4:#444;--ok:#27ae60;--warn:#e67e22;--no:#c0392b;--blue:#3498db}
+html{font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Pretendard","Noto Sans KR",sans-serif;background:var(--bk);color:var(--tx);line-height:1.6;letter-spacing:-0.01em}
+.wrap{max-width:1100px;margin:0 auto;padding:32px 24px 80px}
+.eyebrow{font-size:10px;color:var(--mg);letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+h1{font-size:30px;font-weight:800;line-height:1.15;margin-bottom:6px;letter-spacing:-.5px;color:#fff}
+h2{font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;margin:36px 0 14px;padding:10px 16px;border-radius:6px;background:var(--near);border-left:3px solid var(--mg)}
+h3{font-size:11px;color:var(--mg);font-weight:800;letter-spacing:2px;text-transform:uppercase;margin:14px 0 6px}
+h4{font-size:13px;color:#fff;font-weight:700;margin:8px 0 4px}
+p,li{font-size:13px;color:var(--tx2);margin:3px 0;line-height:1.65}
+.lede{font-size:14px;color:var(--tx);line-height:1.7;margin-bottom:18px}
+.meta{font-size:10px;color:var(--tx3);font-family:"SF Mono",Monaco,monospace;margin-top:4px}
+.pill{display:inline-block;padding:2px 8px;border-radius:100px;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-right:4px}
+.pill-mg{background:rgba(184,37,90,.15);color:var(--mg);border:1px solid rgba(184,37,90,.3)}
+.pill-no{background:rgba(192,57,43,.15);color:var(--no);border:1px solid rgba(192,57,43,.3)}
+.pill-warn{background:rgba(230,126,34,.15);color:var(--warn);border:1px solid rgba(230,126,34,.3)}
+.pill-ok{background:rgba(39,174,96,.15);color:var(--ok);border:1px solid rgba(39,174,96,.3)}
+.pill-blue{background:rgba(52,152,219,.15);color:var(--blue);border:1px solid rgba(52,152,219,.3)}
+
+.crit{background:rgba(184,37,90,.06);border:1.5px solid var(--mg);border-radius:8px;padding:18px 22px;margin:14px 0 24px}
+.crit h3{margin-top:0}
+.crit p{font-size:13px;color:var(--tx);line-height:1.7}
+
+.role{background:var(--near);border:1px solid var(--line);border-radius:10px;padding:24px;margin-bottom:18px}
+.role-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;flex-wrap:wrap;gap:8px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.role-name{font-family:'Times New Roman',Georgia,serif;font-size:28px;color:#fff;letter-spacing:-.3px}
+.role-title{font-size:10px;color:var(--mg);letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-top:2px}
+.role-focus{font-size:13px;color:var(--tx);font-style:italic;margin-top:8px;line-height:1.6}
+.role-section{margin-top:18px}
+.role-section h4{margin-bottom:10px;font-size:12px;color:var(--mg);letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+
+.tasks{list-style:none;padding:0}
+.tasks li{padding:14px 16px;background:var(--bk);border:1px solid #1a1a1a;border-left:2px solid var(--mg);border-radius:0 8px 8px 0;margin-bottom:8px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start}
+.tasks li.crit{border-left-color:var(--no);background:rgba(192,57,43,.04)}
+.tasks li.high{border-left-color:var(--warn);background:rgba(230,126,34,.04)}
+.tasks li.done{border-left-color:var(--ok);background:rgba(39,174,96,.04);opacity:.65}
+.tasks li.done .task-body{text-decoration:line-through}
+.tasks li input[type="checkbox"]{margin-top:3px;accent-color:var(--mg);cursor:pointer;flex-shrink:0;width:16px;height:16px}
+.tasks li .task-body{color:var(--tx);font-size:13px;line-height:1.6}
+.tasks li .task-body strong{color:#fff}
+.tasks li .task-body .step{font-size:11px;color:var(--tx2);margin-top:6px;padding-left:14px;border-left:1px solid #2a2a2a;line-height:1.6}
+.tasks li .task-body .step-num{color:var(--mg);font-weight:700;font-family:"SF Mono",Monaco,monospace}
+.tasks li .task-due{font-size:9px;color:var(--mg);letter-spacing:1px;text-transform:uppercase;font-weight:700;white-space:nowrap;align-self:start;padding-top:2px}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-top:10px}
+.kpi{background:var(--bk);border:1px solid #1a1a1a;border-radius:6px;padding:12px 14px;text-align:left}
+.kpi-n{font-family:'Times New Roman',Georgia,serif;font-size:24px;color:var(--mg);line-height:1}
+.kpi-l{font-size:9px;color:var(--tx3);letter-spacing:1px;text-transform:uppercase;margin-top:6px;line-height:1.4}
+
+.handoff{background:rgba(52,152,219,.05);border-left:3px solid var(--blue);padding:14px 18px;border-radius:0 6px 6px 0;font-size:12px;color:var(--tx2);margin:8px 0}
+.handoff strong{color:var(--blue)}
+
+.daily{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:14px 0}
+@media(max-width:768px){.daily{grid-template-columns:repeat(2,1fr)}}
+.day-cell{background:var(--near);border:1px solid var(--line);border-radius:6px;padding:12px;font-size:11px}
+.day-cell .day-when{font-size:10px;color:var(--mg);letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.day-cell .day-num{font-family:'Times New Roman',Georgia,serif;font-size:20px;color:#fff;line-height:1;margin-bottom:6px}
+
+.system-card{background:var(--bk);border:1px solid var(--line);border-radius:8px;padding:16px;margin:6px 0}
+.system-card h4{margin-top:0;font-size:13px;color:#fff}
+.system-card p{font-size:11px;color:var(--tx2)}
+
+.ship-table{width:100%;border-collapse:collapse;font-size:12px;margin:8px 0;background:var(--near);border-radius:8px;overflow:hidden}
+.ship-table th{background:var(--char);color:var(--mg);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+.ship-table td{padding:10px 12px;color:var(--tx2);border-bottom:1px solid #1a1a1a}
+.ship-table td strong{color:#fff}
+.ship-table tr:last-child td{border-bottom:none}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header>
+<p class="eyebrow">Sensitive Ones · Design Team Work Order</p>
+<h1>Design · Week of May 4, 2026</h1>
+<p class="lede">Live document. Tap checkboxes as you complete tasks (saves locally). Steps are ordered — start at task 1, work down. Brand guide locked. Packaging artwork in regulatory review (no design action this week). Focus is photo direction + website system + Klaviyo lock + social design system.</p>
+<p class="meta">v1 · 2026-05-04 · For Dawon + Theo · Daily check-in 10am · Design review Thu 11am · Friday recap 4pm</p>
+</header>
+
+<div class="crit">
+<h3>This week's outcome</h3>
+<p>By Friday end-of-day, every visual asset that touches the launch funnel has either shipped or has a documented status. Klaviyo welcome flow design-locked and exported. Social design system templates created so future content production scales without reinventing per asset. Website tightened with second batch of visuals. Apr 15 photo retouching delivered to all downstream pipelines.</p>
+</div>
+
+<h2>Daily flow</h2>
+<div class="daily">
+<div class="day-cell"><div class="day-when">Mon · 5/4</div><div class="day-num">04</div><strong>Kickoff 10am.</strong> Photo retouching starts. Klaviyo emails 1.1–1.3 in design.</div>
+<div class="day-cell"><div class="day-when">Tue · 5/5</div><div class="day-num">05</div><strong>Klaviyo 1.1–1.3 ship.</strong> Photo round 1 delivered. Website tightening starts.</div>
+<div class="day-cell"><div class="day-when">Wed · 5/6</div><div class="day-num">06</div><strong>PDP designer pass</strong> (joint). Carousel templates lock.</div>
+<div class="day-cell"><div class="day-when">Thu · 5/7</div><div class="day-num">07</div><strong>Design review 11am.</strong> Brand asset library sync. Klaviyo 2.1–2.3 ship.</div>
+<div class="day-cell"><div class="day-when">Fri · 5/8</div><div class="day-num">08</div><strong>Ship day.</strong> All deliverables in. Friday recap 4pm.</div>
+</div>
+
+<!-- ========== DAWON ========== -->
+<h2>Dawon</h2>
+<div class="role">
+<div class="role-head">
+<div>
+<p class="role-name">Dawon</p>
+<p class="role-title">Design Lead · Photo · Web · Brand asset owner</p>
+</div>
+<span class="pill pill-mg">Lead</span>
+</div>
+<p class="role-focus">"Polish the photo. Tighten the website. Own the master files. Build for what comes next, not just what ships this week."</p>
+
+<div class="role-section">
+<h4>Tasks · in order</h4>
+<ul class="tasks">
+<li class="high">
+<input type="checkbox" id="d1">
+<div class="task-body">
+<strong>1. Photo retouching · 8 hero finals from Apr 15 shoot.</strong>
+<div class="step"><span class="step-num">1.1</span> Open shared raw folder · select 8 strongest frames per Master Plan brief (3 product, 3 lifestyle, 2 model)</div>
+<div class="step"><span class="step-num">1.2</span> Final color · skin retouch · brand-correct magenta tone in all warm tones</div>
+<div class="step"><span class="step-num">1.3</span> Export 4 crop variants per image: 1:1 (IG/PDP) · 9:16 (story/Reel/TikTok) · 4:5 (IG feed) · 16:9 (web hero)</div>
+<div class="step"><span class="step-num">1.4</span> Drop into shared `/photo/finals/may` folder with naming: `SO_Photo_[type]_[01-08]_[ratio].jpg`</div>
+<div class="step"><span class="step-num">1.5</span> Notify Theo + Justin in chat when delivered (downstream pipelines waiting)</div>
+</div>
+<div class="task-due">Tue 5/5</div>
+</li>
+
+<li class="high">
+<input type="checkbox" id="d2">
+<div class="task-body">
+<strong>2. Master photo library file · build it once, everyone uses it.</strong>
+<div class="step"><span class="step-num">2.1</span> Create master Figma file: `SO · Photo Library · Master`</div>
+<div class="step"><span class="step-num">2.2</span> Import all 8 retouched finals as components (auto-layout, locked aspect)</div>
+<div class="step"><span class="step-num">2.3</span> Tag each: usage rights · subject · best-fit channels · alt text</div>
+<div class="step"><span class="step-num">2.4</span> Share read access with whole team (Theo, Miko, Justin, Alex). Edit access: Dawon only.</div>
+<div class="step"><span class="step-num">2.5</span> Note any photo gaps spotted in retouching → list for next shoot brief</div>
+</div>
+<div class="task-due">Wed 5/6</div>
+</li>
+
+<li>
+<input type="checkbox" id="d3">
+<div class="task-body">
+<strong>3. Website tightening · home + PDP designer pass.</strong>
+<div class="step"><span class="step-num">3.1</span> Read live site: <a href="https://allvitalorganics.github.io/so-website/" style="color:var(--mg)">allvitalorganics.github.io/so-website/</a></div>
+<div class="step"><span class="step-num">3.2</span> Replace [BRAND HERO] placeholder on home with retouched final 01</div>
+<div class="step"><span class="step-num">3.3</span> Replace [DUAL-CAP CLOSE-UP] with retouched product final</div>
+<div class="step"><span class="step-num">3.4</span> Replace [PRODUCT — multiple angles] on PDP page with retouched product set</div>
+<div class="step"><span class="step-num">3.5</span> Replace [WHOLESALE LIFESTYLE] on wholesale page with retouched lifestyle final</div>
+<div class="step"><span class="step-num">3.6</span> Note any spacing, color, or hierarchy issues in shared notes file → Alex reviews Thursday</div>
+</div>
+<div class="task-due">Wed 5/6</div>
+</li>
+
+<li>
+<input type="checkbox" id="d4">
+<div class="task-body">
+<strong>4. Web visuals batch 2 · 6 graphics for Science page expansion.</strong>
+<div class="step"><span class="step-num">4.1</span> Skin layer cross-section diagram (epidermis, dermis, where each ingredient acts)</div>
+<div class="step"><span class="step-num">4.2</span> Dose ladder visual (RCT mid-dose, common DTC, fairy-dusted, SO)</div>
+<div class="step"><span class="step-num">4.3</span> "Cofactor mechanism" diagram for Vitamin C → procollagen synthesis</div>
+<div class="step"><span class="step-num">4.4</span> "Why dual-cap" infographic — liquid vs tablet stability split</div>
+<div class="step"><span class="step-num">4.5</span> Ingredient + dose grid (8-cell minimal version for mobile)</div>
+<div class="step"><span class="step-num">4.6</span> "Made in Korea" sourcing visual</div>
+<div class="step"><span class="step-num">4.7</span> Export each as SVG (scalable) + PNG (fallback). Brand-correct magenta. Black + cream backgrounds.</div>
+</div>
+<div class="task-due">Thu 5/7</div>
+</li>
+
+<li>
+<input type="checkbox" id="d5">
+<div class="task-body">
+<strong>5. Brand asset library · master Figma index. (Owner build.)</strong>
+<div class="step"><span class="step-num">5.1</span> Create master file: `SO · Brand Asset Library · Master`</div>
+<div class="step"><span class="step-num">5.2</span> Import: logo variants · type tokens · color tokens · spacing tokens · component library</div>
+<div class="step"><span class="step-num">5.3</span> Link to: photo library · social templates · email templates · web design (when ready)</div>
+<div class="step"><span class="step-num">5.4</span> Document file naming convention: `SO_[Asset]_[Variant]_[Date].ext`</div>
+<div class="step"><span class="step-num">5.5</span> Share read access to whole team. This is the source of truth for every visual decision going forward.</div>
+</div>
+<div class="task-due">Fri 5/8</div>
+</li>
+
+<li>
+<input type="checkbox" id="d6">
+<div class="task-body">
+<strong>6. Lead Thursday design review · 11am.</strong>
+<div class="step"><span class="step-num">6.1</span> Pull together: photo finals · web visuals batch 2 · Klaviyo design review · social system review</div>
+<div class="step"><span class="step-num">6.2</span> Walk Alex through each block, flag anything that needs decision</div>
+<div class="step"><span class="step-num">6.3</span> Document decisions in shared notes file</div>
+</div>
+<div class="task-due">Thu 5/7</div>
+</li>
+</ul>
+</div>
+
+<div class="role-section">
+<h4>KPIs · Friday May 8 measurement</h4>
+<div class="kpis">
+<div class="kpi"><div class="kpi-n">8</div><div class="kpi-l">Hero photos · final retouched + 4 crop variants each</div></div>
+<div class="kpi"><div class="kpi-n">1</div><div class="kpi-l">Photo library master Figma · live</div></div>
+<div class="kpi"><div class="kpi-n">5</div><div class="kpi-l">Website placeholders swapped for real photo</div></div>
+<div class="kpi"><div class="kpi-n">6</div><div class="kpi-l">Web visuals batch 2 (SVG + PNG)</div></div>
+<div class="kpi"><div class="kpi-n">1</div><div class="kpi-l">Brand asset library master · live</div></div>
+</div>
+</div>
+</div>
+
+<!-- ========== THEO ========== -->
+<h2>Theo</h2>
+<div class="role">
+<div class="role-head">
+<div>
+<p class="role-name">Theo</p>
+<p class="role-title">Klaviyo · Social system · Production design</p>
+</div>
+<span class="pill pill-mg">Email + social system</span>
+</div>
+<p class="role-focus">"Lock the welcome flow this week. Build the social design system so every post going forward starts from a template, not a blank canvas."</p>
+
+<div class="role-section">
+<h4>Tasks · in order</h4>
+<ul class="tasks">
+<li class="crit">
+<input type="checkbox" id="t1">
+<div class="task-body">
+<strong>1. Klaviyo Welcome Flow · all 6 emails design-locked + exported.</strong>
+<div class="step"><span class="step-num">1.1</span> Email 1.1 "You noticed something" · iMessage gradient layout · pink-to-white · day 0 · ship Tue 5/5</div>
+<div class="step"><span class="step-num">1.2</span> Email 1.2 "5,000mg vs 50mg. What's fairy dusting?" · day 3 · ship Tue 5/5</div>
+<div class="step"><span class="step-num">1.3</span> Email 1.3 "Seven active ingredients. Every one backed by research." · day 7 · ship Tue 5/5</div>
+<div class="step"><span class="step-num">1.4</span> Email 2.1 "Wait you made a card game?" · Industry Tea intro · day 14 · ship Thu 5/7</div>
+<div class="step"><span class="step-num">1.5</span> Email 2.2 "Cap. Tablets. Shot. Done." · format reveal · day 21 · ship Thu 5/7</div>
+<div class="step"><span class="step-num">1.6</span> Email 2.3 "Why are you doing this?" · manifesto · day 28 · ship Thu 5/7</div>
+<div class="step"><span class="step-num">1.7</span> Export each as: Klaviyo-ready HTML template · master Figma component · PNG preview</div>
+<div class="step"><span class="step-num">1.8</span> Document the system in `SO · Klaviyo Welcome Flow · Master`: typography rules, color tokens, gradient specs, image placement, mobile breakpoints, bullet/spacing rules. Anyone should be able to design email 3.x from this doc.</div>
+</div>
+<div class="task-due">Thu 5/7</div>
+</li>
+
+<li class="high">
+<input type="checkbox" id="t2">
+<div class="task-body">
+<strong>2. Social design system · templates that scale.</strong>
+<div class="step"><span class="step-num">2.1</span> IG grid template · 9-cell rotation system (3 product · 3 ingredient · 3 lifestyle) · Figma master file</div>
+<div class="step"><span class="step-num">2.2</span> Story templates · 6 reusable layouts (announce · educate · BTS · poll · founder · product)</div>
+<div class="step"><span class="step-num">2.3</span> Story highlight cover icons · 6 covers (About · Science · Reviews · Press · Routine · Q&A)</div>
+<div class="step"><span class="step-num">2.4</span> Carousel templates · 3 master layouts (ingredient education · dose comparison · founder story) · 9:16 + 1:1 versions</div>
+<div class="step"><span class="step-num">2.5</span> Reel/TikTok cover thumbnail template · 2 layouts (product-led + face-led)</div>
+<div class="step"><span class="step-num">2.6</span> Subtitle/overlay style guide for video (font, size, color, drop shadow specs) · ship to Miko</div>
+<div class="step"><span class="step-num">2.7</span> Document each template as a Figma component with variants. Every future post starts here.</div>
+</div>
+<div class="task-due">Wed 5/6</div>
+</li>
+
+<li class="high">
+<input type="checkbox" id="t3">
+<div class="task-body">
+<strong>3. Social carousels · 12 ingredient education pieces (use templates from #2).</strong>
+<div class="step"><span class="step-num">3.1</span> 7 ingredient deep-dives · one per active (Verisol, HA, C, E, Beta-carotene, B2, B5) · use carousel template from #2.4</div>
+<div class="step"><span class="step-num">3.2</span> 5 dose-comparison + transparency angle (5,000mg vs industry · what is fairy dusting · what is proprietary blend · what does cofactor mean · why dual-cap)</div>
+<div class="step"><span class="step-num">3.3</span> Each carousel: hook slide · 4-6 content slides · CTA slide · DSHEA disclaimer slide</div>
+<div class="step"><span class="step-num">3.4</span> Designed to be SAVED, not just liked. Reference data, not promo.</div>
+<div class="step"><span class="step-num">3.5</span> Export 9:16 + 1:1 each. Drop in `/social/carousels/may`.</div>
+</div>
+<div class="task-due">Fri 5/8</div>
+</li>
+
+<li>
+<input type="checkbox" id="t4">
+<div class="task-body">
+<strong>4. PDP designer pass · joint with Dawon.</strong>
+<div class="step"><span class="step-num">4.1</span> Wed 5/6 · sit with Dawon for 90 min · walk through PDP visual hierarchy</div>
+<div class="step"><span class="step-num">4.2</span> Flag any places where photo + copy combo fails the eye-trip test</div>
+<div class="step"><span class="step-num">4.3</span> Recommend specific component swaps (cards, anatomy, ingredient grid, etc.)</div>
+</div>
+<div class="task-due">Wed 5/6</div>
+</li>
+</ul>
+</div>
+
+<div class="role-section">
+<h4>KPIs · Friday May 8 measurement</h4>
+<div class="kpis">
+<div class="kpi"><div class="kpi-n">6</div><div class="kpi-l">Klaviyo emails design-locked + exported</div></div>
+<div class="kpi"><div class="kpi-n">1</div><div class="kpi-l">Klaviyo system master doc · live</div></div>
+<div class="kpi"><div class="kpi-n">5</div><div class="kpi-l">Social system master files (grid · stories · highlights · carousel · video subtitle)</div></div>
+<div class="kpi"><div class="kpi-n">12</div><div class="kpi-l">Ingredient education carousels</div></div>
+<div class="kpi"><div class="kpi-n">1</div><div class="kpi-l">PDP designer pass complete (joint w/ Dawon)</div></div>
+</div>
+</div>
+</div>
+
+<!-- ========== JOINT ========== -->
+<h2>Joint sessions</h2>
+<div class="role">
+<div class="role-head">
+<div>
+<p class="role-name">Cross-share moments</p>
+<p class="role-title">Built-in alignment time</p>
+</div>
+<span class="pill pill-blue">Both</span>
+</div>
+
+<div class="role-section">
+<h4>Three protected windows this week</h4>
+<ul class="tasks">
+<li class="high">
+<input type="checkbox" id="j1">
+<div class="task-body">
+<strong>Mon 5/4 · 10am · Kickoff (15 min).</strong>
+<div class="step">Both name their #1 by Friday. Confirm dependencies (who is waiting on whom). Confirm shared file locations.</div>
+</div>
+<div class="task-due">Mon 5/4</div>
+</li>
+
+<li class="high">
+<input type="checkbox" id="j2">
+<div class="task-body">
+<strong>Wed 5/6 · 1:30pm · PDP designer pass (90 min, joint).</strong>
+<div class="step">Theo + Dawon walk the PDP page together. Theo flags template opportunities (where Dawon can use his social templates for PDP visuals). Dawon brings photo finals.</div>
+</div>
+<div class="task-due">Wed 5/6</div>
+</li>
+
+<li class="high">
+<input type="checkbox" id="j3">
+<div class="task-body">
+<strong>Thu 5/7 · 11am · Design review with Alex (60 min).</strong>
+<div class="step">Dawon leads. Walk through: photo finals · web visuals batch 2 · Klaviyo welcome flow ship · social design system · brand asset library status. Alex approves or flags. Decisions documented in shared notes.</div>
+</div>
+<div class="task-due">Thu 5/7</div>
+</li>
+</ul>
+</div>
+</div>
+
+<!-- ========== FILE STRUCTURE ========== -->
+<h2>File structure (everyone uses)</h2>
+<table class="ship-table">
+<tr><th>Path</th><th>Owner</th><th>Contents</th></tr>
+<tr><td><strong>/photo/finals/may</strong></td><td>Dawon</td><td>8 retouched hero finals · 4 crop variants each · naming `SO_Photo_[type]_[01-08]_[ratio].jpg`</td></tr>
+<tr><td><strong>SO · Photo Library · Master (Figma)</strong></td><td>Dawon</td><td>Photo components · usage rights · alt text · channel best-fit</td></tr>
+<tr><td><strong>SO · Brand Asset Library · Master (Figma)</strong></td><td>Dawon</td><td>Logos · type · color · spacing · components · index of all other libraries</td></tr>
+<tr><td><strong>SO · Klaviyo Welcome Flow · Master (Figma)</strong></td><td>Theo</td><td>6 emails as components + system doc (typography, color, gradient, breakpoints, future-email rules)</td></tr>
+<tr><td><strong>SO · Social System · Master (Figma)</strong></td><td>Theo</td><td>Grid · stories · highlights · carousels · video subtitle templates</td></tr>
+<tr><td><strong>/social/carousels/may</strong></td><td>Theo</td><td>12 ingredient education carousels (9:16 + 1:1 each)</td></tr>
+<tr><td><strong>/web/visuals/batch-2</strong></td><td>Dawon</td><td>6 SVG + PNG infographics for Science page</td></tr>
+</table>
+
+<!-- ========== END OF WEEK SHIP ========== -->
+<h2>Friday end-of-week ship list</h2>
+<table class="ship-table">
+<tr><th>Owner</th><th>Deliverable</th><th>Status</th></tr>
+<tr><td><strong>Dawon</strong></td><td>8 hero photos retouched · 4 crops each · in shared folder</td><td><span class="pill pill-warn">Tue</span></td></tr>
+<tr><td><strong>Dawon</strong></td><td>Photo Library master Figma · live + shared</td><td><span class="pill pill-warn">Wed</span></td></tr>
+<tr><td><strong>Dawon</strong></td><td>Website placeholders swapped (5 images) · home + PDP + wholesale</td><td><span class="pill pill-warn">Wed</span></td></tr>
+<tr><td><strong>Dawon</strong></td><td>6 web visuals batch 2 · SVG + PNG</td><td><span class="pill pill-warn">Thu</span></td></tr>
+<tr><td><strong>Dawon</strong></td><td>Brand Asset Library master Figma · live + shared</td><td><span class="pill pill-mg">Fri</span></td></tr>
+<tr><td><strong>Theo</strong></td><td>Klaviyo emails 1.1, 1.2, 1.3 · design-locked + exported</td><td><span class="pill pill-warn">Tue</span></td></tr>
+<tr><td><strong>Theo</strong></td><td>Social design system · 5 master files (grid, stories, highlights, carousel, subtitle)</td><td><span class="pill pill-warn">Wed</span></td></tr>
+<tr><td><strong>Theo</strong></td><td>Klaviyo emails 2.1, 2.2, 2.3 · design-locked + exported</td><td><span class="pill pill-warn">Thu</span></td></tr>
+<tr><td><strong>Theo</strong></td><td>Klaviyo Welcome Flow Master doc · live + shared</td><td><span class="pill pill-warn">Thu</span></td></tr>
+<tr><td><strong>Theo</strong></td><td>12 ingredient education carousels · 9:16 + 1:1 each</td><td><span class="pill pill-mg">Fri</span></td></tr>
+</table>
+
+<!-- ========== NOTES ========== -->
+<h2>Notes</h2>
+<div class="system-card">
+<h4>If something blocks you</h4>
+<p>Daily 10am standup is the place to flag. If something is critical and you cannot wait, ping Alex directly. Don't sit on a blocker — the launch runway is tight.</p>
+</div>
+
+<div class="system-card">
+<h4>Brand discipline reminders</h4>
+<p>Magenta = #B8255A · cream = #FAF8F6 · black = #0A0A0A. Times New Roman for headings (italic for brand mark). Helvetica Neue for body. No em-dashes in body copy. DSHEA disclaimer adjacent to any structure-function claim. "Anti-aging," "clinically proven," and "FDA approved" never appear anywhere.</p>
+</div>
+
+<div class="system-card">
+<h4>Why the master files matter</h4>
+<p>Every system doc you build this week is a force multiplier for everything we ship after. A locked Klaviyo template means the next 8 emails take an hour each, not a day. A locked carousel template means the next 88 carousels (per the 100-Ads framework) ship at velocity. Build once. Use forever.</p>
+</div>
+
+<p class="meta" style="text-align:center;margin-top:32px;font-size:9px">Sensitive Ones · Internal · Not indexed · For Dawon + Theo · Live link refreshed each week</p>
+
+</div>
+
+<script>
+(function(){
+  var key='so_design_workorder_may4';
+  var saved=JSON.parse(localStorage.getItem(key)||'{}');
+  var checks=document.querySelectorAll('input[type="checkbox"]');
+  checks.forEach(function(cb){
+    if(saved[cb.id]){cb.checked=true;cb.closest('li').classList.add('done');}
+    cb.addEventListener('change',function(){
+      this.closest('li').classList.toggle('done',this.checked);
+      var state={};
+      checks.forEach(function(c){state[c.id]=c.checked;});
+      localStorage.setItem(key,JSON.stringify(state));
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
