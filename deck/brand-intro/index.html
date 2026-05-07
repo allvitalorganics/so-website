@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>sensitive ones · Brand Introduction · v3</title>
+<title>sensitive ones · Brand Introduction</title>
 <style>
 :root{
   --magenta:#B8255A;
@@ -79,15 +79,16 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 @media(max-width:780px){.cover-meta{left:22px;right:22px;bottom:22px;flex-direction:column;align-items:flex-start;gap:6px}}
 
 /* reader stats */
-.reader-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px;max-width:840px}
+.reader-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px;max-width:760px}
 @media(max-width:780px){.reader-stats{grid-template-columns:1fr}}
-.r-stat{background:#fff;border:1px solid var(--border);border-radius:10px;padding:20px}
+.r-stat{background:#fff;border:1px solid var(--border);border-radius:10px;padding:22px}
 .r-stat .num{font-family:var(--serif);font-size:42px;color:var(--magenta);line-height:1;letter-spacing:-0.025em}
-.r-stat .lbl{font-size:12.5px;color:var(--ink-3);margin-top:8px;line-height:1.45}
+.r-stat .lbl{font-size:13px;color:var(--ink-2);margin-top:10px;line-height:1.5}
+.r-stat .src{font-size:11px;color:var(--ink-3);margin-top:8px;font-style:italic;line-height:1.4}
 
 /* dose chart */
 .dose-chart{margin-top:28px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 26px}
-.dose-row{display:grid;grid-template-columns:200px 1fr 90px;align-items:center;gap:16px;padding:10px 0;border-bottom:1px solid var(--border-soft)}
+.dose-row{display:grid;grid-template-columns:230px 1fr 90px;align-items:center;gap:16px;padding:10px 0;border-bottom:1px solid var(--border-soft)}
 .dose-row:last-child{border-bottom:none}
 .dose-row.header{padding-bottom:14px;border-bottom:1px solid var(--border)}
 .dose-row.header .h{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
@@ -189,11 +190,14 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   .actives-row .form{grid-column:2}
   .actives-row .dose{grid-column:3;grid-row:1}
 }
-.actives-foot{font-size:12px;color:var(--ink-3);font-style:italic;margin-top:16px;line-height:1.55}
+.actives-meta{display:flex;justify-content:space-between;gap:16px;margin-top:18px;padding:12px 16px;background:var(--cream-2);border-radius:8px;font-size:12px;color:var(--ink-2)}
+@media(max-width:780px){.actives-meta{flex-direction:column;gap:8px}}
+.actives-meta b{color:var(--ink);font-weight:600}
+.actives-foot{font-size:12px;color:var(--ink-3);font-style:italic;margin-top:14px;line-height:1.55}
 
 /* clinical evidence table */
 .evidence{margin-top:24px;border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
-.ev-row{display:grid;grid-template-columns:1.8fr 0.7fr 2.4fr 2.4fr;align-items:flex-start;padding:14px 22px;border-bottom:1px solid var(--border-soft);gap:18px}
+.ev-row{display:grid;grid-template-columns:1.7fr 0.7fr 2.4fr 2.4fr;align-items:flex-start;padding:14px 22px;border-bottom:1px solid var(--border-soft);gap:18px}
 .ev-row:last-child{border-bottom:none}
 .ev-row.header{background:var(--cream-2);border-bottom:1px solid var(--border)}
 .ev-row.header .h{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
@@ -203,6 +207,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 .ev-row .ev-out{font-size:13px;color:var(--ink-2);line-height:1.5}
 .ev-row .ev-cite{font-size:11.5px;color:var(--ink-3);line-height:1.5;font-style:italic}
 .ev-row .ev-cite a{color:var(--magenta);text-decoration:none;font-style:normal}
+.ev-row .ev-cite a:hover{text-decoration:underline}
 .ev-row .ev-cite b{color:var(--ink);font-weight:600;font-style:normal;display:block;margin-bottom:2px;font-size:12px}
 @media(max-width:980px){
   .ev-row{grid-template-columns:1fr;gap:8px;padding:14px 16px}
@@ -303,8 +308,8 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
     <div class="descriptor">Inner care for sensitive problems.</div>
   </div>
   <div class="cover-meta">
-    <span>Brand Introduction · v3</span>
-    <span>2026 · For Sensitive Ones LLC</span>
+    <span>Brand Introduction · 2026</span>
+    <span>For Sensitive Ones LLC · Ohio</span>
   </div>
 </section>
 
@@ -315,19 +320,17 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   <div class="slide-inner">
     <h1 class="title">For the <em>sensitive</em> ones.</h1>
     <p class="lede">Sensitive is not the flaw. Sensitive is the information.</p>
-    <p class="body">Perceptive, not fragile. The friend who reads every label. The one who tried what everyone said worked, and felt nothing. Or worse, felt something. The one who has been let down by a "clean" brand twice. Twenty-four to forty. Buys fewer things, more deliberately. We built this for her. <strong>We are her.</strong></p>
+    <p class="body">Perceptive, not fragile. The friend who reads every label. The one who tried what everyone said worked, and felt nothing, or worse, felt something. The one who has been let down by a "clean" brand twice. Twenty-four to forty. Buys fewer things, more deliberately. We built this for her. <strong>We are her.</strong></p>
     <div class="reader-stats">
       <div class="r-stat">
-        <div class="num">~50%</div>
-        <div class="lbl">of US adults self-identify as having sensitive skin or reactive systems</div>
+        <div class="num">60–70%</div>
+        <div class="lbl">of women self-report some degree of sensitive skin</div>
+        <div class="src">Farage 2019, Front Med (PMID 31157225)</div>
       </div>
       <div class="r-stat">
-        <div class="num">73%</div>
-        <div class="lbl">do not trust supplement label claims</div>
-      </div>
-      <div class="r-stat">
-        <div class="num">50%</div>
-        <div class="lbl">of supplement users quit within 3 months</div>
+        <div class="num">50–60%</div>
+        <div class="lbl">of men self-report some degree of sensitive skin</div>
+        <div class="src">Farage 2019, Front Med (PMID 31157225)</div>
       </div>
     </div>
   </div>
@@ -339,35 +342,35 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   <div class="slide-num">03 / 15</div>
   <div class="slide-inner">
     <h1 class="title">Half the <em>story</em>.</h1>
-    <p class="lede">Most supplements use the right words. Few use the right doses.</p>
-    <p class="body">Proprietary blends hide the actual amounts. The clinically studied dose is on one slide of the white paper. A fraction of it is in the bottle. The label says "blend" because the per-ingredient number would not survive being printed.</p>
+    <p class="lede">Most supplements use the right words. Few publish the actual amounts.</p>
+    <p class="body">Proprietary blends list ingredients without per-ingredient doses. The clinically studied dose appears in the published paper. A different number, often unstated, sits in the bottle. The label says "blend" because the per-ingredient amount would not survive being printed.</p>
 
     <div class="dose-chart">
-      <div class="eyebrow" style="margin-bottom:14px">Bioactive collagen peptides · daily dose comparison</div>
+      <div class="eyebrow" style="margin-bottom:14px">Bioactive collagen peptides · daily dose, disclosure pattern</div>
       <div class="dose-row header">
-        <div class="h">Source</div>
-        <div class="h">Dose at the bottle</div>
-        <div class="h" style="text-align:right">Amount</div>
+        <div class="h">Approach</div>
+        <div class="h">Visual</div>
+        <div class="h" style="text-align:right">Stated dose</div>
       </div>
       <div class="dose-row">
-        <div class="dose-label">Skin Support<span class="sub">Verisol® at study dose</span></div>
+        <div class="dose-label">Skin Support<span class="sub">5g arm of Proksch 2014 elasticity RCT</span></div>
         <div class="dose-bar"><div class="dose-bar-fill full" style="width:100%">5,000mg</div></div>
         <div class="dose-num">5,000mg</div>
       </div>
       <div class="dose-row">
-        <div class="dose-label">Most premium brands<span class="sub">half the studied amount</span></div>
+        <div class="dose-label">Common lower-arm dose<span class="sub">2.5g, the wrinkle-study dose</span></div>
         <div class="dose-bar"><div class="dose-bar-fill half" style="width:50%">2,500mg</div></div>
         <div class="dose-num">2,500mg</div>
       </div>
       <div class="dose-row">
-        <div class="dose-label">Proprietary blends<span class="sub">per-ingredient amount undisclosed</span></div>
+        <div class="dose-label">Proprietary blend<span class="sub">per-ingredient amount not stated</span></div>
         <div class="dose-bar"><div class="dose-bar-fill tiny" style="width:18%">undisclosed</div></div>
         <div class="dose-num">?</div>
       </div>
-      <div class="dose-cite">Clinical reference dose: Verisol® RCT, Proksch et al. 2014, n=114, 8 weeks, eye wrinkle volume reduction. PubMed PMID 24401291.</div>
+      <div class="dose-cite">Both 2.5g and 5g were tested in Proksch et al. 2014 (Skin Pharmacol Physiol). 2.5g was the dose in the Verisol-specific 8-week wrinkle RCT (n=114, PMID 24401291). 2.5g and 5g were the two arms of the 8-week elasticity RCT (n=69, PMID 23949208). Skin Support uses 5,000mg, fully disclosed. The third row above is the industry pattern that this deck addresses.</div>
     </div>
 
-    <div class="anchor-block" style="margin-top:22px">Half the story is not the whole story. We chose differently.</div>
+    <div class="anchor-block" style="margin-top:22px">Half the story is not the whole story. We chose to publish.</div>
   </div>
 </section>
 
@@ -378,16 +381,16 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   <div class="slide-inner">
     <h1 class="title">The window is <em>narrow</em>.</h1>
     <p class="lede">Transparency just became a competitive advantage. It will not stay one for long.</p>
-    <p class="body">Several brands are reaching for the transparency wedge in the same quarter. The one who owns <strong>sensitive-first</strong>, the audience the others are not built for, is the one who will hold the slot.</p>
+    <p class="body">Several brands are reaching for the transparency wedge in the same period. The one who owns <strong>sensitive-first</strong>, the audience the others are not built for, is the one who will hold the slot.</p>
 
     <div class="timeline">
       <div class="timeline-track"></div>
       <div class="timeline-row">
-        <div class="t-event"><div class="t-dot"></div><div><div class="t-date">Q3 2025</div><div class="t-name">Premium audit content emerges</div><div class="t-anchor">UsefulVitamins format begins reshaping consumer trust</div></div></div>
-        <div class="t-event"><div class="t-dot"></div><div><div class="t-date">Q4 2025</div><div class="t-name">Generic transparency brands launch</div><div class="t-anchor">Multiple new entrants reach for "every dose published" claim</div></div></div>
-        <div class="t-event now"><div class="t-dot"></div><div><div class="t-date">Q2 2026 · Now</div><div class="t-name">Sensitive-first slot opens</div><div class="t-anchor">Sensitive ones launches into the slot the others can't reach</div></div></div>
-        <div class="t-event future"><div class="t-dot"></div><div><div class="t-date">Q4 2026</div><div class="t-name">Transparency commoditizes</div><div class="t-anchor">Wedge shrinks; positioning becomes the moat</div></div></div>
-        <div class="t-event future"><div class="t-dot"></div><div><div class="t-date">2027</div><div class="t-name">Brand-trust era</div><div class="t-anchor">Story and audience win, not specs alone</div></div></div>
+        <div class="t-event"><div class="t-dot"></div><div><div class="t-date">Earlier</div><div class="t-name">Audit-style content arrives</div><div class="t-anchor">Side-by-side label comparisons reshape consumer trust</div></div></div>
+        <div class="t-event"><div class="t-dot"></div><div><div class="t-date">Recently</div><div class="t-name">Transparency claims proliferate</div><div class="t-anchor">Multiple new entrants pursue the same wedge</div></div></div>
+        <div class="t-event now"><div class="t-dot"></div><div><div class="t-date">Now</div><div class="t-name">Sensitive-first slot opens</div><div class="t-anchor">Sensitive ones launches into the slot the others are not built to fill</div></div></div>
+        <div class="t-event future"><div class="t-dot"></div><div><div class="t-date">Ahead</div><div class="t-name">Transparency commoditizes</div><div class="t-anchor">Wedge shrinks; positioning becomes the moat</div></div></div>
+        <div class="t-event future"><div class="t-dot"></div><div><div class="t-date">Beyond</div><div class="t-name">Brand-trust era</div><div class="t-anchor">Story and audience win, not specs alone</div></div></div>
       </div>
     </div>
   </div>
@@ -400,29 +403,29 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   <div class="slide-inner">
     <h1 class="title">Only the problems supplements <em>can</em> truly help.</h1>
     <p class="lede">Story is where we thrive. Mechanism is where we earn the right to tell it.</p>
-    <p class="body">Most supplement categories are built on marketing, not mechanism. We are not interested in those. We pick categories where evidence exists at a dose we can actually fit in one daily unit. The rest, we leave alone.</p>
+    <p class="body">Many supplement categories are built on marketing more than on mechanism. We are not interested in those. We pick categories where peer-reviewed evidence exists at a dose that fits in one daily unit. The rest, we leave alone.</p>
 
     <div class="yesno">
       <div class="yn-col yes">
-        <h4>Where we make</h4>
-        <div class="sub">Categories with clinical evidence at functional dose.</div>
+        <h4>Where we will make</h4>
+        <div class="sub">Categories with peer-reviewed evidence at functional dose.</div>
         <ul class="yn-list">
-          <li><span class="yn-mark">+</span><div><b>Skin · collagen and cofactors</b><i>Verisol® RCTs at 5g · measurable wrinkle volume + elasticity outcomes</i></div></li>
-          <li><span class="yn-mark">+</span><div><b>Bloat · ginger and GI motility</b><i>Multiple RCTs · measurable digestive comfort + transit time</i></div></li>
-          <li><span class="yn-mark">+</span><div><b>Sleep quality · SLPS</b><i>Lime peel extract · sleep architecture without melatonin loop</i></div></li>
-          <li><span class="yn-mark">+</span><div><b>Energy · green tea extract</b><i>Steady alertness curve, not the spike-and-crash of caffeine alone</i></div></li>
-          <li><span class="yn-mark">+</span><div><b>PMS · cycle-symptom support</b><i>Anchor in formulation · clinical evidence at the dose we can fit</i></div></li>
+          <li><span class="yn-mark">+</span><div><b>Skin · collagen and cofactors</b><i>Verisol® RCTs · 2.5g wrinkle and 2.5g/5g elasticity arms (Proksch 2014)</i></div></li>
+          <li><span class="yn-mark">+</span><div><b>Bloat · digestive comfort</b><i>Ginger has multiple peer-reviewed RCTs at functional dose; specific anchor citation locks at formulation</i></div></li>
+          <li><span class="yn-mark">+</span><div><b>Sleep quality</b><i>Anchor active selected for evidence at functional dose; specific citation locks at formulation</i></div></li>
+          <li><span class="yn-mark">+</span><div><b>Energy and alertness</b><i>Green tea catechins have published evidence for steady alertness; specific citation locks at formulation</i></div></li>
+          <li><span class="yn-mark">+</span><div><b>PMS · cycle-symptom support</b><i>Anchor active selected for evidence at functional dose; specific citation locks at formulation</i></div></li>
         </ul>
       </div>
       <div class="yn-col no">
-        <h4>Where we don't</h4>
-        <div class="sub">Categories where supplements cannot honestly claim what they sell.</div>
+        <h4>Where we will not</h4>
+        <div class="sub">Categories where supplement claims outrun the evidence.</div>
         <ul class="yn-list">
-          <li><span class="yn-mark">×</span><div><b>Generic multivitamins</b><i>Sub-functional doses across the board · the "broad coverage" lie</i></div></li>
-          <li><span class="yn-mark">×</span><div><b>Anti-aging promises</b><i>Regulated claim category · no honest version of the word exists</i></div></li>
-          <li><span class="yn-mark">×</span><div><b>Detox and cleansing</b><i>No biological mechanism · the marketing built the category</i></div></li>
-          <li><span class="yn-mark">×</span><div><b>Adaptogens at sub-functional doses</b><i>The dose where studies hit is rarely the dose in the bottle</i></div></li>
-          <li><span class="yn-mark">×</span><div><b>Memory pills for healthy adults</b><i>Placebo-grade evidence · food and sleep beat the molecule</i></div></li>
+          <li><span class="yn-mark">×</span><div><b>Generic multivitamins</b><i>Sub-functional doses across the board; the "broad coverage" framing</i></div></li>
+          <li><span class="yn-mark">×</span><div><b>Anti-aging promises</b><i>FDA-regulated claim category; no honest version of the word exists in dietary supplements</i></div></li>
+          <li><span class="yn-mark">×</span><div><b>Detox and cleansing</b><i>No biological mechanism for general toxin removal; the marketing built the category</i></div></li>
+          <li><span class="yn-mark">×</span><div><b>Adaptogens at sub-functional doses</b><i>The dose where studies show effect is rarely the dose in the bottle</i></div></li>
+          <li><span class="yn-mark">×</span><div><b>Memory pills for healthy adults</b><i>Insufficient peer-reviewed evidence; food and sleep beat the molecule</i></div></li>
         </ul>
       </div>
     </div>
@@ -440,7 +443,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
       <div class="posture-col we">
         <h4>We say</h4>
         <div class="line">Half the story is not the whole story.</div>
-        <div class="line">Put it back. We chose differently.</div>
+        <div class="line">We chose to publish.</div>
         <div class="line">Clinically studied dose. Notice. Listen.</div>
         <div class="line">Care, not correction.</div>
       </div>
@@ -448,8 +451,8 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         <h4>We never say</h4>
         <div class="line">Clinically proven. Anti-aging.</div>
         <div class="line">Detox. Boost. Optimize. Stack.</div>
-        <div class="line">The industry is lying.</div>
-        <div class="line">Glow up. Bestie. !!!</div>
+        <div class="line">Names of competitors.</div>
+        <div class="line">Glow up. Bestie. Miracle.</div>
       </div>
     </div>
     <p class="body" style="margin-top:22px">When we critique a practice, we never name a competitor. <strong>Every critique is a promise we hold ourselves to.</strong></p>
@@ -461,8 +464,8 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   <div class="slide-tag">The format</div>
   <div class="slide-num">07 / 15</div>
   <div class="slide-inner">
-    <h1 class="title">One cap.<br>Two parts.</h1>
-    <p class="lede">A 25 to 30 ml liquid shot. One or two compressed tablets. One unit a day.</p>
+    <h1 class="title">One unit.<br>Two parts.</h1>
+    <p class="lede">A liquid shot in the 25 to 30 ml range, plus one or two compressed tablets. One daily unit.</p>
     <div class="anatomy">
       <div class="cap-viz">
         <div class="cap-shot"><span>liquid actives</span></div>
@@ -477,7 +480,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         <div>
           <div class="lbl">The shot</div>
           <div class="nm">Liquid actives</div>
-          <div class="ds">Bioactive collagen peptides, hyaluronic acid, water-soluble vitamins. Fast-absorbing layer. Pineapple flavored for tolerance, not for marketing.</div>
+          <div class="ds">Bioactive collagen peptides, hyaluronic acid, water-soluble vitamins. Pineapple flavored for tolerance, not for marketing.</div>
         </div>
         <div>
           <div class="lbl">The tablets</div>
@@ -487,7 +490,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         <div>
           <div class="lbl">The platform</div>
           <div class="nm">28 units · 4 weeks · ambient stable</div>
-          <div class="ds">Same dual-cap across the full line. No cold chain. No refrigeration at retail. Manufactured at an FDA-registered, HACCP-approved, GMP-certified Korean facility with 20+ years of dietary-supplement OEM experience. Third-party tested by lot.</div>
+          <div class="ds">No cold chain. No refrigeration at retail. Manufactured at an FDA-registered, HACCP-approved, GMP-certified Korean facility with 20+ years of dietary-supplement OEM experience. Third-party tested by lot.</div>
         </div>
       </div>
     </div>
@@ -504,9 +507,9 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
     <div class="actives">
       <div class="actives-row header">
         <div class="h">#</div>
-        <div><div class="h">Active · form</div></div>
-        <div class="h">Source</div>
-        <div class="h" style="text-align:right">Dose</div>
+        <div><div class="h">Active</div></div>
+        <div class="h">Form</div>
+        <div class="h" style="text-align:right">Daily dose</div>
       </div>
       <div class="actives-row"><div class="num">1</div><div><div class="name">Verisol® Collagen Peptides</div></div><div class="form">GELITA AG · bioactive peptides</div><div class="dose">5,000mg</div></div>
       <div class="actives-row"><div class="num">2</div><div><div class="name">Hyaluronic Acid</div></div><div class="form">Sodium Hyaluronate</div><div class="dose">120mg</div></div>
@@ -514,9 +517,14 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
       <div class="actives-row"><div class="num">4</div><div><div class="name">Vitamin E</div></div><div class="form">D-Alpha Tocopherol (natural)</div><div class="dose">30mg<span class="dv">200% DV</span></div></div>
       <div class="actives-row"><div class="num">5</div><div><div class="name">Beta-Carotene</div></div><div class="form">Provitamin A carotenoid</div><div class="dose">6mg</div></div>
       <div class="actives-row"><div class="num">6</div><div><div class="name">Riboflavin (B2)</div></div><div class="form">Riboflavin</div><div class="dose">2mg<span class="dv">154% DV</span></div></div>
-      <div class="actives-row"><div class="num">7</div><div><div class="name">Pantothenic Acid (B5)</div></div><div class="form">Calcium D-Pantothenate</div><div class="dose">5mg<span class="dv">100% AI</span></div></div>
+      <div class="actives-row"><div class="num">7</div><div><div class="name">Pantothenic Acid (B5)</div></div><div class="form">Calcium D-Pantothenate</div><div class="dose">5mg<span class="dv">100% DV</span></div></div>
     </div>
-    <p class="actives-foot">Each active corresponds to a publicly cited clinical study or regulatory reference. See slide 9 for full citations.</p>
+    <div class="actives-meta">
+      <span><b>Format</b> · 25 ml liquid shot + 2 compressed tablets</span>
+      <span><b>Pack</b> · 28 daily units · 4-week supply</span>
+      <span><b>Flavor</b> · pineapple</span>
+    </div>
+    <p class="actives-foot">Each active is supported by a peer-reviewed study or NIH regulatory reference. See slide 9 for full citations.</p>
   </div>
 </section>
 
@@ -526,59 +534,59 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   <div class="slide-num">09 / 15</div>
   <div class="slide-inner">
     <h1 class="title">Each active.<br>Each <em>citation</em>.</h1>
-    <p class="lede">We do not list ingredients without citing the public study or regulatory reference that supports the dose.</p>
+    <p class="lede">Every dose corresponds to a publicly verifiable study or regulatory reference.</p>
 
     <div class="evidence">
       <div class="ev-row header">
         <div class="h">Active</div>
-        <div class="h">Dose</div>
-        <div class="h">Outcome (measured)</div>
+        <div class="h">Dose in Skin Support</div>
+        <div class="h">Study evidence (outcome at the cited dose)</div>
         <div class="h">Public reference</div>
       </div>
       <div class="ev-row">
         <div class="ev-active">Verisol® Collagen Peptides<span class="form">GELITA AG · bioactive peptides</span></div>
         <div class="ev-dose">5,000mg</div>
-        <div class="ev-out">20% reduction in eye wrinkle volume after 8 weeks; significant skin elasticity improvement at 4 and 8 weeks; increased dermal procollagen type I and elastin synthesis.</div>
-        <div class="ev-cite"><b>Proksch et al. 2014</b>Skin Pharmacol Physiol · n=114 wrinkle RCT, n=69 elasticity RCT, both 8-week double-blind placebo-controlled. <a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" target="_blank">PMID 24401291</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/23949208/" target="_blank">PMID 23949208</a></div>
+        <div class="ev-out">5g and 2.5g arms both produced statistically significant skin elasticity improvement at 4 and 8 weeks (Proksch 2014 elasticity RCT). The Verisol®-specific wrinkle RCT, conducted at 2.5g/d, demonstrated 20% reduction in eye wrinkle volume after 8 weeks plus increased dermal procollagen type I and elastin synthesis. Skin Support uses the upper-range 5g dose with full disclosure.</div>
+        <div class="ev-cite"><b>Proksch et al. 2014 (two RCTs)</b>Skin Pharmacol Physiol. n=69 elasticity (2.5g + 5g arms, 8wk DBPC), n=114 wrinkle (2.5g, 8wk DBPC). <a href="https://pubmed.ncbi.nlm.nih.gov/23949208/" target="_blank">PMID 23949208</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" target="_blank">PMID 24401291</a></div>
       </div>
       <div class="ev-row">
         <div class="ev-active">Hyaluronic Acid<span class="form">Sodium Hyaluronate</span></div>
         <div class="ev-dose">120mg</div>
-        <div class="ev-out">Significant skin moisture improvement at 12 weeks of daily oral supplementation.</div>
-        <div class="ev-cite"><b>Oe et al. 2017</b>Clin Cosmet Investig Dermatol · n=60, 12-week double-blind placebo-controlled RCT. <a href="https://pubmed.ncbi.nlm.nih.gov/28686544/" target="_blank">PMID 28686544</a></div>
+        <div class="ev-out">12-week double-blind placebo-controlled RCT in 60 subjects. The 300 kDa hyaluronan arm showed statistically significant reductions in wrinkle area ratio and wrinkle volume ratio versus placebo, with significant improvement at the 8-week timepoint.</div>
+        <div class="ev-cite"><b>Oe et al. 2017</b>Clin Cosmet Investig Dermatol. n=60, 12-wk DBPC RCT, 120 mg/d. <a href="https://pubmed.ncbi.nlm.nih.gov/28761365/" target="_blank">PMID 28761365</a></div>
       </div>
       <div class="ev-row">
         <div class="ev-active">Vitamin C<span class="form">L-Ascorbic Acid</span></div>
         <div class="ev-dose">200mg · 222% DV</div>
-        <div class="ev-out">Essential cofactor for endogenous collagen biosynthesis; dermal antioxidant activity.</div>
-        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin C Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" target="_blank">ods.od.nih.gov</a></div>
+        <div class="ev-out">Required cofactor for endogenous collagen biosynthesis. Established Daily Value of 90 mg.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin C Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" target="_blank">ods.od.nih.gov/factsheets/VitaminC-HealthProfessional</a></div>
       </div>
       <div class="ev-row">
         <div class="ev-active">Vitamin E<span class="form">D-Alpha Tocopherol (natural)</span></div>
         <div class="ev-dose">30mg · 200% DV</div>
-        <div class="ev-out">Lipid-soluble antioxidant; supports skin barrier integrity and protects cell membranes from oxidative damage.</div>
-        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin E Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/" target="_blank">ods.od.nih.gov</a></div>
+        <div class="ev-out">Lipid-soluble antioxidant; essential nutrient with established Daily Value of 15 mg alpha-tocopherol.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin E Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/" target="_blank">ods.od.nih.gov/factsheets/VitaminE-HealthProfessional</a></div>
       </div>
       <div class="ev-row">
         <div class="ev-active">Beta-Carotene<span class="form">Provitamin A carotenoid</span></div>
         <div class="ev-dose">6mg</div>
-        <div class="ev-out">Provitamin A precursor; carotenoid antioxidant with documented role in protection against UV-induced photo damage.</div>
-        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin A and Carotenoids Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/" target="_blank">ods.od.nih.gov</a></div>
+        <div class="ev-out">Provitamin A precursor; carotenoid antioxidant. Source of vitamin A through endogenous conversion.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin A and Carotenoids Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/" target="_blank">ods.od.nih.gov/factsheets/VitaminA-HealthProfessional</a></div>
       </div>
       <div class="ev-row">
         <div class="ev-active">Riboflavin (B2)<span class="form">Riboflavin</span></div>
         <div class="ev-dose">2mg · 154% DV</div>
-        <div class="ev-out">Essential cofactor in cellular oxidative metabolism; required for energy production and cellular repair.</div>
-        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Riboflavin Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/" target="_blank">ods.od.nih.gov</a></div>
+        <div class="ev-out">Essential vitamin; cofactor in cellular oxidative metabolism. Established Daily Value of 1.3 mg.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Riboflavin Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/" target="_blank">ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional</a></div>
       </div>
       <div class="ev-row">
         <div class="ev-active">Pantothenic Acid (B5)<span class="form">Calcium D-Pantothenate</span></div>
-        <div class="ev-dose">5mg · 100% AI</div>
-        <div class="ev-out">Precursor to Coenzyme A; cofactor for fatty acid synthesis and skin barrier lipid production.</div>
-        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Pantothenic Acid Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/" target="_blank">ods.od.nih.gov</a></div>
+        <div class="ev-dose">5mg · 100% DV</div>
+        <div class="ev-out">Essential vitamin; precursor to Coenzyme A, required for fatty acid synthesis. Established Daily Value of 5 mg.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Pantothenic Acid Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/" target="_blank">ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional</a></div>
       </div>
     </div>
-    <p class="ev-foot">All references are public-domain regulatory references or peer-reviewed studies indexed on PubMed. Verisol® is a registered trademark of GELITA AG, Eberbach, Germany.</p>
+    <p class="ev-foot">All references are public-domain regulatory references or peer-reviewed studies indexed on PubMed. Verisol® is a registered trademark of GELITA AG, Eberbach, Germany. Outcomes described apply to the doses tested in the cited studies; Skin Support uses 5,000mg of Verisol®, the upper arm of the cited elasticity RCT.</p>
   </div>
 </section>
 
@@ -588,45 +596,45 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   <div class="slide-num">10 / 15</div>
   <div class="slide-inner">
     <h1 class="title">Five products.<br>One platform.</h1>
-    <p class="lede">Each product on the same dual-cap. Each anchor active selected for clinical evidence at a dose that fits in one daily unit.</p>
+    <p class="lede">Each product on the same dual-cap. Each anchor active selected for peer-reviewed evidence at a dose that fits one daily unit.</p>
     <div class="range-grid">
       <div class="range-card active">
-        <div class="stage">Now · 2026</div>
+        <div class="stage">In market · 2026</div>
         <div class="name">Skin Support</div>
         <div class="anchor-lbl">Anchor active</div>
         <div class="anchor-name">Verisol® collagen, 5g</div>
-        <div class="outcome">Wrinkle, elasticity, dermal collagen synthesis (Proksch 2014)</div>
+        <div class="outcome">Wrinkle and elasticity outcomes (Proksch 2014)</div>
       </div>
       <div class="range-card">
-        <div class="stage">2027</div>
+        <div class="stage">2027 target</div>
         <div class="name">Bloat Support</div>
         <div class="anchor-lbl">Anchor active</div>
         <div class="anchor-name">Ginger</div>
-        <div class="outcome">Digestive comfort, gastric motility (multiple RCTs)</div>
+        <div class="outcome">Citation locks at formulation</div>
       </div>
       <div class="range-card">
-        <div class="stage">2027</div>
+        <div class="stage">2027 target</div>
         <div class="name">Sleep Support</div>
         <div class="anchor-lbl">Anchor active</div>
-        <div class="anchor-name">SLPS, lime peel</div>
-        <div class="outcome">Sleep architecture, no next-morning grogginess</div>
+        <div class="anchor-name">In selection</div>
+        <div class="outcome">Citation locks at formulation</div>
       </div>
       <div class="range-card">
-        <div class="stage">2028</div>
+        <div class="stage">2028 target</div>
         <div class="name">Energy Support</div>
         <div class="anchor-lbl">Anchor active</div>
         <div class="anchor-name">Green tea extract</div>
-        <div class="outcome">Steady alertness curve without caffeine spike</div>
+        <div class="outcome">Citation locks at formulation</div>
       </div>
       <div class="range-card">
-        <div class="stage">2028</div>
+        <div class="stage">2028 target</div>
         <div class="name">PMS Support</div>
         <div class="anchor-lbl">Anchor active</div>
-        <div class="anchor-name">In formulation</div>
-        <div class="outcome">Cycle-symptom support · clinical evidence required</div>
+        <div class="anchor-name">In selection</div>
+        <div class="outcome">Citation locks at formulation</div>
       </div>
     </div>
-    <p class="body" style="margin-top:22px"><strong>Discipline rule.</strong> SKU two ships only after SKU one has six months of subscriber data and five hundred active subscribers. Each product earns the next.</p>
+    <p class="body" style="margin-top:22px"><strong>Discipline rule.</strong> SKU two does not ship until SKU one has six months of subscriber data and five hundred active subscribers. Each product earns the next.</p>
   </div>
 </section>
 
@@ -656,7 +664,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         <div class="pc-name">28-pack auto-ship</div>
         <div class="pc-price">$69</div>
         <div class="pc-unit">28 daily units · 4 weeks</div>
-        <div class="pc-save">30% off MSRP</div>
+        <div class="pc-save">~30% off MSRP</div>
       </div>
       <div class="price-card feat">
         <div class="pc-tag">Subscribe · prepaid</div>
@@ -686,7 +694,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
       </div>
     </div>
 
-    <p class="trade-foot">Wholesale, retail, and partnership terms available on request. Co-op marketing programs and SKU-locked retailer exclusives considered per relationship.</p>
+    <p class="trade-foot">Wholesale, retail, and partnership terms available on request. Co-op marketing programs and SKU-locked retailer windows considered per relationship.</p>
   </div>
 </section>
 
@@ -703,12 +711,12 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         <div class="big-stat-sub">Daesung Seo · followers, day one</div>
       </div>
       <div class="community-info">
-        <p><strong>Co-founder, not creator-for-hire.</strong> Daesung is the customer-facing voice of the brand and a third-of-the-cap-table founder. He owns the audience he speaks to. The brand and the audience are not separate assets being stitched together at launch. They are the same.</p>
-        <p>For most supplement startups, paid customer acquisition is the line item that decides the company. For us, the channel is co-founded into the brand.</p>
+        <p><strong>Co-founder, not creator-for-hire.</strong> Daesung is the customer-facing voice of the brand and one of three co-founders. He owns the audience he speaks to. The brand and the audience are not separate assets being stitched together at launch. They are the same.</p>
+        <p>For most supplement startups, paid customer acquisition is the line item that decides the company. For Sensitive Ones, the channel is co-founded into the brand.</p>
         <div class="community-stats">
           <div class="cs"><div class="num">5/wk</div><div class="lbl">viral content cadence target through launch</div></div>
           <div class="cs"><div class="num">10/wk</div><div class="lbl">short-form output with the videographer</div></div>
-          <div class="cs"><div class="num">CAC ↓</div><div class="lbl">organic-led acquisition vs paid-led peers</div></div>
+          <div class="cs"><div class="num">Lower CAC</div><div class="lbl">organic-led acquisition vs paid-led peers</div></div>
           <div class="cs"><div class="num">3 lanes</div><div class="lbl">co-founder voices, not single-founder brand</div></div>
         </div>
       </div>
@@ -728,24 +736,24 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         <div class="num">1</div>
         <div class="name">Sensitive-first positioning</div>
         <div class="desc">A specific reader, not a generic ingestible audience. The slot most brands are not built for. The window for owning it is narrow and we are inside it.</div>
-        <div class="stat">The story is the moat, not the molecule.</div>
+        <div class="stat">Story is the moat, not the molecule.</div>
       </div>
       <div class="moat-card">
         <div class="num">2</div>
         <div class="name">Dual-cap platform</div>
-        <div class="desc">A 25 to 30 ml liquid plus one or two tablets in a single daily unit. Few US sensitive-skin brands ship this format. The platform stretches across the full five-product line.</div>
+        <div class="desc">A 25 to 30 ml liquid plus one or two tablets in a single daily unit. The platform stretches across the full five-product line.</div>
         <div class="stat">5 products on 1 platform · 1 daily ritual</div>
       </div>
       <div class="moat-card">
         <div class="num">3</div>
         <div class="name">Every dose published</div>
-        <div class="desc">Anchor actives at the clinically studied dose. No proprietary blends. Each product earns the next. Six months of subscriber data plus five hundred active subscribers before SKU two ships.</div>
+        <div class="desc">Anchor actives at peer-reviewed doses. No proprietary blends. Each product earns the next: six months of subscriber data plus five hundred active subscribers before SKU two ships.</div>
         <div class="stat">7 actives · 7 doses · 0 proprietary</div>
       </div>
       <div class="moat-card">
         <div class="num">4</div>
-        <div class="name">Daesung's identity + community</div>
-        <div class="desc">2.6M followers as the brand's customer-facing voice, owned by a co-founder not rented from one. The audience is co-founded into the brand. Channel and brand are not separate assets stitched at launch.</div>
+        <div class="name">Daesung's identity and community</div>
+        <div class="desc">2.6M followers as the brand's customer-facing voice, owned by a co-founder rather than rented from one. The audience is co-founded into the brand. Channel and brand are not separate assets stitched together at launch.</div>
         <div class="stat">2.6M day-one audience · co-founder equity</div>
       </div>
     </div>
@@ -758,13 +766,13 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   <div class="slide-num">14 / 15</div>
   <div class="slide-inner">
     <h1 class="title">Three founders.<br>Three lanes.</h1>
-    <p class="lede">Built by people who would actually take this product themselves.</p>
+    <p class="lede">Built by people who would take this product themselves.</p>
     <div class="founders">
       <div class="founder">
         <div class="role">Co-founder · COO</div>
         <div class="name">Justin Kim</div>
         <div class="title">Operations · supply chain · finance · legal · export</div>
-        <div class="lane">Korean OEM rigor. Holds the manufacturing standard, the FDA paperwork, the production calendar. The reason every dose on the back of the box is the dose in the bottle.</div>
+        <div class="lane">Holds the manufacturing standard, the regulatory paperwork, the production calendar. The reason every dose on the back of the box is the dose in the bottle.</div>
       </div>
       <div class="founder">
         <div class="role">Co-founder · CEO</div>
@@ -787,7 +795,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   <div class="slide-num">15 / 15</div>
   <div class="closer-mark">For <em>sensitive</em> ones.</div>
   <div class="descriptor">Inner care for sensitive problems.</div>
-  <div class="contact">For Sensitive Ones LLC · forsensitiveones.com (forthcoming) · @sensitiveones</div>
+  <div class="contact">For Sensitive Ones LLC · Ohio · forsensitiveones.com (forthcoming) · @sensitiveones</div>
   <div class="dshea">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
 </section>
 
