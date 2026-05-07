@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>sensitive ones · Brand Introduction · v2</title>
+<title>sensitive ones · Brand Introduction · v3</title>
 <style>
 :root{
   --magenta:#B8255A;
@@ -35,7 +35,6 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;letter-spacing:-0.005em;line-height:1.55}
 
-/* slide */
 .slide{
   min-height:100vh;
   display:flex;flex-direction:column;justify-content:center;
@@ -45,25 +44,23 @@ body{font-family:var(--sans);background:var(--cream);color:var(--ink);-webkit-fo
   page-break-after:always;
 }
 @media(max-width:780px){.slide{padding:80px 22px 56px}}
-.slide-inner{max-width:1040px;width:100%;margin:0 auto}
+.slide-inner{max-width:1080px;width:100%;margin:0 auto}
 
-/* chrome */
 .slide-num{position:absolute;top:32px;right:48px;font-size:11px;letter-spacing:0.18em;color:var(--ink-3);text-transform:uppercase;font-feature-settings:"tnum"}
 .slide-tag{position:absolute;top:32px;left:48px;font-size:10px;font-weight:700;letter-spacing:0.22em;color:var(--magenta);text-transform:uppercase}
 @media(max-width:780px){.slide-num{top:22px;right:20px}.slide-tag{top:22px;left:20px}}
 
-/* type */
 .brand-mark{font-family:var(--serif);font-weight:400;letter-spacing:-0.04em;line-height:0.92;color:var(--black)}
 .brand-mark em{font-style:italic;color:var(--magenta);font-weight:400}
 
-h1.title{font-family:var(--serif);font-size:80px;font-weight:400;letter-spacing:-0.035em;line-height:0.96;color:var(--black);margin-bottom:32px}
+h1.title{font-family:var(--serif);font-size:78px;font-weight:400;letter-spacing:-0.035em;line-height:0.96;color:var(--black);margin-bottom:30px}
 h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
-@media(max-width:780px){h1.title{font-size:42px;margin-bottom:20px}}
+@media(max-width:780px){h1.title{font-size:42px;margin-bottom:18px}}
 
-.lede{font-family:var(--serif);font-size:30px;font-weight:400;font-style:italic;line-height:1.28;color:var(--magenta);margin-bottom:32px;max-width:820px;letter-spacing:-0.015em}
-@media(max-width:780px){.lede{font-size:20px;margin-bottom:20px}}
+.lede{font-family:var(--serif);font-size:28px;font-weight:400;font-style:italic;line-height:1.3;color:var(--magenta);margin-bottom:28px;max-width:860px;letter-spacing:-0.015em}
+@media(max-width:780px){.lede{font-size:19px;margin-bottom:18px}}
 
-.body{font-size:17px;line-height:1.6;color:var(--ink-2);max-width:680px;letter-spacing:-0.005em}
+.body{font-size:16px;line-height:1.6;color:var(--ink-2);max-width:720px;letter-spacing:-0.005em}
 .body + .body{margin-top:14px}
 .body strong{color:var(--ink);font-weight:600}
 .body em{font-style:italic;color:var(--magenta);font-weight:400}
@@ -81,20 +78,20 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 .cover-meta{position:absolute;bottom:48px;left:80px;right:80px;display:flex;justify-content:space-between;align-items:flex-end;font-size:11px;color:var(--ink-3);letter-spacing:0.1em;text-transform:uppercase}
 @media(max-width:780px){.cover-meta{left:22px;right:22px;bottom:22px;flex-direction:column;align-items:flex-start;gap:6px}}
 
-/* reader stat row */
-.reader-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px;max-width:820px}
+/* reader stats */
+.reader-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px;max-width:840px}
 @media(max-width:780px){.reader-stats{grid-template-columns:1fr}}
 .r-stat{background:#fff;border:1px solid var(--border);border-radius:10px;padding:20px}
 .r-stat .num{font-family:var(--serif);font-size:42px;color:var(--magenta);line-height:1;letter-spacing:-0.025em}
 .r-stat .lbl{font-size:12.5px;color:var(--ink-3);margin-top:8px;line-height:1.45}
 
-/* dose comparison chart */
-.dose-chart{margin-top:28px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px 28px}
+/* dose chart */
+.dose-chart{margin-top:28px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 26px}
 .dose-row{display:grid;grid-template-columns:200px 1fr 90px;align-items:center;gap:16px;padding:10px 0;border-bottom:1px solid var(--border-soft)}
 .dose-row:last-child{border-bottom:none}
 .dose-row.header{padding-bottom:14px;border-bottom:1px solid var(--border)}
 .dose-row.header .h{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
-.dose-label{font-size:14px;color:var(--ink);font-weight:600}
+.dose-label{font-size:13.5px;color:var(--ink);font-weight:600}
 .dose-label .sub{display:block;font-size:11.5px;color:var(--ink-3);font-weight:400;font-style:italic;margin-top:2px}
 .dose-bar{height:22px;background:var(--cream-2);border-radius:4px;position:relative;overflow:hidden}
 .dose-bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:11px;color:#fff;font-weight:600}
@@ -110,7 +107,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 .dose-cite{font-size:11px;color:var(--ink-3);margin-top:14px;line-height:1.55;font-style:italic}
 
 /* timeline */
-.timeline{position:relative;margin:36px 0 12px;padding:0 12px}
+.timeline{position:relative;margin:32px 0 12px;padding:0 12px}
 .timeline-track{position:absolute;top:14px;left:12px;right:12px;height:1px;background:var(--border)}
 .timeline-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;position:relative}
 .t-event{text-align:center;position:relative}
@@ -119,7 +116,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 .t-event.future .t-dot{background:#fff;border-color:var(--magenta)}
 .t-date{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
 .t-event.now .t-date{color:var(--magenta)}
-.t-name{font-family:var(--serif);font-size:17px;color:var(--ink);line-height:1.2;margin-bottom:4px;letter-spacing:-0.015em}
+.t-name{font-family:var(--serif);font-size:16px;color:var(--ink);line-height:1.2;margin-bottom:4px;letter-spacing:-0.015em}
 .t-anchor{font-size:11px;color:var(--ink-3);font-style:italic;line-height:1.4}
 @media(max-width:780px){
   .timeline-row{grid-template-columns:1fr;gap:0}
@@ -129,29 +126,40 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   .t-event > div:last-child{display:flex;flex-direction:column;gap:4px}
 }
 
-/* yes/no list */
-.yesno{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+/* yes/no */
+.yesno{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
 @media(max-width:780px){.yesno{grid-template-columns:1fr}}
-.yn-col{border-radius:12px;padding:24px 26px;border:1px solid}
+.yn-col{border-radius:12px;padding:22px 24px;border:1px solid}
 .yn-col.yes{background:var(--yes-bg);border-color:var(--yes-border)}
 .yn-col.no{background:var(--no-bg);border-color:var(--no-border)}
 .yn-col h4{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
 .yn-col.yes h4{color:var(--yes)}
 .yn-col.no h4{color:var(--no)}
-.yn-col .sub{font-family:var(--serif);font-size:18px;font-style:italic;line-height:1.3;margin-bottom:18px;color:var(--ink)}
+.yn-col .sub{font-family:var(--serif);font-size:17px;font-style:italic;line-height:1.3;margin-bottom:16px;color:var(--ink)}
 .yn-list{margin:0;padding:0;list-style:none}
-.yn-list li{font-size:14px;line-height:1.55;color:var(--ink-2);padding:10px 0;border-top:1px solid rgba(0,0,0,0.05);display:grid;grid-template-columns:24px 1fr;gap:8px}
+.yn-list li{font-size:13.5px;line-height:1.55;color:var(--ink-2);padding:9px 0;border-top:1px solid rgba(0,0,0,0.05);display:grid;grid-template-columns:24px 1fr;gap:8px}
 .yn-list li:first-child{border-top:none;padding-top:4px}
-.yn-list li b{font-weight:600;color:var(--ink);display:block;margin-bottom:2px;font-size:14px}
-.yn-list li i{font-style:normal;color:var(--ink-3);font-size:12.5px}
+.yn-list li b{font-weight:600;color:var(--ink);display:block;margin-bottom:2px;font-size:13.5px}
+.yn-list li i{font-style:normal;color:var(--ink-3);font-size:12px}
 .yn-mark{font-family:var(--serif);font-size:18px;line-height:1;margin-top:-1px}
 .yn-col.yes .yn-mark{color:var(--yes)}
 .yn-col.no .yn-mark{color:var(--no)}
 
-/* dual-cap anatomy */
-.anatomy{display:grid;grid-template-columns:280px 1fr;gap:32px;margin-top:32px;align-items:center}
+/* posture */
+.posture-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+@media(max-width:780px){.posture-grid{grid-template-columns:1fr}}
+.posture-col{padding:18px 22px;border-radius:10px;border:1px solid}
+.posture-col.we{background:var(--yes-bg);border-color:var(--yes-border)}
+.posture-col.never{background:var(--no-bg);border-color:var(--no-border)}
+.posture-col h4{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+.posture-col.we h4{color:var(--yes)}
+.posture-col.never h4{color:var(--no)}
+.posture-col .line{font-family:var(--serif);font-size:15px;line-height:1.4;color:var(--ink);padding:5px 0;font-style:italic}
+
+/* anatomy */
+.anatomy{display:grid;grid-template-columns:280px 1fr;gap:32px;margin-top:28px;align-items:center}
 @media(max-width:780px){.anatomy{grid-template-columns:1fr;gap:20px}}
-.cap-viz{background:#fff;border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:6px;align-items:center}
+.cap-viz{background:#fff;border:1px solid var(--border);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:6px;align-items:center}
 .cap-shot{width:100%;height:80px;background:linear-gradient(180deg,#FFF6E8 0%,#FFE7B8 100%);border:1px solid var(--cream-3);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:14px;font-style:italic;color:var(--ink-2);position:relative}
 .cap-shot::before{content:"25–30 ml";position:absolute;top:8px;left:10px;font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);font-style:normal}
 .cap-divider{height:6px;width:60%;background:var(--cream-3);border-radius:2px;margin:2px 0}
@@ -165,9 +173,9 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 .anatomy-info .nm{font-family:var(--serif);font-size:18px;color:var(--ink);margin-bottom:4px}
 .anatomy-info .ds{font-size:13px;color:var(--ink-2);line-height:1.55}
 
-/* actives table */
+/* actives table (Skin Support) */
 .actives{margin-top:18px;border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
-.actives-row{display:grid;grid-template-columns:32px 2.4fr 1.6fr 1fr;align-items:center;padding:14px 22px;border-bottom:1px solid var(--border-soft);gap:18px}
+.actives-row{display:grid;grid-template-columns:32px 2.4fr 1.6fr 1fr;align-items:center;padding:13px 22px;border-bottom:1px solid var(--border-soft);gap:18px}
 .actives-row:last-child{border-bottom:none}
 .actives-row.header{background:var(--cream-2);border-bottom:1px solid var(--border)}
 .actives-row.header .h{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
@@ -181,63 +189,77 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   .actives-row .form{grid-column:2}
   .actives-row .dose{grid-column:3;grid-row:1}
 }
+.actives-foot{font-size:12px;color:var(--ink-3);font-style:italic;margin-top:16px;line-height:1.55}
 
-/* line / range timeline */
-.range-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:28px}
+/* clinical evidence table */
+.evidence{margin-top:24px;border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
+.ev-row{display:grid;grid-template-columns:1.8fr 0.7fr 2.4fr 2.4fr;align-items:flex-start;padding:14px 22px;border-bottom:1px solid var(--border-soft);gap:18px}
+.ev-row:last-child{border-bottom:none}
+.ev-row.header{background:var(--cream-2);border-bottom:1px solid var(--border)}
+.ev-row.header .h{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.ev-row .ev-active{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.4;letter-spacing:-0.005em}
+.ev-row .ev-active .form{display:block;font-size:11.5px;color:var(--ink-3);font-style:italic;font-weight:400;margin-top:2px}
+.ev-row .ev-dose{font-family:var(--serif);font-size:16px;color:var(--black);letter-spacing:-0.01em;line-height:1.3}
+.ev-row .ev-out{font-size:13px;color:var(--ink-2);line-height:1.5}
+.ev-row .ev-cite{font-size:11.5px;color:var(--ink-3);line-height:1.5;font-style:italic}
+.ev-row .ev-cite a{color:var(--magenta);text-decoration:none;font-style:normal}
+.ev-row .ev-cite b{color:var(--ink);font-weight:600;font-style:normal;display:block;margin-bottom:2px;font-size:12px}
+@media(max-width:980px){
+  .ev-row{grid-template-columns:1fr;gap:8px;padding:14px 16px}
+  .ev-row.header{display:none}
+  .ev-row .ev-dose{font-size:14px;color:var(--magenta)}
+}
+.ev-foot{font-size:11.5px;color:var(--ink-3);margin-top:16px;line-height:1.55;font-style:italic}
+
+/* line / range cards */
+.range-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:24px}
 @media(max-width:980px){.range-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.range-grid{grid-template-columns:1fr}}
-.range-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;position:relative}
+.range-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;position:relative;display:flex;flex-direction:column}
 .range-card.active{border-color:var(--magenta);background:var(--magenta-soft)}
 .range-card .stage{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:10px}
 .range-card.active .stage{color:var(--magenta)}
-.range-card .name{font-family:var(--serif);font-size:19px;line-height:1.15;color:var(--black);margin-bottom:6px;letter-spacing:-0.02em}
-.range-card .anchor{font-size:11.5px;color:var(--ink-3);font-style:italic;line-height:1.4}
+.range-card .name{font-family:var(--serif);font-size:18px;line-height:1.15;color:var(--black);margin-bottom:8px;letter-spacing:-0.02em}
+.range-card .anchor-lbl{font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-top:auto;padding-top:10px;border-top:1px solid var(--border-soft)}
+.range-card .anchor-name{font-family:var(--serif);font-size:14px;color:var(--ink);font-style:italic;margin-top:3px;line-height:1.3}
+.range-card .outcome{font-size:11px;color:var(--ink-3);line-height:1.45;margin-top:6px;font-style:italic}
 
-/* coming products quad */
-.coming-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
-@media(max-width:780px){.coming-grid{grid-template-columns:1fr}}
-.coming-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px}
-.coming-card .stg{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:8px}
-.coming-card .nm{font-family:var(--serif);font-size:24px;line-height:1.1;color:var(--black);margin-bottom:10px;letter-spacing:-0.02em}
-.coming-card .anchor-label{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--magenta);font-weight:700;margin-bottom:5px;margin-top:6px}
-.coming-card .anchor-name{font-family:var(--serif);font-size:18px;color:var(--ink);margin-bottom:6px;font-style:italic}
-.coming-card .anchor-why{font-size:12.5px;color:var(--ink-2);line-height:1.55}
-.coming-card .fmt{font-size:11px;color:var(--ink-3);margin-top:10px;padding-top:10px;border-top:1px solid var(--border-soft);font-style:italic}
+/* trade economics */
+.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+@media(max-width:780px){.price-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.price-grid{grid-template-columns:1fr}}
+.price-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:20px;position:relative}
+.price-card.feat{border-color:var(--magenta);background:var(--magenta-soft)}
+.price-card .pc-tag{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:8px}
+.price-card.feat .pc-tag{color:var(--magenta)}
+.price-card .pc-name{font-family:var(--serif);font-size:17px;color:var(--ink);margin-bottom:10px;line-height:1.2;letter-spacing:-0.015em}
+.price-card .pc-price{font-family:var(--serif);font-size:32px;color:var(--black);letter-spacing:-0.025em;line-height:1}
+.price-card .pc-unit{font-size:11px;color:var(--ink-3);margin-top:4px}
+.price-card .pc-save{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:var(--magenta);margin-top:8px}
 
-/* market sizing */
-.market-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:32px;margin-top:32px;align-items:center}
-@media(max-width:980px){.market-grid{grid-template-columns:1fr}}
-.market-circles{position:relative;width:100%;aspect-ratio:1;max-width:420px;margin:0 auto}
-.mc{position:absolute;border-radius:50%;border:2px solid var(--magenta-line);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:6%}
-.mc.tam{width:100%;height:100%;left:0;top:0;background:var(--magenta-soft)}
-.mc.sam{width:62%;height:62%;left:19%;top:19%;background:#fff;border-color:var(--magenta);border-width:2px}
-.mc.som{width:24%;height:24%;left:38%;top:38%;background:var(--magenta);border:none;justify-content:center;padding:0}
-.mc-lbl{font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;color:var(--magenta)}
-.mc.som .mc-lbl{color:#fff}
-.mc-val{font-family:var(--serif);font-size:14px;color:var(--ink);margin-top:2px}
-.mc.som .mc-val{color:#fff;font-size:13px}
-.market-rows > div{padding:16px 0;border-bottom:1px solid var(--border-soft)}
-.market-rows > div:last-child{border-bottom:none}
-.market-rows .stage{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--magenta);font-weight:700;margin-bottom:6px}
-.market-rows .nm{font-family:var(--serif);font-size:22px;color:var(--ink);margin-bottom:4px;letter-spacing:-0.015em}
-.market-rows .nm strong{color:var(--magenta);font-weight:400;font-style:italic}
-.market-rows .ds{font-size:13px;color:var(--ink-3);line-height:1.55}
+.trade-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+@media(max-width:780px){.trade-stats{grid-template-columns:repeat(2,1fr)}}
+.ts{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.ts .num{font-family:var(--serif);font-size:22px;color:var(--magenta);letter-spacing:-0.02em;line-height:1}
+.ts .lbl{font-size:11px;color:var(--ink-3);margin-top:6px;line-height:1.4}
 
-/* daesung community big stat */
-.community{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:28px}
+.trade-foot{font-size:11.5px;color:var(--ink-3);margin-top:18px;line-height:1.55;font-style:italic}
+
+/* community big stat */
+.community{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:24px}
 @media(max-width:780px){.community{grid-template-columns:1fr;gap:28px}}
 .big-stat{font-family:var(--serif);font-size:180px;color:var(--magenta);line-height:0.9;letter-spacing:-0.05em;font-weight:400}
 @media(max-width:980px){.big-stat{font-size:140px}}
 @media(max-width:780px){.big-stat{font-size:104px}}
 .big-stat-sub{font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-top:10px}
-.community-info p{font-size:16px;line-height:1.6;color:var(--ink-2);margin-bottom:14px;max-width:480px}
+.community-info p{font-size:15px;line-height:1.6;color:var(--ink-2);margin-bottom:14px;max-width:480px}
 .community-info p strong{color:var(--ink);font-weight:600}
 .community-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
 .cs{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px}
 .cs .num{font-family:var(--serif);font-size:24px;color:var(--magenta);letter-spacing:-0.02em;line-height:1}
 .cs .lbl{font-size:11px;color:var(--ink-3);margin-top:6px;line-height:1.4}
 
-/* moat 4 pillars */
+/* moat */
 .moat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
 @media(max-width:780px){.moat-grid{grid-template-columns:1fr}}
 .moat-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:22px;position:relative}
@@ -247,7 +269,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 .moat-card .stat{margin-top:12px;padding-top:12px;border-top:1px solid var(--border-soft);font-size:12px;color:var(--magenta);font-weight:600;letter-spacing:0.02em}
 
 /* founders */
-.founders{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.founders{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
 @media(max-width:780px){.founders{grid-template-columns:1fr}}
 .founder{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px}
 .founder .role{font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--magenta);font-weight:700;margin-bottom:14px}
@@ -255,19 +277,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 .founder .title{font-size:11.5px;color:var(--ink-3);margin-bottom:16px;font-style:italic;line-height:1.45}
 .founder .lane{font-size:13px;line-height:1.6;color:var(--ink-2)}
 
-/* posture wins/loses */
-.posture-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
-@media(max-width:780px){.posture-grid{grid-template-columns:1fr}}
-.posture-col{padding:18px 22px;border-radius:10px;border:1px solid}
-.posture-col.we{background:var(--yes-bg);border-color:var(--yes-border)}
-.posture-col.never{background:var(--no-bg);border-color:var(--no-border)}
-.posture-col h4{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;margin-bottom:10px}
-.posture-col.we h4{color:var(--yes)}
-.posture-col.never h4{color:var(--no)}
-.posture-col .line{font-family:var(--serif);font-size:15px;line-height:1.4;color:var(--ink);padding:5px 0;font-style:italic}
-
-/* anchor block */
-.anchor-block{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--ink);border-left:3px solid var(--magenta);padding:6px 0 6px 16px;margin:24px 0;line-height:1.4;max-width:680px}
+.anchor-block{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--ink);border-left:3px solid var(--magenta);padding:6px 0 6px 16px;margin:22px 0;line-height:1.4;max-width:720px}
 
 /* closer */
 .closer{justify-content:center;align-items:center;text-align:center;background:var(--cream-2)}
@@ -275,8 +285,8 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 @media(max-width:780px){.closer-mark{font-size:48px}}
 .closer .descriptor{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--ink-3);margin-top:28px;letter-spacing:-0.01em}
 .closer .dshea{position:absolute;bottom:32px;left:48px;right:48px;font-size:10.5px;color:var(--ink-3);text-align:center;line-height:1.55;max-width:680px;margin:0 auto}
+.closer .contact{margin-top:36px;font-size:13px;color:var(--ink-3);letter-spacing:0.04em}
 
-/* print */
 @media print{
   body{background:#fff}
   .slide{min-height:auto;page-break-after:always;border-bottom:none;padding:48px}
@@ -293,7 +303,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
     <div class="descriptor">Inner care for sensitive problems.</div>
   </div>
   <div class="cover-meta">
-    <span>Brand Introduction · v2</span>
+    <span>Brand Introduction · v3</span>
     <span>2026 · For Sensitive Ones LLC</span>
   </div>
 </section>
@@ -354,10 +364,10 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         <div class="dose-bar"><div class="dose-bar-fill tiny" style="width:18%">undisclosed</div></div>
         <div class="dose-num">?</div>
       </div>
-      <div class="dose-cite">Clinical reference dose: Verisol® RCT, Proksch et al. 2014, n=114, 8 weeks, eye wrinkle volume reduction. PubMed 24401291.</div>
+      <div class="dose-cite">Clinical reference dose: Verisol® RCT, Proksch et al. 2014, n=114, 8 weeks, eye wrinkle volume reduction. PubMed PMID 24401291.</div>
     </div>
 
-    <div class="anchor-block" style="margin-top:24px">Half the story is not the whole story. We chose differently.</div>
+    <div class="anchor-block" style="margin-top:22px">Half the story is not the whole story. We chose differently.</div>
   </div>
 </section>
 
@@ -383,7 +393,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   </div>
 </section>
 
-<!-- Slide 5: What we make / what we don't -->
+<!-- Slide 5: The discipline -->
 <section class="slide">
   <div class="slide-tag">The discipline</div>
   <div class="slide-num">05 / 15</div>
@@ -442,7 +452,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         <div class="line">Glow up. Bestie. !!!</div>
       </div>
     </div>
-    <p class="body" style="margin-top:24px">When we critique a practice, we never name a competitor. <strong>Every critique is a promise we hold ourselves to.</strong></p>
+    <p class="body" style="margin-top:22px">When we critique a practice, we never name a competitor. <strong>Every critique is a promise we hold ourselves to.</strong></p>
   </div>
 </section>
 
@@ -476,8 +486,8 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         </div>
         <div>
           <div class="lbl">The platform</div>
-          <div class="nm">28 units · 4 weeks · one ritual</div>
-          <div class="ds">Same dual-cap across the full line. Different function, same daily unit.</div>
+          <div class="nm">28 units · 4 weeks · ambient stable</div>
+          <div class="ds">Same dual-cap across the full line. No cold chain. No refrigeration at retail. Manufactured at an FDA-registered, HACCP-approved, GMP-certified Korean facility with 20+ years of dietary-supplement OEM experience. Third-party tested by lot.</div>
         </div>
       </div>
     </div>
@@ -506,123 +516,177 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
       <div class="actives-row"><div class="num">6</div><div><div class="name">Riboflavin (B2)</div></div><div class="form">Riboflavin</div><div class="dose">2mg<span class="dv">154% DV</span></div></div>
       <div class="actives-row"><div class="num">7</div><div><div class="name">Pantothenic Acid (B5)</div></div><div class="form">Calcium D-Pantothenate</div><div class="dose">5mg<span class="dv">100% AI</span></div></div>
     </div>
-    <p class="body" style="margin-top:24px;font-size:14px">Manufactured at an FDA-registered, HACCP-approved, GMP-certified Korean facility. Twenty-plus years dietary-supplement OEM experience. Third-party tested by lot.</p>
+    <p class="actives-foot">Each active corresponds to a publicly cited clinical study or regulatory reference. See slide 9 for full citations.</p>
   </div>
 </section>
 
-<!-- Slide 9: The line -->
+<!-- Slide 9: Clinical evidence -->
 <section class="slide">
-  <div class="slide-tag">The line</div>
+  <div class="slide-tag">Clinical evidence</div>
   <div class="slide-num">09 / 15</div>
   <div class="slide-inner">
+    <h1 class="title">Each active.<br>Each <em>citation</em>.</h1>
+    <p class="lede">We do not list ingredients without citing the public study or regulatory reference that supports the dose.</p>
+
+    <div class="evidence">
+      <div class="ev-row header">
+        <div class="h">Active</div>
+        <div class="h">Dose</div>
+        <div class="h">Outcome (measured)</div>
+        <div class="h">Public reference</div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">Verisol® Collagen Peptides<span class="form">GELITA AG · bioactive peptides</span></div>
+        <div class="ev-dose">5,000mg</div>
+        <div class="ev-out">20% reduction in eye wrinkle volume after 8 weeks; significant skin elasticity improvement at 4 and 8 weeks; increased dermal procollagen type I and elastin synthesis.</div>
+        <div class="ev-cite"><b>Proksch et al. 2014</b>Skin Pharmacol Physiol · n=114 wrinkle RCT, n=69 elasticity RCT, both 8-week double-blind placebo-controlled. <a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" target="_blank">PMID 24401291</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/23949208/" target="_blank">PMID 23949208</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">Hyaluronic Acid<span class="form">Sodium Hyaluronate</span></div>
+        <div class="ev-dose">120mg</div>
+        <div class="ev-out">Significant skin moisture improvement at 12 weeks of daily oral supplementation.</div>
+        <div class="ev-cite"><b>Oe et al. 2017</b>Clin Cosmet Investig Dermatol · n=60, 12-week double-blind placebo-controlled RCT. <a href="https://pubmed.ncbi.nlm.nih.gov/28686544/" target="_blank">PMID 28686544</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">Vitamin C<span class="form">L-Ascorbic Acid</span></div>
+        <div class="ev-dose">200mg · 222% DV</div>
+        <div class="ev-out">Essential cofactor for endogenous collagen biosynthesis; dermal antioxidant activity.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin C Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" target="_blank">ods.od.nih.gov</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">Vitamin E<span class="form">D-Alpha Tocopherol (natural)</span></div>
+        <div class="ev-dose">30mg · 200% DV</div>
+        <div class="ev-out">Lipid-soluble antioxidant; supports skin barrier integrity and protects cell membranes from oxidative damage.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin E Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/" target="_blank">ods.od.nih.gov</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">Beta-Carotene<span class="form">Provitamin A carotenoid</span></div>
+        <div class="ev-dose">6mg</div>
+        <div class="ev-out">Provitamin A precursor; carotenoid antioxidant with documented role in protection against UV-induced photo damage.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin A and Carotenoids Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/" target="_blank">ods.od.nih.gov</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">Riboflavin (B2)<span class="form">Riboflavin</span></div>
+        <div class="ev-dose">2mg · 154% DV</div>
+        <div class="ev-out">Essential cofactor in cellular oxidative metabolism; required for energy production and cellular repair.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Riboflavin Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/" target="_blank">ods.od.nih.gov</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">Pantothenic Acid (B5)<span class="form">Calcium D-Pantothenate</span></div>
+        <div class="ev-dose">5mg · 100% AI</div>
+        <div class="ev-out">Precursor to Coenzyme A; cofactor for fatty acid synthesis and skin barrier lipid production.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Pantothenic Acid Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/" target="_blank">ods.od.nih.gov</a></div>
+      </div>
+    </div>
+    <p class="ev-foot">All references are public-domain regulatory references or peer-reviewed studies indexed on PubMed. Verisol® is a registered trademark of GELITA AG, Eberbach, Germany.</p>
+  </div>
+</section>
+
+<!-- Slide 10: The line -->
+<section class="slide">
+  <div class="slide-tag">The line</div>
+  <div class="slide-num">10 / 15</div>
+  <div class="slide-inner">
     <h1 class="title">Five products.<br>One platform.</h1>
-    <p class="lede">Each product on the same dual-cap. Each function locked to evidence at functional dose.</p>
+    <p class="lede">Each product on the same dual-cap. Each anchor active selected for clinical evidence at a dose that fits in one daily unit.</p>
     <div class="range-grid">
       <div class="range-card active">
         <div class="stage">Now · 2026</div>
         <div class="name">Skin Support</div>
-        <div class="anchor">Verisol® collagen, 5g</div>
+        <div class="anchor-lbl">Anchor active</div>
+        <div class="anchor-name">Verisol® collagen, 5g</div>
+        <div class="outcome">Wrinkle, elasticity, dermal collagen synthesis (Proksch 2014)</div>
       </div>
       <div class="range-card">
         <div class="stage">2027</div>
         <div class="name">Bloat Support</div>
-        <div class="anchor">Ginger anchor</div>
+        <div class="anchor-lbl">Anchor active</div>
+        <div class="anchor-name">Ginger</div>
+        <div class="outcome">Digestive comfort, gastric motility (multiple RCTs)</div>
       </div>
       <div class="range-card">
         <div class="stage">2027</div>
         <div class="name">Sleep Support</div>
-        <div class="anchor">SLPS lime peel</div>
+        <div class="anchor-lbl">Anchor active</div>
+        <div class="anchor-name">SLPS, lime peel</div>
+        <div class="outcome">Sleep architecture, no next-morning grogginess</div>
       </div>
       <div class="range-card">
         <div class="stage">2028</div>
         <div class="name">Energy Support</div>
-        <div class="anchor">Green tea extract</div>
+        <div class="anchor-lbl">Anchor active</div>
+        <div class="anchor-name">Green tea extract</div>
+        <div class="outcome">Steady alertness curve without caffeine spike</div>
       </div>
       <div class="range-card">
         <div class="stage">2028</div>
         <div class="name">PMS Support</div>
-        <div class="anchor">Anchor in formulation</div>
+        <div class="anchor-lbl">Anchor active</div>
+        <div class="anchor-name">In formulation</div>
+        <div class="outcome">Cycle-symptom support · clinical evidence required</div>
       </div>
     </div>
-    <p class="body" style="margin-top:24px"><strong>Discipline rule.</strong> SKU two ships only after SKU one has six months of subscriber data and five hundred active subscribers. Each product earns the next.</p>
+    <p class="body" style="margin-top:22px"><strong>Discipline rule.</strong> SKU two ships only after SKU one has six months of subscriber data and five hundred active subscribers. Each product earns the next.</p>
   </div>
 </section>
 
-<!-- Slide 10: Coming products grid -->
+<!-- Slide 11: Trade economics -->
 <section class="slide">
-  <div class="slide-tag">Coming products</div>
-  <div class="slide-num">10 / 15</div>
-  <div class="slide-inner">
-    <h1 class="title">Anchored in <em>evidence</em>.</h1>
-    <p class="lede">Each anchor active is selected for clinical evidence at a dose that fits the dual-cap. No anchor without evidence. No formula without disclosure.</p>
-    <div class="coming-grid">
-      <div class="coming-card">
-        <div class="stg">2027 · Bloat Support</div>
-        <div class="nm">Bloat Support.</div>
-        <div class="anchor-label">Anchor active</div>
-        <div class="anchor-name">Ginger.</div>
-        <div class="anchor-why">Multiple RCTs on digestive comfort and gastric motility. The dose where studies move the marker.</div>
-        <div class="fmt">25 to 30 ml liquid + 1 to 2 tablets · 28 units</div>
-      </div>
-      <div class="coming-card">
-        <div class="stg">2027 · Sleep Support</div>
-        <div class="nm">Sleep Support.</div>
-        <div class="anchor-label">Anchor active</div>
-        <div class="anchor-name">SLPS, lime peel extract.</div>
-        <div class="anchor-why">Sleep architecture support without the melatonin loop. No next-morning grogginess.</div>
-        <div class="fmt">25 to 30 ml liquid + 1 to 2 tablets · 28 units</div>
-      </div>
-      <div class="coming-card">
-        <div class="stg">2028 · Energy Support</div>
-        <div class="nm">Energy Support.</div>
-        <div class="anchor-label">Anchor active</div>
-        <div class="anchor-name">Green tea extract.</div>
-        <div class="anchor-why">Steadier alertness curve than caffeine alone. The same on, none of the spike.</div>
-        <div class="fmt">25 to 30 ml liquid + 1 to 2 tablets · 28 units</div>
-      </div>
-      <div class="coming-card">
-        <div class="stg">2028 · PMS Support</div>
-        <div class="nm">PMS Support.</div>
-        <div class="anchor-label">Anchor active</div>
-        <div class="anchor-name">In formulation.</div>
-        <div class="anchor-why">The category proprietary blends damaged most. We will publish what's inside, at the dose that fits.</div>
-        <div class="fmt">25 to 30 ml liquid + 1 to 2 tablets · 28 units</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Slide 11: Market -->
-<section class="slide">
-  <div class="slide-tag">Market</div>
+  <div class="slide-tag">The economics</div>
   <div class="slide-num">11 / 15</div>
   <div class="slide-inner">
-    <h1 class="title">Big market.<br>Specific <em>slot</em>.</h1>
-    <p class="lede">Bottom-up. Subscriber math, not category puffery.</p>
-    <div class="market-grid">
-      <div class="market-circles">
-        <div class="mc tam"><div class="mc-lbl">TAM</div><div class="mc-val">$65B</div></div>
-        <div class="mc sam"><div class="mc-lbl">SAM</div><div class="mc-val">~$3-4B</div></div>
-        <div class="mc som"><div class="mc-lbl">SOM</div><div class="mc-val">$12M</div></div>
+    <h1 class="title">Subscription-first.<br>Built for <em>retention</em>.</h1>
+    <p class="lede">Premium-priced. Margin-aware. Designed so the second box is easier to deliver than the first.</p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="pc-tag">Trial</div>
+        <div class="pc-name">14-pack one-time</div>
+        <div class="pc-price">$49</div>
+        <div class="pc-unit">14 daily units · 2 weeks</div>
       </div>
-      <div class="market-rows">
-        <div>
-          <div class="stage">TAM · US dietary supplements</div>
-          <div class="nm"><strong>$65B</strong> category</div>
-          <div class="ds">The full universe. Industry estimate, 2025-2026.</div>
-        </div>
-        <div>
-          <div class="stage">SAM · Ingestible beauty + skin supplements</div>
-          <div class="nm"><strong>~$3-4B</strong> US slice</div>
-          <div class="ds">Collagen and skin-positioned ingestibles. Where Skin Support sits.</div>
-        </div>
-        <div>
-          <div class="stage">SOM · Bottom-up Year 3</div>
-          <div class="nm"><strong>$12M</strong> ARR target</div>
-          <div class="ds">15,000 active subscribers × $69/mo. 0.0006% of TAM. Conservative.</div>
-        </div>
+      <div class="price-card">
+        <div class="pc-tag">Single purchase</div>
+        <div class="pc-name">28-pack one-time</div>
+        <div class="pc-price">$99</div>
+        <div class="pc-unit">28 daily units · 4 weeks</div>
+      </div>
+      <div class="price-card feat">
+        <div class="pc-tag">Subscribe · monthly</div>
+        <div class="pc-name">28-pack auto-ship</div>
+        <div class="pc-price">$69</div>
+        <div class="pc-unit">28 daily units · 4 weeks</div>
+        <div class="pc-save">30% off MSRP</div>
+      </div>
+      <div class="price-card feat">
+        <div class="pc-tag">Subscribe · prepaid</div>
+        <div class="pc-name">3-month bundle</div>
+        <div class="pc-price">$179</div>
+        <div class="pc-unit">$59.67/mo · 84 daily units</div>
+        <div class="pc-save">~40% off MSRP</div>
       </div>
     </div>
+
+    <div class="trade-stats">
+      <div class="ts">
+        <div class="num">50%+</div>
+        <div class="lbl">target subscriber mix at scale</div>
+      </div>
+      <div class="ts">
+        <div class="num">70–75%</div>
+        <div class="lbl">target gross margin range</div>
+      </div>
+      <div class="ts">
+        <div class="num">28 units</div>
+        <div class="lbl">case pack · 4-week supply</div>
+      </div>
+      <div class="ts">
+        <div class="num">Ambient</div>
+        <div class="lbl">no cold chain · standard retail shelf</div>
+      </div>
+    </div>
+
+    <p class="trade-foot">Wholesale, retail, and partnership terms available on request. Co-op marketing programs and SKU-locked retailer exclusives considered per relationship.</p>
   </div>
 </section>
 
@@ -643,7 +707,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         <p>For most supplement startups, paid customer acquisition is the line item that decides the company. For us, the channel is co-founded into the brand.</p>
         <div class="community-stats">
           <div class="cs"><div class="num">5/wk</div><div class="lbl">viral content cadence target through launch</div></div>
-          <div class="cs"><div class="num">10/wk</div><div class="lbl">short-form output with Miko, videographer</div></div>
+          <div class="cs"><div class="num">10/wk</div><div class="lbl">short-form output with the videographer</div></div>
           <div class="cs"><div class="num">CAC ↓</div><div class="lbl">organic-led acquisition vs paid-led peers</div></div>
           <div class="cs"><div class="num">3 lanes</div><div class="lbl">co-founder voices, not single-founder brand</div></div>
         </div>
@@ -723,6 +787,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   <div class="slide-num">15 / 15</div>
   <div class="closer-mark">For <em>sensitive</em> ones.</div>
   <div class="descriptor">Inner care for sensitive problems.</div>
+  <div class="contact">For Sensitive Ones LLC · forsensitiveones.com (forthcoming) · @sensitiveones</div>
   <div class="dshea">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
 </section>
 
