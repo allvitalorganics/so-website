@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>sensitive ones · 브랜드 소개</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --magenta:#B8255A;
+  --magenta-soft:#B8255A0F;
+  --magenta-line:#B8255A33;
+  --magenta-bar:#B8255A;
+  --magenta-bar-2:#B8255A66;
+  --cream:#FAF8F6;
+  --cream-2:#F2EDE8;
+  --cream-3:#E8E2DB;
+  --black:#0A0A0A;
+  --ink:#1D1D1F;
+  --ink-2:#424245;
+  --ink-3:#6E6E73;
+  --ink-4:#A1A1A6;
+  --border:#E5E5EA;
+  --border-soft:#EFECE8;
+  --yes:#1F7A2E;
+  --yes-bg:#F0FBF3;
+  --yes-border:#C8EBD1;
+  --no:#B42318;
+  --no-bg:#FDF2F2;
+  --no-border:#F4CECA;
+  --serif:"Nanum Myeongjo","Noto Serif KR","AppleMyungjo","Times New Roman",Georgia,serif;
+  --serif-en:"Times New Roman",Georgia,serif;
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Helvetica Neue",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;letter-spacing:-0.005em;line-height:1.6;word-break:keep-all}
+
+.slide{
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:104px 80px 96px;
+  position:relative;
+  border-bottom:1px solid var(--border-soft);
+  page-break-after:always;
+}
+@media(max-width:780px){.slide{padding:80px 22px 56px}}
+.slide-inner{max-width:1080px;width:100%;margin:0 auto}
+
+.slide-num{position:absolute;top:32px;right:48px;font-size:11px;letter-spacing:0.18em;color:var(--ink-3);text-transform:uppercase;font-feature-settings:"tnum";font-family:var(--serif-en)}
+.slide-tag{position:absolute;top:32px;left:48px;font-size:11px;font-weight:700;letter-spacing:0.14em;color:var(--magenta)}
+@media(max-width:780px){.slide-num{top:22px;right:20px}.slide-tag{top:22px;left:20px}}
+
+.brand-mark{font-family:var(--serif-en);font-weight:400;letter-spacing:-0.04em;line-height:0.92;color:var(--black)}
+.brand-mark em{font-style:italic;color:var(--magenta);font-weight:400}
+
+h1.title{font-family:var(--serif);font-size:64px;font-weight:400;letter-spacing:-0.03em;line-height:1.15;color:var(--black);margin-bottom:30px;word-break:keep-all}
+h1.title em{color:var(--magenta);font-style:normal;font-weight:700}
+@media(max-width:780px){h1.title{font-size:36px;margin-bottom:18px;line-height:1.2}}
+
+.lede{font-family:var(--serif);font-size:24px;font-weight:400;line-height:1.4;color:var(--magenta);margin-bottom:28px;max-width:860px;letter-spacing:-0.01em;word-break:keep-all}
+@media(max-width:780px){.lede{font-size:18px;margin-bottom:18px}}
+
+.body{font-size:15px;line-height:1.75;color:var(--ink-2);max-width:780px;letter-spacing:-0.005em;word-break:keep-all}
+.body + .body{margin-top:14px}
+.body strong{color:var(--ink);font-weight:600}
+.body em{font-style:normal;color:var(--magenta);font-weight:600}
+@media(max-width:780px){.body{font-size:14px}}
+
+.eyebrow{font-size:11px;letter-spacing:0.14em;color:var(--magenta);font-weight:700;margin-bottom:10px}
+
+/* cover */
+.cover{justify-content:flex-end;padding-bottom:96px}
+.cover .brand-mark{font-size:160px}
+@media(max-width:980px){.cover .brand-mark{font-size:108px}}
+@media(max-width:780px){.cover .brand-mark{font-size:64px}}
+.cover .descriptor{font-family:var(--serif);font-size:24px;color:var(--ink-2);margin-top:24px;letter-spacing:-0.01em;line-height:1.4}
+@media(max-width:780px){.cover .descriptor{font-size:17px;margin-top:14px}}
+.cover-meta{position:absolute;bottom:48px;left:80px;right:80px;display:flex;justify-content:space-between;align-items:flex-end;font-size:12px;color:var(--ink-3);letter-spacing:0.04em}
+@media(max-width:780px){.cover-meta{left:22px;right:22px;bottom:22px;flex-direction:column;align-items:flex-start;gap:6px}}
+
+/* reader stats */
+.reader-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px;max-width:760px}
+@media(max-width:780px){.reader-stats{grid-template-columns:1fr}}
+.r-stat{background:#fff;border:1px solid var(--border);border-radius:10px;padding:22px}
+.r-stat .num{font-family:var(--serif-en);font-size:42px;color:var(--magenta);line-height:1;letter-spacing:-0.025em}
+.r-stat .lbl{font-size:13.5px;color:var(--ink-2);margin-top:10px;line-height:1.55}
+.r-stat .src{font-size:11px;color:var(--ink-3);margin-top:8px;line-height:1.45;font-family:var(--serif-en)}
+
+/* dose chart */
+.dose-chart{margin-top:28px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 26px}
+.dose-row{display:grid;grid-template-columns:230px 1fr 90px;align-items:center;gap:16px;padding:10px 0;border-bottom:1px solid var(--border-soft)}
+.dose-row:last-child{border-bottom:none}
+.dose-row.header{padding-bottom:14px;border-bottom:1px solid var(--border)}
+.dose-row.header .h{font-size:11px;letter-spacing:0.14em;color:var(--ink-3);font-weight:700}
+.dose-label{font-size:13.5px;color:var(--ink);font-weight:600}
+.dose-label .sub{display:block;font-size:11.5px;color:var(--ink-3);font-weight:400;margin-top:3px;line-height:1.4}
+.dose-bar{height:22px;background:var(--cream-2);border-radius:4px;position:relative;overflow:hidden}
+.dose-bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:11px;color:#fff;font-weight:600;font-family:var(--serif-en)}
+.dose-bar-fill.full{background:var(--magenta-bar)}
+.dose-bar-fill.half{background:var(--magenta-bar-2)}
+.dose-bar-fill.tiny{background:var(--ink-4)}
+.dose-num{font-family:var(--serif-en);font-size:16px;color:var(--ink);text-align:right;letter-spacing:-0.01em}
+@media(max-width:780px){
+  .dose-row{grid-template-columns:1fr 60px;gap:8px}
+  .dose-row .dose-bar{grid-column:1/-1}
+  .dose-row.header .h:nth-child(2){display:none}
+}
+.dose-cite{font-size:11.5px;color:var(--ink-3);margin-top:14px;line-height:1.65}
+
+/* yes/no */
+.yesno{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+@media(max-width:780px){.yesno{grid-template-columns:1fr}}
+.yn-col{border-radius:12px;padding:22px 24px;border:1px solid}
+.yn-col.yes{background:var(--yes-bg);border-color:var(--yes-border)}
+.yn-col.no{background:var(--no-bg);border-color:var(--no-border)}
+.yn-col h4{font-size:11px;letter-spacing:0.14em;font-weight:700;margin-bottom:6px}
+.yn-col.yes h4{color:var(--yes)}
+.yn-col.no h4{color:var(--no)}
+.yn-col .sub{font-family:var(--serif);font-size:16px;line-height:1.4;margin-bottom:16px;color:var(--ink)}
+.yn-list{margin:0;padding:0;list-style:none}
+.yn-list li{font-size:13px;line-height:1.65;color:var(--ink-2);padding:9px 0;border-top:1px solid rgba(0,0,0,0.05);display:grid;grid-template-columns:24px 1fr;gap:8px}
+.yn-list li:first-child{border-top:none;padding-top:4px}
+.yn-list li b{font-weight:600;color:var(--ink);display:block;margin-bottom:3px;font-size:13.5px}
+.yn-list li i{font-style:normal;color:var(--ink-3);font-size:12px;line-height:1.55}
+.yn-mark{font-family:var(--serif-en);font-size:18px;line-height:1;margin-top:-1px}
+.yn-col.yes .yn-mark{color:var(--yes)}
+.yn-col.no .yn-mark{color:var(--no)}
+
+/* anatomy */
+.anatomy{display:grid;grid-template-columns:280px 1fr;gap:32px;margin-top:28px;align-items:center}
+@media(max-width:780px){.anatomy{grid-template-columns:1fr;gap:20px}}
+.cap-viz{background:#fff;border:1px solid var(--border);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:6px;align-items:center}
+.cap-shot{width:100%;height:80px;background:linear-gradient(180deg,#FFF6E8 0%,#FFE7B8 100%);border:1px solid var(--cream-3);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:13px;color:var(--ink-2);position:relative}
+.cap-shot::before{content:"25–30 ml";position:absolute;top:8px;left:10px;font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);font-family:var(--serif-en)}
+.cap-divider{height:6px;width:60%;background:var(--cream-3);border-radius:2px;margin:2px 0}
+.cap-tablets{display:flex;gap:10px}
+.cap-tablet{width:42px;height:42px;background:#fff;border:1.5px solid var(--ink-4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif-en);font-size:11px;color:var(--ink-3)}
+.cap-tablet.alt{background:var(--cream-2)}
+.cap-unit-label{font-size:11px;letter-spacing:0.14em;color:var(--magenta);font-weight:700;margin-top:14px}
+.anatomy-info > div{padding:14px 0;border-bottom:1px solid var(--border-soft)}
+.anatomy-info > div:last-child{border-bottom:none}
+.anatomy-info .lbl{font-size:11px;letter-spacing:0.14em;color:var(--magenta);font-weight:700;margin-bottom:6px}
+.anatomy-info .nm{font-family:var(--serif);font-size:17px;color:var(--ink);margin-bottom:5px}
+.anatomy-info .ds{font-size:13px;color:var(--ink-2);line-height:1.7}
+
+/* actives table */
+.actives{margin-top:18px;border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
+.actives-row{display:grid;grid-template-columns:32px 2.4fr 1.6fr 1fr;align-items:center;padding:13px 22px;border-bottom:1px solid var(--border-soft);gap:18px}
+.actives-row:last-child{border-bottom:none}
+.actives-row.header{background:var(--cream-2);border-bottom:1px solid var(--border)}
+.actives-row.header .h{font-size:11px;letter-spacing:0.14em;color:var(--ink-3);font-weight:700}
+.actives-row .num{font-family:var(--serif-en);font-size:18px;color:var(--magenta);font-weight:400}
+.actives-row .name{font-size:14px;font-weight:600;color:var(--ink);letter-spacing:-0.005em}
+.actives-row .form{font-size:12px;color:var(--ink-3);line-height:1.5}
+.actives-row .dose{font-family:var(--serif-en);font-size:17px;color:var(--black);text-align:right;letter-spacing:-0.01em}
+.actives-row .dose .dv{font-size:10.5px;color:var(--ink-3);display:block;letter-spacing:0.04em;font-family:var(--sans);margin-top:1px}
+@media(max-width:780px){
+  .actives-row{grid-template-columns:24px 1fr auto;gap:8px;padding:12px 14px}
+  .actives-row .form{grid-column:2}
+  .actives-row .dose{grid-column:3;grid-row:1}
+}
+.actives-meta{display:flex;justify-content:space-between;gap:16px;margin-top:18px;padding:12px 16px;background:var(--cream-2);border-radius:8px;font-size:12.5px;color:var(--ink-2)}
+@media(max-width:780px){.actives-meta{flex-direction:column;gap:8px}}
+.actives-meta b{color:var(--ink);font-weight:600}
+.actives-foot{font-size:12.5px;color:var(--ink-3);margin-top:14px;line-height:1.65}
+
+/* clinical evidence table */
+.evidence{margin-top:24px;border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
+.ev-row{display:grid;grid-template-columns:1.7fr 0.7fr 2.4fr 2.4fr;align-items:flex-start;padding:14px 22px;border-bottom:1px solid var(--border-soft);gap:18px}
+.ev-row:last-child{border-bottom:none}
+.ev-row.header{background:var(--cream-2);border-bottom:1px solid var(--border)}
+.ev-row.header .h{font-size:11px;letter-spacing:0.14em;color:var(--ink-3);font-weight:700}
+.ev-row .ev-active{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.4}
+.ev-row .ev-active .form{display:block;font-size:11.5px;color:var(--ink-3);font-weight:400;margin-top:2px}
+.ev-row .ev-dose{font-family:var(--serif-en);font-size:16px;color:var(--black);letter-spacing:-0.01em;line-height:1.3}
+.ev-row .ev-out{font-size:13px;color:var(--ink-2);line-height:1.7}
+.ev-row .ev-cite{font-size:11.5px;color:var(--ink-3);line-height:1.55}
+.ev-row .ev-cite a{color:var(--magenta);text-decoration:none;font-family:var(--serif-en)}
+.ev-row .ev-cite a:hover{text-decoration:underline}
+.ev-row .ev-cite b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px;font-size:12px}
+@media(max-width:980px){
+  .ev-row{grid-template-columns:1fr;gap:8px;padding:14px 16px}
+  .ev-row.header{display:none}
+  .ev-row .ev-dose{font-size:14px;color:var(--magenta)}
+}
+.ev-foot{font-size:11.5px;color:var(--ink-3);margin-top:16px;line-height:1.65}
+
+/* line / range cards */
+.range-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:24px}
+@media(max-width:980px){.range-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.range-grid{grid-template-columns:1fr}}
+.range-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;position:relative;display:flex;flex-direction:column}
+.range-card.active{border-color:var(--magenta);background:var(--magenta-soft)}
+.range-card .stage{font-size:10px;letter-spacing:0.14em;color:var(--ink-3);font-weight:700;margin-bottom:10px}
+.range-card.active .stage{color:var(--magenta)}
+.range-card .name{font-family:var(--serif);font-size:17px;line-height:1.2;color:var(--black);margin-bottom:8px;letter-spacing:-0.015em}
+.range-card .anchor-lbl{font-size:10px;letter-spacing:0.14em;color:var(--ink-3);font-weight:700;margin-top:auto;padding-top:10px;border-top:1px solid var(--border-soft)}
+.range-card .anchor-name{font-family:var(--serif);font-size:14px;color:var(--ink);margin-top:4px;line-height:1.4}
+.range-card .outcome{font-size:11.5px;color:var(--ink-3);line-height:1.55;margin-top:6px}
+
+/* community */
+.community{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:24px}
+@media(max-width:780px){.community{grid-template-columns:1fr;gap:28px}}
+.big-stat{font-family:var(--serif-en);font-size:180px;color:var(--magenta);line-height:0.9;letter-spacing:-0.05em;font-weight:400}
+@media(max-width:980px){.big-stat{font-size:140px}}
+@media(max-width:780px){.big-stat{font-size:104px}}
+.big-stat-sub{font-size:13px;letter-spacing:0.08em;color:var(--ink-3);font-weight:700;margin-top:10px;line-height:1.5}
+.community-info p{font-size:14.5px;line-height:1.75;color:var(--ink-2);margin-bottom:14px;max-width:480px}
+.community-info p strong{color:var(--ink);font-weight:600}
+.community-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.cs{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.cs .num{font-family:var(--serif-en);font-size:22px;color:var(--magenta);letter-spacing:-0.02em;line-height:1}
+.cs .lbl{font-size:11px;color:var(--ink-3);margin-top:6px;line-height:1.55}
+
+/* moat */
+.moat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
+@media(max-width:780px){.moat-grid{grid-template-columns:1fr}}
+.moat-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:22px;position:relative}
+.moat-card .num{font-family:var(--serif-en);font-size:28px;color:var(--magenta);line-height:1;margin-bottom:10px}
+.moat-card .name{font-family:var(--serif);font-size:18px;color:var(--black);margin-bottom:10px;line-height:1.3;letter-spacing:-0.01em}
+.moat-card .desc{font-size:13px;color:var(--ink-2);line-height:1.7}
+.moat-card .stat{margin-top:12px;padding-top:12px;border-top:1px solid var(--border-soft);font-size:12px;color:var(--magenta);font-weight:600;line-height:1.5}
+
+/* founders */
+.founders{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+@media(max-width:780px){.founders{grid-template-columns:1fr}}
+.founder{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px}
+.founder .role{font-size:10px;letter-spacing:0.14em;color:var(--magenta);font-weight:700;margin-bottom:14px}
+.founder .name{font-family:var(--serif);font-size:22px;color:var(--black);margin-bottom:6px;line-height:1.2;letter-spacing:-0.015em}
+.founder .title{font-size:12px;color:var(--ink-3);margin-bottom:16px;line-height:1.55}
+.founder .lane{font-size:13px;line-height:1.75;color:var(--ink-2)}
+
+.anchor-block{font-family:var(--serif);font-size:18px;color:var(--ink);border-left:3px solid var(--magenta);padding:8px 0 8px 16px;margin:22px 0;line-height:1.55;max-width:780px}
+
+/* closer */
+.closer{justify-content:center;align-items:center;text-align:center;background:var(--cream-2)}
+.closer-mark{font-family:var(--serif-en);font-size:96px;font-style:italic;color:var(--magenta);letter-spacing:-0.04em;line-height:1;font-weight:400}
+@media(max-width:780px){.closer-mark{font-size:48px}}
+.closer .descriptor{font-family:var(--serif);font-size:22px;color:var(--ink-3);margin-top:28px;letter-spacing:-0.01em;line-height:1.4}
+.closer .dshea{position:absolute;bottom:32px;left:48px;right:48px;font-size:11px;color:var(--ink-3);text-align:center;line-height:1.7;max-width:760px;margin:0 auto}
+.closer .dshea .en{display:block;margin-top:6px;font-family:var(--serif-en);color:var(--ink-4)}
+.closer .contact{margin-top:36px;font-size:13px;color:var(--ink-3);letter-spacing:0.04em}
+
+@media print{
+  body{background:#fff}
+  .slide{min-height:auto;page-break-after:always;border-bottom:none;padding:48px}
+}
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Cover -->
+<section class="slide cover">
+  <div class="slide-num">01 / 12</div>
+  <div class="slide-inner">
+    <div class="brand-mark"><em>sensitive</em> ones.</div>
+    <div class="descriptor">예민한 문제를 위한 이너케어.</div>
+  </div>
+  <div class="cover-meta">
+    <span>브랜드 소개 · 2026</span>
+    <span>For Sensitive Ones LLC · Ohio</span>
+  </div>
+</section>
+
+<!-- Slide 2: The reader -->
+<section class="slide">
+  <div class="slide-tag">독자</div>
+  <div class="slide-num">02 / 12</div>
+  <div class="slide-inner">
+    <h1 class="title"><em>예민한</em> 분들을 위해.</h1>
+    <p class="lede">예민함은 결함이 아니다. 예민함은 정보다.</p>
+    <p class="body">섬세하지만 약하지 않은 사람. 라벨을 모두 읽는 친구. 누구나 효과 있다고 한 영양제를 시도해 보았으나 아무것도 느끼지 못했거나, 더 나쁘게는 무언가를 느꼈던 사람. "클린"이라는 이름의 브랜드에 두 번 실망한 사람. 24세에서 40세 사이. 더 적게, 더 신중하게 구매한다. 우리는 그러한 사람을 위해 만들었다. <strong>우리도 같은 사람이다.</strong></p>
+    <div class="reader-stats">
+      <div class="r-stat">
+        <div class="num">60–70%</div>
+        <div class="lbl">여성이 어느 정도의 민감성 피부를 자가 보고함</div>
+        <div class="src">Farage 2019, Front Med (PMID 31157225)</div>
+      </div>
+      <div class="r-stat">
+        <div class="num">50–60%</div>
+        <div class="lbl">남성이 어느 정도의 민감성 피부를 자가 보고함</div>
+        <div class="src">Farage 2019, Front Med (PMID 31157225)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 3: The problem -->
+<section class="slide">
+  <div class="slide-tag">문제</div>
+  <div class="slide-num">03 / 12</div>
+  <div class="slide-inner">
+    <h1 class="title">절반의 <em>이야기</em>.</h1>
+    <p class="lede">대부분의 영양제는 적절한 표현을 사용한다. 실제 함량을 공개하는 곳은 드물다.</p>
+    <p class="body">독점 블렌드는 성분만 나열할 뿐, 성분별 함량은 공개하지 않는다. 임상 시험에서 사용된 용량은 발표 논문에 적혀 있다. 병에 들어 있는 양은 종종 표기되지 않은 다른 숫자다. 라벨에 "블렌드"라고 적는 이유는, 성분별 함량을 그대로 적었을 때 그 표기가 살아남지 못하기 때문이다.</p>
+
+    <div class="dose-chart">
+      <div class="eyebrow" style="margin-bottom:14px">생리활성 콜라겐 펩타이드 · 1일 용량 · 공개 패턴</div>
+      <div class="dose-row header">
+        <div class="h">접근 방식</div>
+        <div class="h">시각화</div>
+        <div class="h" style="text-align:right">표기 용량</div>
+      </div>
+      <div class="dose-row">
+        <div class="dose-label">Skin Support<span class="sub">Proksch 2014 탄력성 RCT의 5g 군</span></div>
+        <div class="dose-bar"><div class="dose-bar-fill full" style="width:100%">5,000mg</div></div>
+        <div class="dose-num">5,000mg</div>
+      </div>
+      <div class="dose-row">
+        <div class="dose-label">일반적 하위 군 용량<span class="sub">2.5g, 주름 연구의 용량</span></div>
+        <div class="dose-bar"><div class="dose-bar-fill half" style="width:50%">2,500mg</div></div>
+        <div class="dose-num">2,500mg</div>
+      </div>
+      <div class="dose-row">
+        <div class="dose-label">독점 블렌드<span class="sub">성분별 함량 미표기</span></div>
+        <div class="dose-bar"><div class="dose-bar-fill tiny" style="width:18%">미공개</div></div>
+        <div class="dose-num">?</div>
+      </div>
+      <div class="dose-cite">Proksch et al. 2014 (Skin Pharmacol Physiol)는 8주간 진행된 Verisol® 특정 주름 RCT에서 2.5g/일을 사용하였고 (n=114, PMID 24401291), 8주간의 탄력성 RCT에서는 2.5g과 5g 두 군을 사용하였다 (n=69, PMID 23949208). Skin Support는 5,000mg을 사용하며, 전 함량을 공개한다. 위 표의 세 번째 행은 본 자료가 다루는 업계의 패턴이다.</div>
+    </div>
+
+    <div class="anchor-block" style="margin-top:22px">절반의 이야기는 전체의 이야기가 아니다. 우리는 공개를 선택했다.</div>
+  </div>
+</section>
+
+<!-- Slide 4: The discipline -->
+<section class="slide">
+  <div class="slide-tag">원칙</div>
+  <div class="slide-num">04 / 12</div>
+  <div class="slide-inner">
+    <h1 class="title">영양제가 <em>실제로</em> 도울 수 있는 문제만 다룬다.</h1>
+    <p class="lede">우리는 이야기에서 차별화된다. 그 이야기를 할 자격은 메커니즘 위에서 얻는다.</p>
+    <p class="body">많은 영양제 카테고리는 메커니즘보다 마케팅 위에 세워졌다. 우리는 그러한 카테고리에 관심이 없다. 1일 1단위에 담을 수 있는 효과 용량의 동료 검토 임상 근거가 존재하는 카테고리만 선택한다. 그 외에는 만들지 않는다.</p>
+
+    <div class="yesno">
+      <div class="yn-col yes">
+        <h4>진입할 카테고리</h4>
+        <div class="sub">효과 용량의 동료 검토 임상 근거가 존재하는 카테고리.</div>
+        <ul class="yn-list">
+          <li><span class="yn-mark">+</span><div><b>피부 · 콜라겐과 보조인자</b><i>Verisol® RCT · 2.5g 주름 연구 및 2.5g/5g 탄력성 군 (Proksch 2014)</i></div></li>
+          <li><span class="yn-mark">+</span><div><b>더부룩함 · 소화 편안함</b><i>생강에 대한 다수의 동료 검토 RCT 존재. 구체적 인용은 제형 확정 시 결정된다.</i></div></li>
+          <li><span class="yn-mark">+</span><div><b>수면의 질</b><i>효과 용량의 임상 근거를 갖춘 핵심 활성 성분 선정 중. 인용은 제형 확정 시.</i></div></li>
+          <li><span class="yn-mark">+</span><div><b>에너지 및 각성</b><i>녹차 카테킨의 안정적 각성 효과에 대한 발표 근거가 존재. 인용은 제형 확정 시.</i></div></li>
+          <li><span class="yn-mark">+</span><div><b>PMS · 생리 주기 증상 케어</b><i>효과 용량의 임상 근거를 갖춘 핵심 활성 성분 선정 중. 인용은 제형 확정 시.</i></div></li>
+        </ul>
+      </div>
+      <div class="yn-col no">
+        <h4>진입하지 않을 카테고리</h4>
+        <div class="sub">영양제의 주장이 근거를 넘어서는 카테고리.</div>
+        <ul class="yn-list">
+          <li><span class="yn-mark">×</span><div><b>종합 비타민제</b><i>전반적으로 비효과 용량. "광범위 커버리지"라는 프레이밍.</i></div></li>
+          <li><span class="yn-mark">×</span><div><b>안티에이징 약속</b><i>FDA 규제 클레임 카테고리. 영양제에서 해당 표현의 정직한 사용은 존재하지 않는다.</i></div></li>
+          <li><span class="yn-mark">×</span><div><b>디톡스 · 클렌징</b><i>일반적 독소 배출에 대한 생물학적 메커니즘이 부재. 마케팅이 카테고리를 만든 영역.</i></div></li>
+          <li><span class="yn-mark">×</span><div><b>비효과 용량의 어댑토젠</b><i>임상 효과를 보인 용량이 병에 들어 있는 용량과 일치하지 않는 경우가 흔하다.</i></div></li>
+          <li><span class="yn-mark">×</span><div><b>건강한 성인을 위한 기억력 영양제</b><i>동료 검토 근거가 부족하다. 음식과 수면이 분자보다 효과적이다.</i></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 5: The format -->
+<section class="slide">
+  <div class="slide-tag">제형</div>
+  <div class="slide-num">05 / 12</div>
+  <div class="slide-inner">
+    <h1 class="title">하나의 단위.<br>두 개의 부분.</h1>
+    <p class="lede">25에서 30 ml 범위의 액상 샷, 그리고 1개 또는 2개의 정제. 1일 1단위.</p>
+    <div class="anatomy">
+      <div class="cap-viz">
+        <div class="cap-shot"><span>액상 활성 성분</span></div>
+        <div class="cap-divider"></div>
+        <div class="cap-tablets">
+          <div class="cap-tablet">1</div>
+          <div class="cap-tablet alt">2</div>
+        </div>
+        <div class="cap-unit-label">1일 1단위</div>
+      </div>
+      <div class="anatomy-info">
+        <div>
+          <div class="lbl">샷</div>
+          <div class="nm">액상 활성 성분</div>
+          <div class="ds">생리활성 콜라겐 펩타이드, 히알루론산, 수용성 비타민. 빠르게 흡수되는 층. 마케팅이 아닌 복용 편의를 위한 파인애플 풍미.</div>
+        </div>
+        <div>
+          <div class="lbl">정제</div>
+          <div class="nm">보조인자 전달</div>
+          <div class="ds">지용성 비타민과 용량 안정성이 필요한 화합물을 압축 정제 형태로 제공. 샷의 효과를 보완하는 동반 성분.</div>
+        </div>
+        <div>
+          <div class="lbl">플랫폼</div>
+          <div class="nm">28단위 · 4주 · 상온 보관</div>
+          <div class="ds">콜드체인 불필요. 매장 냉장 불필요. FDA 등록, HACCP 인증, GMP 인증을 보유한 한국 제조 시설에서 생산. 영양제 OEM 20년 이상의 경험. 로트별 제3자 시험을 시행한다.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 6: Skin Support -->
+<section class="slide">
+  <div class="slide-tag">첫 제품</div>
+  <div class="slide-num">06 / 12</div>
+  <div class="slide-inner">
+    <h1 class="title">Skin Support.</h1>
+    <p class="lede">7가지 활성 성분. 모든 용량 공개. 독점 블렌드 없음.</p>
+    <div class="actives">
+      <div class="actives-row header">
+        <div class="h">#</div>
+        <div><div class="h">활성 성분</div></div>
+        <div class="h">형태</div>
+        <div class="h" style="text-align:right">1일 용량</div>
+      </div>
+      <div class="actives-row"><div class="num">1</div><div><div class="name">Verisol® 콜라겐 펩타이드</div></div><div class="form">GELITA AG · 생리활성 펩타이드</div><div class="dose">5,000mg</div></div>
+      <div class="actives-row"><div class="num">2</div><div><div class="name">히알루론산</div></div><div class="form">소듐 히알루로네이트</div><div class="dose">120mg</div></div>
+      <div class="actives-row"><div class="num">3</div><div><div class="name">비타민 C</div></div><div class="form">L-아스코르브산</div><div class="dose">200mg<span class="dv">222% DV</span></div></div>
+      <div class="actives-row"><div class="num">4</div><div><div class="name">비타민 E</div></div><div class="form">D-알파 토코페롤 (천연)</div><div class="dose">30mg<span class="dv">200% DV</span></div></div>
+      <div class="actives-row"><div class="num">5</div><div><div class="name">베타카로틴</div></div><div class="form">프로비타민 A 카로티노이드</div><div class="dose">6mg</div></div>
+      <div class="actives-row"><div class="num">6</div><div><div class="name">리보플라빈 (B2)</div></div><div class="form">리보플라빈</div><div class="dose">2mg<span class="dv">154% DV</span></div></div>
+      <div class="actives-row"><div class="num">7</div><div><div class="name">판토텐산 (B5)</div></div><div class="form">D-판토텐산 칼슘</div><div class="dose">5mg<span class="dv">100% DV</span></div></div>
+    </div>
+    <div class="actives-meta">
+      <span><b>제형</b> · 25 ml 액상 샷 + 압축 정제 2개</span>
+      <span><b>구성</b> · 28일분 · 4주 분량</span>
+      <span><b>풍미</b> · 파인애플</span>
+    </div>
+    <p class="actives-foot">각 활성 성분은 동료 검토 연구 또는 NIH 규제 자료에 의해 뒷받침된다. 전체 인용은 슬라이드 7에서 확인한다.</p>
+  </div>
+</section>
+
+<!-- Slide 7: Clinical evidence -->
+<section class="slide">
+  <div class="slide-tag">임상 근거</div>
+  <div class="slide-num">07 / 12</div>
+  <div class="slide-inner">
+    <h1 class="title">모든 활성 성분.<br>모든 <em>인용</em>.</h1>
+    <p class="lede">모든 용량은 공개적으로 검증 가능한 연구 또는 규제 자료에 근거한다.</p>
+
+    <div class="evidence">
+      <div class="ev-row header">
+        <div class="h">활성 성분</div>
+        <div class="h">Skin Support 용량</div>
+        <div class="h">임상 근거 (인용된 용량에서의 결과)</div>
+        <div class="h">공개 자료</div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">Verisol® 콜라겐 펩타이드<span class="form">GELITA AG · 생리활성 펩타이드</span></div>
+        <div class="ev-dose">5,000mg</div>
+        <div class="ev-out">5g과 2.5g 군 모두 4주 및 8주 시점에서 통계적으로 유의한 피부 탄력성 개선을 보였다 (Proksch 2014 탄력성 RCT). Verisol® 특정 주름 RCT는 2.5g/일에서 8주 후 눈가 주름 부피의 20% 감소와 진피 프로콜라겐 I 및 엘라스틴 합성 증가를 보고하였다. Skin Support는 인용된 탄력성 RCT의 상위 군인 5g 용량을 채택하며, 전 함량을 공개한다.</div>
+        <div class="ev-cite"><b>Proksch et al. 2014 (RCT 2건)</b>Skin Pharmacol Physiol. n=69 탄력성 (2.5g + 5g 군, 8주 DBPC), n=114 주름 (2.5g, 8주 DBPC). <a href="https://pubmed.ncbi.nlm.nih.gov/23949208/" target="_blank">PMID 23949208</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/24401291/" target="_blank">PMID 24401291</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">히알루론산<span class="form">소듐 히알루로네이트</span></div>
+        <div class="ev-dose">120mg</div>
+        <div class="ev-out">60명을 대상으로 12주간 진행된 이중맹검 위약대조 RCT. 300 kDa 히알루론산 군은 위약 대비 통계적으로 유의한 주름 면적비 및 주름 부피비 감소를 보였으며, 8주 시점에서 유의한 개선을 보고하였다.</div>
+        <div class="ev-cite"><b>Oe et al. 2017</b>Clin Cosmet Investig Dermatol. n=60, 12주 DBPC RCT, 120 mg/일. <a href="https://pubmed.ncbi.nlm.nih.gov/28761365/" target="_blank">PMID 28761365</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">비타민 C<span class="form">L-아스코르브산</span></div>
+        <div class="ev-dose">200mg · 222% DV</div>
+        <div class="ev-out">내인성 콜라겐 생합성에 필요한 보조인자. 1일 권장 섭취 기준치 (DV) 90 mg.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin C Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" target="_blank">ods.od.nih.gov/factsheets/VitaminC-HealthProfessional</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">비타민 E<span class="form">D-알파 토코페롤 (천연)</span></div>
+        <div class="ev-dose">30mg · 200% DV</div>
+        <div class="ev-out">지용성 항산화제. 알파 토코페롤 기준 DV 15 mg의 필수 영양소.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin E Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/" target="_blank">ods.od.nih.gov/factsheets/VitaminE-HealthProfessional</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">베타카로틴<span class="form">프로비타민 A 카로티노이드</span></div>
+        <div class="ev-dose">6mg</div>
+        <div class="ev-out">프로비타민 A 전구체이자 카로티노이드 항산화제. 내인성 전환을 통해 비타민 A 공급원 역할을 한다.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Vitamin A and Carotenoids Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/" target="_blank">ods.od.nih.gov/factsheets/VitaminA-HealthProfessional</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">리보플라빈 (B2)<span class="form">리보플라빈</span></div>
+        <div class="ev-dose">2mg · 154% DV</div>
+        <div class="ev-out">필수 비타민. 세포 산화 대사의 보조인자. DV 1.3 mg.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Riboflavin Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/" target="_blank">ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional</a></div>
+      </div>
+      <div class="ev-row">
+        <div class="ev-active">판토텐산 (B5)<span class="form">D-판토텐산 칼슘</span></div>
+        <div class="ev-dose">5mg · 100% DV</div>
+        <div class="ev-out">필수 비타민. 코엔자임 A의 전구체로서 지방산 합성에 요구된다. DV 5 mg.</div>
+        <div class="ev-cite"><b>NIH Office of Dietary Supplements</b>Pantothenic Acid Fact Sheet for Health Professionals. <a href="https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/" target="_blank">ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional</a></div>
+      </div>
+    </div>
+    <p class="ev-foot">모든 인용은 공개 도메인의 규제 자료 또는 PubMed에 등재된 동료 검토 연구이다. Verisol®은 GELITA AG (독일 Eberbach)의 등록 상표이다. 본 슬라이드의 결과는 인용된 연구에서 시험된 용량에 적용된다. Skin Support는 인용된 탄력성 RCT의 상위 군 용량인 Verisol® 5,000mg을 채택한다.</p>
+  </div>
+</section>
+
+<!-- Slide 8: The line -->
+<section class="slide">
+  <div class="slide-tag">제품 라인</div>
+  <div class="slide-num">08 / 12</div>
+  <div class="slide-inner">
+    <h1 class="title">5개 제품.<br>하나의 플랫폼.</h1>
+    <p class="lede">모든 제품은 동일한 듀얼캡 위에 구축된다. 각 핵심 활성 성분은 1일 1단위에 담을 수 있는 효과 용량의 동료 검토 근거에 따라 선정된다.</p>
+    <div class="range-grid">
+      <div class="range-card active">
+        <div class="stage">출시 · 2026</div>
+        <div class="name">Skin Support</div>
+        <div class="anchor-lbl">핵심 활성 성분</div>
+        <div class="anchor-name">Verisol® 콜라겐, 5g</div>
+        <div class="outcome">주름 및 탄력성 결과 (Proksch 2014)</div>
+      </div>
+      <div class="range-card">
+        <div class="stage">2027 목표</div>
+        <div class="name">Bloat Support</div>
+        <div class="anchor-lbl">핵심 활성 성분</div>
+        <div class="anchor-name">생강</div>
+        <div class="outcome">인용은 제형 확정 시 결정</div>
+      </div>
+      <div class="range-card">
+        <div class="stage">2027 목표</div>
+        <div class="name">Sleep Support</div>
+        <div class="anchor-lbl">핵심 활성 성분</div>
+        <div class="anchor-name">선정 중</div>
+        <div class="outcome">인용은 제형 확정 시 결정</div>
+      </div>
+      <div class="range-card">
+        <div class="stage">2028 목표</div>
+        <div class="name">Energy Support</div>
+        <div class="anchor-lbl">핵심 활성 성분</div>
+        <div class="anchor-name">녹차 추출물</div>
+        <div class="outcome">인용은 제형 확정 시 결정</div>
+      </div>
+      <div class="range-card">
+        <div class="stage">2028 목표</div>
+        <div class="name">PMS Support</div>
+        <div class="anchor-lbl">핵심 활성 성분</div>
+        <div class="anchor-name">선정 중</div>
+        <div class="outcome">인용은 제형 확정 시 결정</div>
+      </div>
+    </div>
+    <p class="body" style="margin-top:22px"><strong>출시 원칙.</strong> SKU 2는 SKU 1이 6개월의 정기 구독 데이터와 500명 이상의 활성 구독자를 확보한 이후에만 출시된다. 각 제품이 다음 제품의 자격을 만든다.</p>
+  </div>
+</section>
+
+<!-- Slide 9: Daesung community moat -->
+<section class="slide">
+  <div class="slide-tag">커뮤니티</div>
+  <div class="slide-num">09 / 12</div>
+  <div class="slide-inner">
+    <h1 class="title">오디언스가<br><em>먼저</em> 있었다.</h1>
+    <p class="lede">서대성의 커뮤니티는 마케팅 계획이 아니다. 이미 존재하는, 브랜드의 고객 대면 보이스다.</p>
+    <div class="community">
+      <div>
+        <div class="big-stat">2.6M</div>
+        <div class="big-stat-sub">서대성 · 출시 첫날 팔로워</div>
+      </div>
+      <div class="community-info">
+        <p><strong>외주 크리에이터가 아닌 공동 창업자.</strong> 서대성은 브랜드의 고객 대면 보이스이자 세 명의 공동 창업자 중 한 명이다. 자신이 말하는 오디언스를 직접 소유한다. 브랜드와 오디언스는 출시 시점에 결합되는 별개의 자산이 아니다. 처음부터 같은 것이다.</p>
+        <p>대부분의 영양제 스타트업에서 유료 고객 획득은 회사의 운명을 결정하는 비용 항목이다. Sensitive Ones에서는 그 채널이 브랜드와 함께 공동 창업되어 있다.</p>
+        <div class="community-stats">
+          <div class="cs"><div class="num">5/주</div><div class="lbl">출시 시점까지의 주간 바이럴 콘텐츠 목표</div></div>
+          <div class="cs"><div class="num">10/주</div><div class="lbl">영상 디렉터와의 단편 콘텐츠 산출 목표</div></div>
+          <div class="cs"><div class="num">CAC 절감</div><div class="lbl">유료 중심 경쟁사 대비 오가닉 중심 획득</div></div>
+          <div class="cs"><div class="num">3 보이스</div><div class="lbl">단일 창업자 브랜드가 아닌 공동 창업자 보이스 3개</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 10: The moat -->
+<section class="slide">
+  <div class="slide-tag">해자</div>
+  <div class="slide-num">10 / 12</div>
+  <div class="slide-inner">
+    <h1 class="title"><em>예민한</em> 문제를 위한<br>이너케어.</h1>
+    <p class="lede">네 개의 기둥. 이 기둥을 묶는 것은 스펙이 아니라 이야기다.</p>
+    <div class="moat-grid">
+      <div class="moat-card">
+        <div class="num">1</div>
+        <div class="name">민감 우선 포지셔닝</div>
+        <div class="desc">일반적인 영양제 오디언스가 아닌, 특정한 독자. 대부분의 브랜드가 만들어지지 않은 슬롯이다. 이를 차지할 수 있는 시간은 좁고, 우리는 그 안에 있다.</div>
+        <div class="stat">해자는 분자가 아닌 이야기에 있다.</div>
+      </div>
+      <div class="moat-card">
+        <div class="num">2</div>
+        <div class="name">듀얼캡 플랫폼</div>
+        <div class="desc">25에서 30 ml의 액상과 1개 또는 2개의 정제, 1일 1단위. 플랫폼은 5개 제품 라인 전체에 적용된다.</div>
+        <div class="stat">1 플랫폼에 5개 제품 · 1일 1회의 의식</div>
+      </div>
+      <div class="moat-card">
+        <div class="num">3</div>
+        <div class="name">모든 용량 공개</div>
+        <div class="desc">핵심 활성 성분은 동료 검토 용량으로 들어간다. 독점 블렌드 없음. 각 제품이 다음 제품의 자격을 만든다. SKU 2는 SKU 1의 6개월 구독 데이터와 500명 이상의 활성 구독자 확보 이후에만 출시된다.</div>
+        <div class="stat">7개 활성 성분 · 7개 용량 · 0개 독점 블렌드</div>
+      </div>
+      <div class="moat-card">
+        <div class="num">4</div>
+        <div class="name">서대성의 정체성과 커뮤니티</div>
+        <div class="desc">2.6M 팔로워가 브랜드의 고객 대면 보이스이며, 외부에서 임대하는 것이 아니라 공동 창업자가 직접 소유한다. 오디언스가 브랜드와 함께 공동 창업되어 있다. 채널과 브랜드는 출시 시점에 결합되는 별개의 자산이 아니다.</div>
+        <div class="stat">2.6M 출시 첫날 오디언스 · 공동 창업자 지분</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 11: The founders -->
+<section class="slide">
+  <div class="slide-tag">공동 창업자</div>
+  <div class="slide-num">11 / 12</div>
+  <div class="slide-inner">
+    <h1 class="title">세 명의 공동 창업자.<br>세 개의 라인.</h1>
+    <p class="lede">자신도 직접 복용할 사람들이 만들었다.</p>
+    <div class="founders">
+      <div class="founder">
+        <div class="role">공동 창업자 · COO</div>
+        <div class="name">Justin Kim</div>
+        <div class="title">운영 · 공급망 · 재무 · 법무 · 수출</div>
+        <div class="lane">제조 표준, 규제 서류, 생산 일정을 책임진다. 박스 뒷면에 적힌 모든 용량이 병 안의 용량과 일치하는 이유다.</div>
+      </div>
+      <div class="founder">
+        <div class="role">공동 창업자 · CEO</div>
+        <div class="name">Alex Kim</div>
+        <div class="title">브랜드 · 크리에이티브 · 제품 · 투자자</div>
+        <div class="lane">브랜드 테제, 보이스, 디자인 시스템을 정의한다. 브랜드가 지금처럼 읽히는 이유이자, 카테고리가 시끄러워질 때에도 자신을 잃지 않는 이유다.</div>
+      </div>
+      <div class="founder">
+        <div class="role">공동 창업자 · CMO</div>
+        <div class="name">Daesung Seo</div>
+        <div class="title">콘텐츠 · 오디언스 · 크리에이터 · 2.6M 팔로워</div>
+        <div class="lane">출시 전부터 2.6M 오디언스를 보유한 고객 대면 창업자 보이스. 브랜드의 케어가 비용을 들이지 않고 독자에게 도달하는 이유다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 12: Closer -->
+<section class="slide closer">
+  <div class="slide-num">12 / 12</div>
+  <div class="closer-mark">For <em>sensitive</em> ones.</div>
+  <div class="descriptor">예민한 문제를 위한 이너케어.</div>
+  <div class="contact">For Sensitive Ones LLC · Ohio · forsensitiveones.com (예정) · @sensitiveones</div>
+  <div class="dshea">*본 진술은 미국 식품의약국(FDA)의 평가를 받지 않았다. 본 제품은 어떤 질병의 진단, 치료, 완치, 예방을 의도하지 않는다.<span class="en">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</span></div>
+</section>
+
+</body>
+</html>
