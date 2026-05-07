@@ -107,26 +107,6 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 }
 .dose-cite{font-size:11px;color:var(--ink-3);margin-top:14px;line-height:1.55;font-style:italic}
 
-/* timeline */
-.timeline{position:relative;margin:32px 0 12px;padding:0 12px}
-.timeline-track{position:absolute;top:14px;left:12px;right:12px;height:1px;background:var(--border)}
-.timeline-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;position:relative}
-.t-event{text-align:center;position:relative}
-.t-dot{width:13px;height:13px;border-radius:50%;background:var(--magenta);margin:0 auto 14px;position:relative;z-index:2;border:3px solid var(--cream)}
-.t-event.now .t-dot{background:var(--magenta);box-shadow:0 0 0 4px var(--magenta-soft)}
-.t-event.future .t-dot{background:#fff;border-color:var(--magenta)}
-.t-date{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
-.t-event.now .t-date{color:var(--magenta)}
-.t-name{font-family:var(--serif);font-size:16px;color:var(--ink);line-height:1.2;margin-bottom:4px;letter-spacing:-0.015em}
-.t-anchor{font-size:11px;color:var(--ink-3);font-style:italic;line-height:1.4}
-@media(max-width:780px){
-  .timeline-row{grid-template-columns:1fr;gap:0}
-  .timeline-track{display:none}
-  .t-event{text-align:left;display:grid;grid-template-columns:24px 1fr;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--border-soft)}
-  .t-dot{margin:6px 0 0}
-  .t-event > div:last-child{display:flex;flex-direction:column;gap:4px}
-}
-
 /* yes/no */
 .yesno{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
 @media(max-width:780px){.yesno{grid-template-columns:1fr}}
@@ -145,17 +125,6 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 .yn-mark{font-family:var(--serif);font-size:18px;line-height:1;margin-top:-1px}
 .yn-col.yes .yn-mark{color:var(--yes)}
 .yn-col.no .yn-mark{color:var(--no)}
-
-/* posture */
-.posture-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
-@media(max-width:780px){.posture-grid{grid-template-columns:1fr}}
-.posture-col{padding:18px 22px;border-radius:10px;border:1px solid}
-.posture-col.we{background:var(--yes-bg);border-color:var(--yes-border)}
-.posture-col.never{background:var(--no-bg);border-color:var(--no-border)}
-.posture-col h4{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;margin-bottom:10px}
-.posture-col.we h4{color:var(--yes)}
-.posture-col.never h4{color:var(--no)}
-.posture-col .line{font-family:var(--serif);font-size:15px;line-height:1.4;color:var(--ink);padding:5px 0;font-style:italic}
 
 /* anatomy */
 .anatomy{display:grid;grid-template-columns:280px 1fr;gap:32px;margin-top:28px;align-items:center}
@@ -229,27 +198,6 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 .range-card .anchor-name{font-family:var(--serif);font-size:14px;color:var(--ink);font-style:italic;margin-top:3px;line-height:1.3}
 .range-card .outcome{font-size:11px;color:var(--ink-3);line-height:1.45;margin-top:6px;font-style:italic}
 
-/* trade economics */
-.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
-@media(max-width:780px){.price-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.price-grid{grid-template-columns:1fr}}
-.price-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:20px;position:relative}
-.price-card.feat{border-color:var(--magenta);background:var(--magenta-soft)}
-.price-card .pc-tag{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:8px}
-.price-card.feat .pc-tag{color:var(--magenta)}
-.price-card .pc-name{font-family:var(--serif);font-size:17px;color:var(--ink);margin-bottom:10px;line-height:1.2;letter-spacing:-0.015em}
-.price-card .pc-price{font-family:var(--serif);font-size:32px;color:var(--black);letter-spacing:-0.025em;line-height:1}
-.price-card .pc-unit{font-size:11px;color:var(--ink-3);margin-top:4px}
-.price-card .pc-save{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:var(--magenta);margin-top:8px}
-
-.trade-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
-@media(max-width:780px){.trade-stats{grid-template-columns:repeat(2,1fr)}}
-.ts{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px}
-.ts .num{font-family:var(--serif);font-size:22px;color:var(--magenta);letter-spacing:-0.02em;line-height:1}
-.ts .lbl{font-size:11px;color:var(--ink-3);margin-top:6px;line-height:1.4}
-
-.trade-foot{font-size:11.5px;color:var(--ink-3);margin-top:18px;line-height:1.55;font-style:italic}
-
 /* community big stat */
 .community{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:24px}
 @media(max-width:780px){.community{grid-template-columns:1fr;gap:28px}}
@@ -302,7 +250,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 
 <!-- Slide 1: Cover -->
 <section class="slide cover">
-  <div class="slide-num">01 / 15</div>
+  <div class="slide-num">01 / 12</div>
   <div class="slide-inner">
     <div class="brand-mark"><em>sensitive</em> ones.</div>
     <div class="descriptor">Inner care for sensitive problems.</div>
@@ -316,7 +264,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 <!-- Slide 2: The reader -->
 <section class="slide">
   <div class="slide-tag">The reader</div>
-  <div class="slide-num">02 / 15</div>
+  <div class="slide-num">02 / 12</div>
   <div class="slide-inner">
     <h1 class="title">For the <em>sensitive</em> ones.</h1>
     <p class="lede">Sensitive is not the flaw. Sensitive is the information.</p>
@@ -339,7 +287,7 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
 <!-- Slide 3: The problem -->
 <section class="slide">
   <div class="slide-tag">The problem</div>
-  <div class="slide-num">03 / 15</div>
+  <div class="slide-num">03 / 12</div>
   <div class="slide-inner">
     <h1 class="title">Half the <em>story</em>.</h1>
     <p class="lede">Most supplements use the right words. Few publish the actual amounts.</p>
@@ -367,39 +315,17 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
         <div class="dose-bar"><div class="dose-bar-fill tiny" style="width:18%">undisclosed</div></div>
         <div class="dose-num">?</div>
       </div>
-      <div class="dose-cite">Both 2.5g and 5g were tested in Proksch et al. 2014 (Skin Pharmacol Physiol). 2.5g was the dose in the Verisol-specific 8-week wrinkle RCT (n=114, PMID 24401291). 2.5g and 5g were the two arms of the 8-week elasticity RCT (n=69, PMID 23949208). Skin Support uses 5,000mg, fully disclosed. The third row above is the industry pattern that this deck addresses.</div>
+      <div class="dose-cite">Proksch et al. 2014 (Skin Pharmacol Physiol) tested 2.5g in the Verisol-specific 8-week wrinkle RCT (n=114, PMID 24401291) and 2.5g + 5g arms in the 8-week elasticity RCT (n=69, PMID 23949208). Skin Support uses 5,000mg, fully disclosed. The third row above is the industry pattern this deck addresses.</div>
     </div>
 
     <div class="anchor-block" style="margin-top:22px">Half the story is not the whole story. We chose to publish.</div>
   </div>
 </section>
 
-<!-- Slide 4: Why now -->
-<section class="slide">
-  <div class="slide-tag">Why now</div>
-  <div class="slide-num">04 / 15</div>
-  <div class="slide-inner">
-    <h1 class="title">The window is <em>narrow</em>.</h1>
-    <p class="lede">Transparency just became a competitive advantage. It will not stay one for long.</p>
-    <p class="body">Several brands are reaching for the transparency wedge in the same period. The one who owns <strong>sensitive-first</strong>, the audience the others are not built for, is the one who will hold the slot.</p>
-
-    <div class="timeline">
-      <div class="timeline-track"></div>
-      <div class="timeline-row">
-        <div class="t-event"><div class="t-dot"></div><div><div class="t-date">Earlier</div><div class="t-name">Audit-style content arrives</div><div class="t-anchor">Side-by-side label comparisons reshape consumer trust</div></div></div>
-        <div class="t-event"><div class="t-dot"></div><div><div class="t-date">Recently</div><div class="t-name">Transparency claims proliferate</div><div class="t-anchor">Multiple new entrants pursue the same wedge</div></div></div>
-        <div class="t-event now"><div class="t-dot"></div><div><div class="t-date">Now</div><div class="t-name">Sensitive-first slot opens</div><div class="t-anchor">Sensitive ones launches into the slot the others are not built to fill</div></div></div>
-        <div class="t-event future"><div class="t-dot"></div><div><div class="t-date">Ahead</div><div class="t-name">Transparency commoditizes</div><div class="t-anchor">Wedge shrinks; positioning becomes the moat</div></div></div>
-        <div class="t-event future"><div class="t-dot"></div><div><div class="t-date">Beyond</div><div class="t-name">Brand-trust era</div><div class="t-anchor">Story and audience win, not specs alone</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Slide 5: The discipline -->
+<!-- Slide 4: The discipline -->
 <section class="slide">
   <div class="slide-tag">The discipline</div>
-  <div class="slide-num">05 / 15</div>
+  <div class="slide-num">04 / 12</div>
   <div class="slide-inner">
     <h1 class="title">Only the problems supplements <em>can</em> truly help.</h1>
     <p class="lede">Story is where we thrive. Mechanism is where we earn the right to tell it.</p>
@@ -432,37 +358,10 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   </div>
 </section>
 
-<!-- Slide 6: The posture -->
-<section class="slide">
-  <div class="slide-tag">The posture</div>
-  <div class="slide-num">06 / 15</div>
-  <div class="slide-inner">
-    <h1 class="title"><em>Notice.</em><br>Don't scold.</h1>
-    <p class="lede">Care, not correction. The loudest caption on the feed should still feel like one-on-one.</p>
-    <div class="posture-grid">
-      <div class="posture-col we">
-        <h4>We say</h4>
-        <div class="line">Half the story is not the whole story.</div>
-        <div class="line">We chose to publish.</div>
-        <div class="line">Clinically studied dose. Notice. Listen.</div>
-        <div class="line">Care, not correction.</div>
-      </div>
-      <div class="posture-col never">
-        <h4>We never say</h4>
-        <div class="line">Clinically proven. Anti-aging.</div>
-        <div class="line">Detox. Boost. Optimize. Stack.</div>
-        <div class="line">Names of competitors.</div>
-        <div class="line">Glow up. Bestie. Miracle.</div>
-      </div>
-    </div>
-    <p class="body" style="margin-top:22px">When we critique a practice, we never name a competitor. <strong>Every critique is a promise we hold ourselves to.</strong></p>
-  </div>
-</section>
-
-<!-- Slide 7: The format -->
+<!-- Slide 5: The format -->
 <section class="slide">
   <div class="slide-tag">The format</div>
-  <div class="slide-num">07 / 15</div>
+  <div class="slide-num">05 / 12</div>
   <div class="slide-inner">
     <h1 class="title">One unit.<br>Two parts.</h1>
     <p class="lede">A liquid shot in the 25 to 30 ml range, plus one or two compressed tablets. One daily unit.</p>
@@ -497,10 +396,10 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   </div>
 </section>
 
-<!-- Slide 8: Skin Support -->
+<!-- Slide 6: Skin Support -->
 <section class="slide">
   <div class="slide-tag">First product</div>
-  <div class="slide-num">08 / 15</div>
+  <div class="slide-num">06 / 12</div>
   <div class="slide-inner">
     <h1 class="title">Skin Support.</h1>
     <p class="lede">Seven actives. Every dose published. No proprietary blends.</p>
@@ -524,14 +423,14 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
       <span><b>Pack</b> · 28 daily units · 4-week supply</span>
       <span><b>Flavor</b> · pineapple</span>
     </div>
-    <p class="actives-foot">Each active is supported by a peer-reviewed study or NIH regulatory reference. See slide 9 for full citations.</p>
+    <p class="actives-foot">Each active is supported by a peer-reviewed study or NIH regulatory reference. See slide 7 for full citations.</p>
   </div>
 </section>
 
-<!-- Slide 9: Clinical evidence -->
+<!-- Slide 7: Clinical evidence -->
 <section class="slide">
   <div class="slide-tag">Clinical evidence</div>
-  <div class="slide-num">09 / 15</div>
+  <div class="slide-num">07 / 12</div>
   <div class="slide-inner">
     <h1 class="title">Each active.<br>Each <em>citation</em>.</h1>
     <p class="lede">Every dose corresponds to a publicly verifiable study or regulatory reference.</p>
@@ -590,10 +489,10 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   </div>
 </section>
 
-<!-- Slide 10: The line -->
+<!-- Slide 8: The line -->
 <section class="slide">
   <div class="slide-tag">The line</div>
-  <div class="slide-num">10 / 15</div>
+  <div class="slide-num">08 / 12</div>
   <div class="slide-inner">
     <h1 class="title">Five products.<br>One platform.</h1>
     <p class="lede">Each product on the same dual-cap. Each anchor active selected for peer-reviewed evidence at a dose that fits one daily unit.</p>
@@ -638,70 +537,10 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   </div>
 </section>
 
-<!-- Slide 11: Trade economics -->
-<section class="slide">
-  <div class="slide-tag">The economics</div>
-  <div class="slide-num">11 / 15</div>
-  <div class="slide-inner">
-    <h1 class="title">Subscription-first.<br>Built for <em>retention</em>.</h1>
-    <p class="lede">Premium-priced. Margin-aware. Designed so the second box is easier to deliver than the first.</p>
-
-    <div class="price-grid">
-      <div class="price-card">
-        <div class="pc-tag">Trial</div>
-        <div class="pc-name">14-pack one-time</div>
-        <div class="pc-price">$49</div>
-        <div class="pc-unit">14 daily units · 2 weeks</div>
-      </div>
-      <div class="price-card">
-        <div class="pc-tag">Single purchase</div>
-        <div class="pc-name">28-pack one-time</div>
-        <div class="pc-price">$99</div>
-        <div class="pc-unit">28 daily units · 4 weeks</div>
-      </div>
-      <div class="price-card feat">
-        <div class="pc-tag">Subscribe · monthly</div>
-        <div class="pc-name">28-pack auto-ship</div>
-        <div class="pc-price">$69</div>
-        <div class="pc-unit">28 daily units · 4 weeks</div>
-        <div class="pc-save">~30% off MSRP</div>
-      </div>
-      <div class="price-card feat">
-        <div class="pc-tag">Subscribe · prepaid</div>
-        <div class="pc-name">3-month bundle</div>
-        <div class="pc-price">$179</div>
-        <div class="pc-unit">$59.67/mo · 84 daily units</div>
-        <div class="pc-save">~40% off MSRP</div>
-      </div>
-    </div>
-
-    <div class="trade-stats">
-      <div class="ts">
-        <div class="num">50%+</div>
-        <div class="lbl">target subscriber mix at scale</div>
-      </div>
-      <div class="ts">
-        <div class="num">70–75%</div>
-        <div class="lbl">target gross margin range</div>
-      </div>
-      <div class="ts">
-        <div class="num">28 units</div>
-        <div class="lbl">case pack · 4-week supply</div>
-      </div>
-      <div class="ts">
-        <div class="num">Ambient</div>
-        <div class="lbl">no cold chain · standard retail shelf</div>
-      </div>
-    </div>
-
-    <p class="trade-foot">Wholesale, retail, and partnership terms available on request. Co-op marketing programs and SKU-locked retailer windows considered per relationship.</p>
-  </div>
-</section>
-
-<!-- Slide 12: Daesung community moat -->
+<!-- Slide 9: Daesung community moat -->
 <section class="slide">
   <div class="slide-tag">The community</div>
-  <div class="slide-num">12 / 15</div>
+  <div class="slide-num">09 / 12</div>
   <div class="slide-inner">
     <h1 class="title">The audience<br>came <em>first</em>.</h1>
     <p class="lede">Daesung's community is not a marketing plan. It is the brand's customer-facing voice, already built.</p>
@@ -724,10 +563,10 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   </div>
 </section>
 
-<!-- Slide 13: The moat -->
+<!-- Slide 10: The moat -->
 <section class="slide">
   <div class="slide-tag">The moat</div>
-  <div class="slide-num">13 / 15</div>
+  <div class="slide-num">10 / 12</div>
   <div class="slide-inner">
     <h1 class="title">Inner care<br>for <em>sensitive</em> problems.</h1>
     <p class="lede">Four pillars. Story, not specs, is what holds them together.</p>
@@ -760,10 +599,10 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   </div>
 </section>
 
-<!-- Slide 14: The founders -->
+<!-- Slide 11: The founders -->
 <section class="slide">
   <div class="slide-tag">The founders</div>
-  <div class="slide-num">14 / 15</div>
+  <div class="slide-num">11 / 12</div>
   <div class="slide-inner">
     <h1 class="title">Three founders.<br>Three lanes.</h1>
     <p class="lede">Built by people who would take this product themselves.</p>
@@ -790,9 +629,9 @@ h1.title em{font-style:italic;color:var(--magenta);font-weight:400}
   </div>
 </section>
 
-<!-- Slide 15: Closer -->
+<!-- Slide 12: Closer -->
 <section class="slide closer">
-  <div class="slide-num">15 / 15</div>
+  <div class="slide-num">12 / 12</div>
   <div class="closer-mark">For <em>sensitive</em> ones.</div>
   <div class="descriptor">Inner care for sensitive problems.</div>
   <div class="contact">For Sensitive Ones LLC · Ohio · forsensitiveones.com (forthcoming) · @sensitiveones</div>
